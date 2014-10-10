@@ -1,0 +1,1763 @@
+2014/10/09 13:24:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin
+---
+2014/10/09 13:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin
+---
+2014/10/09 13:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 13:55:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 13:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 13:55:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 13:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/page?view=about
+---
+2014/10/09 13:58:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/page?view=about
+---
+2014/10/09 13:58:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 13:58:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 13:58:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 13:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 13:58:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+---
+2014/10/09 13:59:22 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+---
+2014/10/09 13:59:23 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:27:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:29:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:29:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:29:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:29:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "OrderListForToDay.aspx".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('OrderListForToD...')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('OrderListForToD...')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/OrderListF...')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/book/OrderListForToDay.aspx
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:32:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:37:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:38:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:39:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:39:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:40:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:40:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:40:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:40:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:40:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:40:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:43:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:43:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:43:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:45:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:45:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:45:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:45:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:46:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:46:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:50:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+HTTP_REFERER=http://121.199.53.139/
+---
+2014/10/09 14:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 14:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 14:51:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:57:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:57:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/page?view=about
+---
+2014/10/09 14:57:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:57:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:58:30 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 14:58:31 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 14:58:31 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 14:58:33 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 15:04:45 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 15:08:13 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/page?view=about
+---
+2014/10/09 15:08:15 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 15:08:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:13:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/contact
+---
+2014/10/09 15:14:00 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 15:31:47 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/1/Welcome%21
+---
+2014/10/09 15:31:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:31:49 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 15:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:31:51 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 15:35:32 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/1/Welcome%21
+---
+2014/10/09 15:36:40 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:37:19 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "index".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(136): CController->render('index', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionIndex()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 15:42:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 15:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+HTTP_REFERER=http://121.199.53.139/
+---
+2014/10/09 15:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/login
+---
+2014/10/09 15:43:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 15:43:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:43:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 15:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:45:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 15:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:47:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 15:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "book/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/book/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 15:49:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 15:49:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:51:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/post/index
+---
+2014/10/09 15:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 15:55:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 15:55:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 16:07:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:10:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:12:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/page?view=about
+---
+2014/10/09 16:12:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/site/page?view=about
+---
+2014/10/09 16:12:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:12:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:39:16 [error] [php] Invalid argument supplied for foreach() (/home/admin/nginx/html/yii2/framework/zii/widgets/CBreadcrumbs.php:119)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#1 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#3 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#4 /home/admin/nginx/html/yii2/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(206): CContentDecorator->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(300): SiteController->endWidget()
+#7 /home/admin/nginx/html/yii2/demos/blog/protected/views/layouts/column1.php(7): SiteController->endContent()
+#8 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#9 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(784): SiteController->renderFile()
+#11 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/SiteController.php(57): SiteController->render()
+#12 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#13 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/admin/nginx/html/yii2/framework/web/CController.php(286): SiteController->runAction()
+#15 /home/admin/nginx/html/yii2/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/site/contact
+2014/10/09 16:39:16 [error] [php] Invalid argument supplied for foreach() (/home/admin/nginx/html/yii2/framework/zii/widgets/CBreadcrumbs.php:119)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#1 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#3 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#4 /home/admin/nginx/html/yii2/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(206): CContentDecorator->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(300): SiteController->endWidget()
+#7 /home/admin/nginx/html/yii2/demos/blog/protected/views/layouts/column1.php(7): SiteController->endContent()
+#8 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#9 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(784): SiteController->renderFile()
+#11 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/SiteController.php(57): SiteController->render()
+#12 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#13 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/admin/nginx/html/yii2/framework/web/CController.php(286): SiteController->runAction()
+#15 /home/admin/nginx/html/yii2/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/site/contact
+2014/10/09 16:39:23 [error] [php] Invalid argument supplied for foreach() (/home/admin/nginx/html/yii2/framework/zii/widgets/CBreadcrumbs.php:119)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#1 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): PostController->renderInternal()
+#2 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(76): PostController->renderFile()
+#3 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#4 /home/admin/nginx/html/yii2/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(206): CContentDecorator->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(300): PostController->endWidget()
+#7 /home/admin/nginx/html/yii2/demos/blog/protected/views/layouts/column2.php(9): PostController->endContent()
+#8 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#9 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): PostController->renderInternal()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(784): PostController->renderFile()
+#11 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/PostController.php(136): PostController->render()
+#12 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#13 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#15 /home/admin/nginx/html/yii2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/admin/nginx/html/yii2/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/admin/nginx/html/yii2/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#18 /home/admin/nginx/html/yii2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/admin/nginx/html/yii2/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/admin/nginx/html/yii2/framework/web/CController.php(265): PostController->runActionWithFilters()
+#21 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): PostController->run()
+#22 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php
+2014/10/09 16:39:24 [error] [php] Invalid argument supplied for foreach() (/home/admin/nginx/html/yii2/framework/zii/widgets/CBreadcrumbs.php:119)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#1 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): BookController->renderInternal()
+#2 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(76): BookController->renderFile()
+#3 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#4 /home/admin/nginx/html/yii2/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(206): CContentDecorator->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(300): BookController->endWidget()
+#7 /home/admin/nginx/html/yii2/demos/blog/protected/views/layouts/column1.php(7): BookController->endContent()
+#8 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#9 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): BookController->renderInternal()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(784): BookController->renderFile()
+#11 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(110): BookController->render()
+#12 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionAa()
+#13 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/admin/nginx/html/yii2/framework/web/CController.php(286): BookController->runAction()
+#15 /home/admin/nginx/html/yii2/framework/web/CController.php(265): BookController->runActionWithFilters()
+#16 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): BookController->run()
+#17 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/book/aa
+2014/10/09 16:39:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:39:26 [error] [php] Invalid argument supplied for foreach() (/home/admin/nginx/html/yii2/framework/zii/widgets/CBreadcrumbs.php:119)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#1 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#3 /home/admin/nginx/html/yii2/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#4 /home/admin/nginx/html/yii2/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(206): CContentDecorator->run()
+#6 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(300): SiteController->endWidget()
+#7 /home/admin/nginx/html/yii2/demos/blog/protected/views/layouts/column1.php(7): SiteController->endContent()
+#8 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require()
+#9 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(784): SiteController->renderFile()
+#11 /home/admin/nginx/html/yii2/framework/web/actions/CViewAction.php(140): SiteController->render()
+#12 /home/admin/nginx/html/yii2/framework/web/actions/CAction.php(76): CViewAction->run()
+#13 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CViewAction->runWithParams()
+#14 /home/admin/nginx/html/yii2/framework/web/CController.php(286): SiteController->runAction()
+#15 /home/admin/nginx/html/yii2/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/site/page?view=about
+2014/10/09 16:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:39:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:48:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:48:26 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "contact".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('contact', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(106): CController->render('contact', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionAa()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('aa')
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/aa')
+#8 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/book/aa
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:48:28 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "contact".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('contact', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(106): CController->render('contact', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionAa()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('aa')
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/aa')
+#8 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/book/aa
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:48:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:50:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:50:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/aa
+---
+2014/10/09 16:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 16:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:54:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aa".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('aa')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('aa')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/aa')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/book/aa
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:54:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:54:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aa".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('aa')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('aa')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/aa')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/book/aa
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:55:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aa".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('aa')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('aa')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/aa')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/book/aa
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:55:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:55:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 16:55:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 16:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:55:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 16:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 16:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 16:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/book/index
+---
+2014/10/09 16:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:57:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:57:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:57:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 16:57:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "route/index".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('route/index')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/route/index
+HTTP_REFERER=http://121.199.53.139:8080/index.php/route/index
+---
+2014/10/09 16:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 16:58:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 17:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 17:06:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 22:49:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/09 22:49:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 22:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 22:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 22:49:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 22:49:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/bg_body.png".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/bg_body....')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/bg_body.png
+HTTP_REFERER=http://121.199.53.139:8080/css/pub.css
+---
+2014/10/09 23:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---
