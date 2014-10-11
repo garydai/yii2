@@ -1,0 +1,607 @@
+@charset "utf-8";
+/* CSS Document */
+
+.autoCenter{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+}
+/***********
+ *页面底部
+ **/
+.footer{
+	width:100%;
+	border-top:1px solid #b4b4b4;
+	height:auto;
+	background:#eeeeee;
+}
+.footer .content {
+	color: #9f9797;
+	height: 61px;
+	width: 1002px;
+	margin: 0 auto;
+	line-height: 61px;
+	text-indent: 7em;
+	text-align: center;
+}
+
+.down a{
+	color:#06F;
+	text-decoration:underline;
+}
+/********************************
+ *顶部欢迎菜单
+ **/
+.welcomeBox{
+	background:#f3f3f3;
+	border-bottom:1px solid #c1c1c1;	
+}
+.welcomeBox .content{
+	width:1002px;
+	height:29px;
+	line-height:29px;
+	margin:0 auto;
+}
+.welcomeBox .content span{ float:left; display:block;}
+.welcomeBox .content span em{ color:#007cca;}
+.welcomeBox .content a{ float:right;}
+
+/********************************
+ *顶部logo搜索 
+ **/
+.logoBox{} 
+.logoBox .content{
+	width:1002px;
+	height:92px;
+	margin:0 auto;
+	position:relative;
+}
+.logoBox .content .logo{
+	display:block;
+	width:425px;
+	height:92px;
+	background:url(../../images/ui.a/ui.a.logo.jpg) no-repeat;
+	float:left;
+	text-indent:-9999em;
+}
+.logoBox .content .search{
+	width:307px;
+	height:30px;
+	float:right;
+	margin-top:37px;
+	margin-right:1px;
+}
+.logoBox .content .search input{ border:none; float:left;} 
+.logoBox .content .search input.a{ width:272px; height:28px; background:url(../../images/ui.a/ui.a.search.02.jpg) no-repeat; padding:1px; line-height:28px;}
+.logoBox .content .search input.b{ width:33px; height:30px; cursor:pointer; background:url(../../images/ui.a/ui.a.search.01.jpg) no-repeat;}
+
+/********************************
+ *顶部页面菜单 
+ **/
+.menuBox{
+	background:#007cca;
+}
+.menuBox .content{
+	width:1002px;
+	height:46px;
+	margin:0 auto;
+	position:relative;
+}
+/*
+.menuBox .content a{
+	display:block;
+	float:left;
+	height:100%;
+	width:167px;
+	text-indent:-9999em;
+	line-height:100%;
+	background:url(../../images/ui.a/ui.a.menu.01.jpg) no-repeat;
+}
+.menuBox .content a.menu0{ margin-left:10px;}
+.menuBox .content a.menu1{ margin-left:0; background-position:-167px 0;}
+.menuBox .content a.menu2{ margin-left:22px; background-position:-334px 0;}
+.menuBox .content a.menu3{ margin-left:35px; background-position:-501px 0;}
+.menuBox .content a.menu4{ margin-left:45px; background-position:-668px 0;}
+.menuBox .content a.menu0.active{ background-position:0 -46px;}
+.menuBox .content a.menu1.active{ background-position:-167px -46px;}
+.menuBox .content a.menu2.active{ background-position:-334px -46px;}
+.menuBox .content a.menu3.active{ background-position:-501px -46px;}
+.menuBox .content a.menu4.active{ background-position:-668px -46px;}
+*/
+
+
+.menuBox .content a{
+	display:block;
+	float:left;
+	height:100%;
+	width:127px;
+	line-height:46px;
+	color:#ffffff;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	font-family:"微软雅黑";
+}
+.menuBox .content a.active {
+	background:#004c7c;
+}
+
+/********************************
+ *页面内容
+ **/
+.contentBox{padding-bottom:36px;}
+.contentBox .content{
+	width:1002px;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+	padding-top:18px;
+	
+}
+
+/***********
+ *页面内容---左边内容部分
+ **/
+.contentBox .content .left{
+	width:186px;
+	height:auto;
+	border:1px solid #bfbfbf;
+	float:left;
+}
+.contentBox .content .left dl{}
+.contentBox .content .left dl dt{ background:#f0f0f0; width:100%; height:31px; border-bottom:1px solid #d2d2d2; line-height:31px; text-indent:2em; position:relative;}
+.contentBox .content .left dl dt span{ position:absolute; display:block; width:12px; height:12px; background:url(../../images/ui.a/ui.a.menu.02.jpg) no-repeat; top:11px; right:15px; cursor:pointer;}
+.contentBox .content .left dl dd{}
+.contentBox .content .left dl dd ul li {
+	display:block;
+	width:100%;
+	height:36px;
+}
+.contentBox .content .left dl dd ul li a{
+	display:block;
+	width:100%;
+	height:35px;
+	border-bottom:1px solid #d2d2d2;
+	line-height:35px;
+	text-indent:3em;
+}
+.contentBox .content .left dl dd ul li a:hover{ background:#ecf8ff;}
+.contentBox .content .left dl dd ul li a.active{ background:#ecf8ff;}
+
+/***********
+ *页面内容---右边内容部分
+ **/
+.contentBox .content .right{
+	width:950px; /*800px;*/
+	height:auto;
+	border:1px solid #bfbfbf;
+/*	float:right; */
+}
+.contentBox .content .right .searchBox{
+	width:100%;
+	height:138px;
+	border-bottom:1px solid #dadada;
+	position:relative;
+}
+.contentBox .content .right .searchBox .one{ margin-left:17px; margin-top:28px; margin-bottom:27px;}
+
+
+
+.contentBox .content .right .searchBox .one img{ float:left;}
+.contentBox .content .right .searchBox .one ul{ float:left; line-height:27px;}
+.contentBox .content .right .searchBox .one ul li{ float:left; text-indent:1em;}
+.contentBox .content .right .searchBox .one span{ display:block; float:left; height:27px; line-height:27px; margin-right:30px;}
+.contentBox .content .right .searchBox .one input{ border:none; float:left;}
+.contentBox .content .right .searchBox .one input.a{ width:337px; height:25px; padding:1px; background:url(../../images/ui.a/ui.a.search.03.jpg) no-repeat; line-height:25px;}
+.contentBox .content .right .searchBox .one input.b{ width:80px; height:26px; margin-left:21px;  }
+.contentBox .content .right .searchBox .one input.d{ background:url(../../images/ui.a/ui.a.search.06.jpg) no-repeat; cursor:pointer;}
+.contentBox .content .right .searchBox .one input.c{ width:242px; height:25px; padding:1px; background:url(../../images/ui.a/ui.a.search.07.jpg) no-repeat; line-height:25px;}
+.contentBox .content .right .searchBox .two input.g{ background:url(../../images/ui.a/ui.a.search.08.jpg) no-repeat; cursor:pointer;}
+.contentBox .content .right .searchBox .two input.f{ background:url(../../images/ui.a/ui.a.search.10.jpg) no-repeat; cursor:pointer;}
+
+.contentBox .content .right .searchBox .two input.selC{background:url(../../images/ui.a/ui.a.search.09.jpg) no-repeat; width:128px; height:20px; padding:1px; line-height:20px; margin-left:0px; }
+.contentBox .content .right .searchBox .two label{ float:left; display:block; line-height:20px; margin-left:5px;}
+
+
+.contentBox .content .right .searchBox .two{ margin-left:23px;}
+.contentBox .content .right .searchBox .two span{ display:block; float:left; height:22px; line-height:22px;margin-right:20px; text-indent:0.5em;}
+.contentBox .content .right .searchBox .two input{ float:left; border:none;}
+.contentBox .content .right .searchBox .two input.b{ width:80px; height:26px; margin-left:4px; margin-top:-3px; }
+.contentBox .content .right .searchBox .two select{ float:left; margin-left:11px; width:90px; overflow:hidden;}
+
+.contentBox .content .right .searchBox .three span{ display:block; float:left; height:22px; line-height:22px; text-indent:0.5em; width:120px; text-indent:2.5em;}
+.contentBox .content .right .searchBox .three .city{ width:638px; height:68px; float:left; line-height:36px;
+text-indent:0.7em;  z-index: 3; }
+.contentBox .content .right .searchBox .three .city ul{ width: 100%; height: 100%; overflow: hidden; border:1px solid #cccccc; position:relative;}
+.contentBox .content .right .searchBox .three .city li{ display:block; float:left; }
+.contentBox .content .right .searchBox .three .city .city_more{ position:absolute;  left:380px; cursor:pointer;}
+.contentBox .content .right .searchBox .three .city li a.hot{ color: #2099E5;}
+
+.contentBox .content .right .searchBox .four{ margin-top:20px;}
+.contentBox .content .right .searchBox .four span{  }
+
+
+
+.contentBox .content .right .banner{ background:url(../../images/ui.a/ui.a.content.01.jpg) repeat-x top; width:100%; height:34px; line-height:34px; color:#373737; font-weight:bold; text-indent:2em;}
+
+.contentBox .content .right .showinfo{}
+.contentBox .content .right .showinfo dl dt{ background:#daf0ff; width:100%; height:31px; border-bottom:1px solid #bcd6e7; border-top:1px solid #bcd6e7; line-height:31px; color:#105e8f; }
+.contentBox .content .right .showinfo dl dt ul{ padding-left:50px;}
+.contentBox .content .right .showinfo dl dt ul li{ float:left;   margin-left:0; width:100px;}
+.contentBox .content .right .showinfo dl dd{color:#090909;border-bottom:1px solid #dadada; height:29px;}
+.contentBox .content .right .showinfo dl dd dt{ background:#fff; color:#090909; width:143px; border:none; text-indent:4em; float:left; height:29px;} 
+.contentBox .content .right .showinfo dl dd  ul{}
+.contentBox .content .right .showinfo dl dd dl dd{ border:none;   width:657px;float:left; line-height:29px;}
+.contentBox .content .right .showinfo dl dd dl dd ul li{ float:left;   margin-left:0; line-height:31px;width:100px; text-indent:1.6em; }
+.contentBox .content .right .showinfo dl dd dl dd a{#090909;text-decoration:underline;}
+.contentBox .content .right .showinfo dl dd:hover{ background:#daf0ff;}
+.contentBox .content .right .showinfo dl dd dt:hover{ background:#daf0ff;}
+.contentBox .content .right .showinfo dl dd.all{ background:#ededed;}
+.contentBox .content .right .showinfo dl dd.all dl dt{ background:#ededed;}
+
+.contentBox .content .right  .firstdayB{ height:auto; padding-bottom:24px;}
+.contentBox .content .right .showinfoB{border-bottom:1px solid #bfbfbf;}
+.contentBox .content .right .showinfoB dt{
+	background:#daf0ff;
+	width:100%;
+	height:31px;
+	border-bottom:1px solid #bcd6e7; border-top:1px solid #bcd6e7; line-height:31px; color:#105e8f; 
+}
+
+.contentBox .content .right  .lists{ height:auto; padding-bottom:14px; font-family:"微软雅黑"; color:#5f5f5f;
+font-weight:bold; line-height:24px; text-indent:2em; padding-top:20px;}
+ 
+
+.contentBox .content .right .showinfoB dl dt ul li{ float:left;   margin-left:40px; width:160px;}
+.contentBox .content .right .showinfoB dl dd{ margin-top: 10px; margin-bottom: 35px; height:100%;}
+.contentBox .content .right .showinfoB dl dd dl{ margin-bottom: 10px;}
+.contentBox .content .right .showinfoB dl dd dt{ background: #fff; border:none; width: 105px; float: left; margin-left: 15px;}
+.contentBox .content .right .showinfoB dl dd dt span{ display: block;  line-height: normal; color: #090909; line-height: 16px;}
+.contentBox .content .right .showinfoB dl dd dt span.num{ width:15px; height: 16px; background: #32b0ff; line-height: 16px; text-align: center; color: #fff; margin-right: 8px; float: left; }
+.contentBox .content .right .showinfoB dl dd dd{}
+.contentBox .content .right .showinfoB dl dd dd li{ float: left; width: 120px;}
+.contentBox .content .right .showinfoB dl dd dd li.info{ width: 275px; height: 142px; overflow:auto; border: 1px solid #dadada; padding: 3px;
+color: #808080; line-height: 20px; margin-left: 20px;}
+.contentBox .content .right .showinfoB dl dd dd li.A{ text-indent: 2em;}
+.contentBox .content .right .showinfoB dl dd dd li.B{ text-indent: 2em; margin-left: 90px;}
+
+.contentBox .content .right .showinfoB   .page{width: 390px; height: 24px; margin:0 auto; overflow:hidden; margin-top: 60px;}
+.contentBox .content .right .showinfoB   .page li{ float:left;width: 23px;height: 24px; line-height: 24px; text-align: center;
+margin-left: 5px;}
+.contentBox .content .right .showinfoB   .page li a{ color: #919191; display: block; width: 100%; height: 100%;background:url(../../images/ui.a/ui.a.content.05.jpg) no-repeat;
+float: left;}
+.contentBox .content .right .showinfoB   .page li a:hover{  background:url(../../images/ui.a/ui.a.content.04.jpg) no-repeat; color: #fff;}
+.contentBox .content .right .showinfoB   .page li.selected a{ background:url(../../images/ui.a/ui.a.content.04.jpg) no-repeat; color: #fff;} 
+.contentBox .content .right .showinfoB   .page li.previous{  color: #919191;width:48px;height: 24px;}
+.contentBox .content .right .showinfoB   .page li.previous a{background: none; background-color: #cecece;}
+.contentBox .content .right .showinfoB   .page li.previous a:hover{ color: #919191;}
+
+.contentBox .content .right .showinfoB   .page li.next{   color: #919191;width:43px;height: 24px;}
+.contentBox .content .right .showinfoB   .page li.next a{background: none; background:url(../../images/ui.a/ui.a.content.06.jpg) no-repeat;}
+.contentBox .content .right .showinfoB   .page li.next a:hover{ color: #919191;}
+
+.contentBox .content .right .showinfoB   .page li.last{   color: #919191;width:43px;height: 24px;}
+.contentBox .content .right .showinfoB   .page li.last a{background: none; background:url(../../images/ui.a/ui.a.content.06.jpg) no-repeat;}
+.contentBox .content .right .showinfoB   .page li.last a:hover{ color: #919191;}
+
+
+.contentBox .content .right .showinfoB dl dd .list{}
+.contentBox .content .right .showinfoB dl dd .list dt{
+	background:#daf0ff;
+	width:100%;
+	height:31px;
+	border-bottom:1px solid #bcd6e7; border-top:1px solid #bcd6e7; line-height:31px; color:#105e8f; 
+	margin-left:0;
+	text-indent:2em;
+	float:none;
+	 
+}
+.contentBox .content .right .showinfoB dl dd .list dd{
+	 
+	 
+	width:790px;
+	height:140px;
+	overflow:auto;
+	margin:0 auto;
+	line-height:20px;
+}
+.contentBox .content .right .showinfoB dl dd .list dd:hover{background:#daf0ff;}
+
+.contentBox .content .right .showinfoC dl dt ul li{ margin-left:0; width:100px; text-align:center;}
+.contentBox .content .right .showinfoC dl dt ul li.listPa{text-align:left; text-indent:1em; width:50px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPb{text-align:left; text-indent:2em; width:160px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPc{text-align:left; text-indent:0em; width:150px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPd{text-align:left; text-indent:0em; width:75px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPe{text-align:left; text-indent:1em; width:95px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPf{text-align:left; text-indent:1em; width:110px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPg{text-align:left; text-indent:1em; width:60px;}
+.contentBox .content .right .showinfoC dl dt ul li.listPh{text-align:left; text-indent:1em; width:50px;}
+
+.contentBox .content .right .showinfoC dl dd ul{ border-bottom:1px solid #dadada; width:100%; height:60px;}
+.contentBox .content .right .showinfoC dl dd ul:hover{background:#daf0ff;}
+.contentBox .content .right .showinfoC dl dd ul li{ margin-left:0; width:100px; text-align:center; float:left; height:60px; line-height:30px;}
+.contentBox .content .right .showinfoC dl dd{ margin-top:0;}
+.contentBox .content .right .showinfoC dl dd ul li.listA{ width:35px;}
+.contentBox .content .right .showinfoC dl dd ul li.listB{ width:160px;  text-align:left;}
+.contentBox .content .right .showinfoC dl dd ul li.listC{ width:160px; text-indent:0; line-height:30px; }
+.contentBox .content .right .showinfoC dl dd ul li.listD{ width:90px; text-indent:0.8em; text-align:left;}
+.contentBox .content .right .showinfoC dl dd ul li.listE{ width:80px; text-indent:1.8em; text-align:left;}
+.contentBox .content .right .showinfoC dl dd ul li.listF{ width:105px; text-indent:0em;}
+.contentBox .content .right .showinfoC dl dd ul li.listG{ width:60px; text-indent:1.8em;}
+.contentBox .content .right .showinfoC dl dd ul li.listH{ width:50px; text-indent:1.8em;}
+.contentBox .content .right .showinfoC dl dd ul li a{text-decoration:underline;}
+
+.contentBox .content .right .showinfoC dl dd ul li.listC span{ display:block;}
+
+.contentBox .content .right .showinfoD{ border:none; padding-bottom:20px;}
+
+.contentBox .content .right .showinfoD table{width:100%; background:#dddddd;}
+
+.contentBox .content .right .showinfoD table td{background:#FFF; height:auto; line-height:24px;}
+.contentBox .content .right .showinfoD table tr{ width:100%; height:31px;}
+/*.contentBox .content .right .showinfoD table tr:hover{ color:#f00;}*/
+.contentBox .content .right .showinfoD table thead{background:#dddddd;}
+.contentBox .content .right .showinfoD table thead td{background:#daf0ff;}
+
+
+.contentBox .content .right .showinfoE span{ display:block; float:left;line-height: 16px;}
+.contentBox .content .right .showinfoE span.num{
+	width: 15px;
+	height: 16px;
+	background: #32b0ff;
+	line-height: 16px;
+	text-align: center;
+	color: #fff;
+	margin-left:6px;
+	margin-right:6px;
+}
+.contentBox .content .right .showinfoE div.info{
+	width: 302px;
+	height: 142px;
+	overflow: auto;
+	padding: 0px;
+	color: #808080;
+	line-height: 20px;
+	margin-left: 0px;
+}
+
+.contentBox .content .right .showinfoE table tbody td{ height:142px;}
+
+
+.contentBox .content .right .searchBox table{width:100%; background:#dddddd;}
+
+.contentBox .content .right .searchBox table td{background:#FFF; height:auto; line-height:24px;}
+.contentBox .content .right .searchBox table tr{ width:100%; height:31px;}
+/*.contentBox .content .right .searchBox table tr:hover{ color:#f00;}*/
+.contentBox .content .right .searchBox table thead{background:#dddddd;}
+.contentBox .content .right .searchBox table thead td{background:#daf0ff;}
+
+
+.contentBox .content .right .posBox{
+	background:#f3f3f3;
+	color:#a2a2a2;
+	height:31px;
+	width:100%;
+	line-height:31px;
+	border-bottom:1px solid #bfbfbf;
+	text-indent:2em;
+	position:relative;
+}
+.contentBox .content .right .posBox img{ position:absolute; top:8px; left:93px;}
+.contentBox .content .right .posBox span{ margin-left:25px; color:#2099e5;}
+.contentBox .content .right .posBox span a{color:#2099e5;}
+
+.contentBox .content .right .title{
+	background:#f3f3f3;
+	color:#3c3c3c;
+	height:48px;
+	width:100%;
+	line-height:48px;
+	border-bottom:1px solid #bfbfbf;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	font-family:"微软雅黑";
+	letter-spacing:0.2em;
+}
+
+.contentBox .content .right .showinfoB dl dd .page ul{ border:none;}
+.contentBox .content .right .showinfoB dl dd .page ul:hover{ background:none;}
+
+
+.return{
+	margin-top:40px;
+	margin-left:364px;
+	cursor:pointer;
+} 
+
+
+.contentBox .content .right .showinfoE span{ display:block; float:left;line-height: 16px;}
+.contentBox .content .right .showinfoE span.num{
+	width: 15px;
+	height: 16px;
+	background: #32b0ff;
+	line-height: 16px;
+	text-align: center;
+	color: #fff;
+	margin-left:6px;
+	margin-right:6px;
+}
+.contentBox .content .right .showinfoE div.info{
+	width: 302px;
+	height: 142px;
+	overflow: auto;
+	padding: 0px;
+	color: #808080;
+	line-height: 20px;
+	margin-left: 0px;
+}
+
+.contentBox .content .right .showinfoH   .page{width: 390px; height: 24px; margin:0 auto; overflow:hidden; margin-top: 60px;}
+.contentBox .content .right .showinfoH   .page li{ float:left;width: 23px;height: 24px; line-height: 24px; text-align: center;
+margin-left: 5px;}
+.contentBox .content .right .showinfoH   .page li a{ color: #919191; display: block; width: 100%; height: 100%;background:url(../../images/ui.a/ui.a.content.05.jpg) no-repeat;
+float: left;}
+.contentBox .content .right .showinfoH   .page li a:hover{  background:url(../../images/ui.a/ui.a.content.04.jpg) no-repeat; color: #fff;}
+.contentBox .content .right .showinfoH   .page li.selected a{ background:url(../../images/ui.a/ui.a.content.04.jpg) no-repeat; color: #fff;} 
+.contentBox .content .right .showinfoH   .page li.previous{  color: #919191;width:48px;height: 24px;}
+.contentBox .content .right .showinfoH   .page li.previous a{background: none; background-color: #cecece;}
+.contentBox .content .right .showinfoH   .page li.previous a:hover{ color: #919191;}
+
+.contentBox .content .right .showinfoH   .page li.next{   color: #919191;width:43px;height: 24px;}
+.contentBox .content .right .showinfoH   .page li.next a{background: none; background:url(../../images/ui.a/ui.a.content.06.jpg) no-repeat;}
+.contentBox .content .right .showinfoH   .page li.next a:hover{ color: #919191;}
+
+.contentBox .content .right .showinfoH   .page li.last{   color: #919191;width:43px;height: 24px;}
+.contentBox .content .right .showinfoH   .page li.last a{background: none; background:url(../../images/ui.a/ui.a.content.06.jpg) no-repeat;}
+.contentBox .content .right .showinfoH   .page li.last a:hover{ color: #919191;}
+
+.contentBox .content .right .searchBox .one input.l{ background:url(../../images/ui.a/ui.a.search.04.jpg) no-repeat; cursor:pointer;}
+
+/****/
+
+.contentBox .content .right .banner span{
+	display:block;
+	float:left;
+}
+.contentBox .content .right .banner span.addUser{
+	float:right;
+	margin-right:20px;
+	background:url(../../images/ui.a/tianjia_03.png) no-repeat right;
+	font-weight:normal;
+	
+}
+.contentBox .content .right .showinfoJ table thead td{ cursor:pointer;}
+.contentBox .content .right .showinfoJ table tbody td{ }
+.contentBox .content .right .showinfoJ table thead td a:hover{ color:#000000}
+.contentBox .content .right .searchBox .one input.k{ background:url(../../images/ui.a/ui.a.search.11.jpg) no-repeat; cursor:pointer;
+margin-left:92px; float:none; }
+.contentBox .content .right .banner span.update{
+	float:right;
+	margin-right:20px;
+	font-weight:normal;
+	font-weight:bold;
+	
+}
+
+.contentBox .content .right .showinfoD table tr.firstA td{ background:#fff;}
+.contentBox .content .right .showinfoD table tr.secondA td{ background:#daf0ff; text-indent:3em;}
+.contentBox .content .right .showinfoD table tr.submitA {}
+.contentBox .content .right .showinfoD .submitA input{background:url(../../images/ui.a/aaa.jpg) no-repeat; cursor:pointer;
+width:80px; height:26px; border:none;margin-left:359px; margin-top:20px;}
+
+
+
+/**************修改的地样式***********/
+.contentBox .content .right .searchBox .three .city{ width:638px; height:auto; float:left; line-height:36px;
+text-indent:0.7em;  z-index: 3; }
+.contentBox .content .right .showinfoB dl dd .list dd:hover{background:none;}
+.contentBox .content .right .showinfoB dl dd{ margin-top: 0; margin-bottom: 35px; height:100%;}
+.contentBox .content .right .searchBox .two{ margin-left:17px;}
+.contentBox .content .right .searchBox .two span{ display:block; float:left; height:22px; line-height:22px;margin-right:0px; text-indent:0.5em;}
+.contentBox .content .right .showinfoC dl dd ul:hover{background:none; color:#f00;}
+
+/****/
+.contentBox .content .right .searchBox .one input.x{ background:url(../../images/ui.a/ui.a.search.04.jpg) no-repeat; cursor:pointer;}
+/***/
+.dingyue{ cursor:pointer;}
+
+ 
+/****/
+.adTimeD{ display:none;}
+.addTime{ cursor:pointer;}
+.adtime_left{ float:left; width:100px;}
+.adtime_meddle{ float:left; width:600px;}
+.adtime_meddle .timeBox{width:440px; height:22px; float:left; margin-bottom:10px;}
+.adtime_meddleA{ float:left; width:680px;}
+.adtime_meddleA .AAA{width:600px; height:22px; float:left; margin-bottom:10px;}
+#adtime_meddleA .timeBoxB .selA{ width:180px;}
+
+
+/*******音频播放 广告段 标记******/
+.start_on1 {
+	background: url(../../images/ui.a/song_on1.png) no-repeat;
+	_background: url(../../images/ui.a/song_on1.gif) no-repeat;
+	width: 65px;
+	height: 20px;
+	text-align: center;
+	padding-top: 15px;
+	position: absolute;
+	z-index: 999;
+	font-size:12px;
+	top:47px;
+	left:110px;
+	cursor:pointer;
+	display:none;
+}
+.start_on {
+	background: url(../../images/ui.a/song_on.png) no-repeat;
+	_background: url(../../images/ui.a/song_on.gif) no-repeat;
+	width: 65px;
+	height: 20px;
+	text-align: center;
+	padding-top: 15px;
+	position: absolute;
+	z-index: 999;
+	font-size:12px;
+	top:47px;
+	left:200px;
+	cursor:pointer;
+	display:none;
+}
+.start, .end {
+	background: url(../../images/ui.a/start.gif) repeat-y;
+	width: 2px;
+	height: 15px;
+}
+
+
+.start {
+	position: relative;
+	left: 163px;
+	top:32px;
+	position: absolute;
+	z-index: 999;
+	display:none;
+}
+.end {
+	position: relative;
+	left: 210px;
+	top:32px;
+	position: absolute;
+	z-index: 999;
+	display:none;
+}
+.left {
+    float: left;
+}
+
+.songCurTime {
+    left: 100px;
+    width: 286px;
+	position: absolute;
+    top: 0px;
+	font-size:14px;
+	color:#878787;
+}
+
+.bg_tjbor{padding: 9px 10px;}
+.bor_bott, .das_bott {
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+}
+.cast_list li, .total_list li {
+    float: left;
+    display: inline;
+    padding-left: 10px;
+    width: 151px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.s_red {
+    color: #ED1C24;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+.tj_image{width: 100%;height: 300px;}

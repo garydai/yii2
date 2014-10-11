@@ -37,86 +37,54 @@ class RouteController extends Controller
 	    }
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$headers="From: {$model->email}\r\nReply-To: {$model->email}";
-				mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-
-	
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		if (!defined('CRYPT_BLOWFISH')||!CRYPT_BLOWFISH)
-			throw new CHttpException(500,"This application requires that PHP was compiled with Blowfish support for crypt().");
-
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
 
         public function actionIndex()
         {
 
-                $model=new ContactForm;
-                if(isset($_POST['ContactForm']))
-                {
-                        $model->attributes=$_POST['ContactForm'];
-                        if($model->validate())
-                        {
-                                $headers="From: {$model->email}\r\nReply-To: {$model->email}";
-                                mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
-                                Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-                                $this->refresh();
-                        }
-                }
+
+	//	header("Content-Type: text/html;charset=utf-8"); 
+		//$model = new Route;
+		$model = Route::model()->find('id=:id', array(':id'=>2));
+//		echo 1;
+              //  $model=new ContactForm;
+               // if(isset($_POST['ContactForm']))
+                //{
+                  //      $model->attributes=$_POST['ContactForm'];
+                    //    if($model->validate())
+                      //  {
+                        //        $headers="From: {$model->email}\r\nReply-To: {$model->email}";
+                          //      mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
+                            //    Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+                              //  $this->refresh();
+                        //}
+                //}
                 $this->render('index',array('model'=>$model));
-
-
-
 
 	
         }
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
+	
+	public function actionSchedule()
 	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$routeId =  intval($_GET['routeId']) ? intval($_GET['routeId']) : '';
+		if(!$routeId) exit();
+		
+		$route = Route::model()->find('id=:id', array(':id'=>$routeId));
+		if(!$routeId) exit();
+		$scheduleId = $route->schedule;
+		$arr = explode(',', $scheduleId);
+		$str = str_replace(',', ' or id = ', $scheduleId);
+		//echo $str;
+		$criteria = new CDbCriteria; // 创建CDbCriteria对象
+		$criteria->condition = 'id = ' .$str; // 设置查询条件
+		echo $criteria->condition;
+		$model = Schedule::model()->findAll($criteria);
+
+		$this->render('schedule',array('model'=>$model, 'days'=>$route->days, 'routeId'=>$route->id));
+	
+	//	echo $model[0]->title;
+
+	
 	}
+
+
 }

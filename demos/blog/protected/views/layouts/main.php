@@ -14,6 +14,14 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
+        <script type="text/javascript" src=" <?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
+
+
+        <!--link rel="stylesheet" href= "<?php echo Yii::app()->request->baseUrl; ?>/css/style1.css" type="text/css" rel="stylesheet"/-->
+        <link rel="stylesheet" href= "<?php echo Yii::app()->request->baseUrl; ?>/css/style2.css" type="text/css" rel="stylesheet"/>
+
+
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 

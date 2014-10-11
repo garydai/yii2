@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0px auto; padding:0px; font-size:12px; font-family:"宋体"; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td,img{margin:0; padding:0px;}
+ol, ul,li {list-style-image:none;list-style-position:outside;list-style-type:none;}
+img{border:0;vertical-align:top;}
+a { blr:expression(this.onFocus=this.blur()); } 
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+	outline: medium none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+	outline: medium none;
+}
+a:hover {
+	text-decoration:underline;
+	color: #000000;
+	outline: medium none;
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+	outline: medium none;
+	}
+.clear{ clear:both;}	
+
+
+	
+	
+ 
