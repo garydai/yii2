@@ -9,10 +9,6 @@ $this->breadcrumbs=array(
 
 
 
-
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/pub.css" rel="stylesheet" type="text/css" />
-
-
 <div class="ebooking_tab">
         <ul class="ebooking_tab_list">
                 <li class="current"><a href="">未处理订单</a></li>

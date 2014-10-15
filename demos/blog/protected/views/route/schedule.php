@@ -8,10 +8,16 @@ $this->breadcrumbs=array(
 
 
 
-<div class="right">
-        <!-- //开始 展示数据 -->
-       	    <div class="showinfo showinfoH showinfoD" >
-              <table width="100%" border="0" cellspacing="1">
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">航线信息</div>
+
+  <!-- Table -->
+  <table class="table">
+
+
+
                     	  <thead>
                             <tr>
                                <td width="12%"  align="center">天数</td>
@@ -51,7 +57,6 @@ $this->breadcrumbs=array(
 		 </tbody>
 
 	  </table>
-	 </div>
 
 
 
