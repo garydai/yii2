@@ -81,7 +81,34 @@ class AreaController extends Controller
 
         }
 
-		
+        public function actionAdd()
+        {
+
+
+                $this->render('add',array());
+
+        }
+
+
+        public function actionAddInfo()
+        {
+//              echo 1;
+//                if(Yii::app()->request->isAjaxRequest)
+                {
+                        $area = new Area;
+                        $area->name = $_POST['title'];
+                        $area->description = $_POST['description'];
+                        $area->save();
+
+                        $this->redirect(Yii::app()->request->urlReferrer);
+
+//                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+                }
+
+        }
+
+
+	
 	
 
 }

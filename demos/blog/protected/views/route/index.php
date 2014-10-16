@@ -18,22 +18,25 @@ $this->breadcrumbs=array(
 
 
   <input type=button  class="btn btn-primary" value="新增航线" onclick="location.href =('/route/add')"/>
+
   <table class="table">
     
 
 
                           <thead>
                             <tr>
-                               <td width="12%"  align="center">航线</td>
-                        
-                               <td width="12%"  align="center">邮轮</td>
+				<td   align="center">航线ID</td>
 
-                               <td width="12%" align="center">路过港口</td>
-                               <td width="12%" align="center">出发时间</td>
-                               <td width="12%" align="center">旅游天数</td>
-                               <td width="12%" align="center">价格</td>
-                               <td width="12%" align="center">行程安排</td>
-                               <td width="12%" align="center">操作</td>
+                               <td   align="center">航线名称</td>
+                        
+                               <td   align="center">邮轮</td>
+
+                               <td  align="center">路过港口</td>
+                               <td  align="center">出发时间</td>
+                               <td  align="center">旅游天数</td>
+                               <td  align="center">价格</td>
+                               <td  align="center">行程安排</td>
+                               <td  align="center">操作</td>
                             </tr>
                           </thead>
 
@@ -43,6 +46,9 @@ $this->breadcrumbs=array(
                                 <?php for($i =0 ;$i< count($route) ; $i++){?>
 
                       <tr>
+			<td align="center" id="id">
+				<?php echo $route[$i]->id?>
+			</td>
                         <td align="center" id="name">
                           <?php echo $route[$i]->name?>
                         </td>

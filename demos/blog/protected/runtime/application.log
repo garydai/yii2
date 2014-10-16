@@ -6839,3 +6839,448 @@ Stack trace:
 REQUEST_URI=/aj/comment/add?_wv=5&__rnd=1413421753780
 HTTP_REFERER=http://weibo.com/at/weibo?leftnav=1
 ---
+2014/10/16 09:35:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('add')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('port/add')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/port/add
+HTTP_REFERER=http://121.199.53.139:8080/port/index
+---
+2014/10/16 09:59:29 [error] [php] Undefined variable: port (/home/admin/nginx/html/yii2/demos/blog/protected/views/port/add.php:50)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(869): PortController->renderFile()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(782): PortController->renderPartial()
+#2 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/PortController.php(72): PortController->render()
+#3 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): PortController->actionAdd()
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(286): PortController->runAction()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(265): PortController->runActionWithFilters()
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): PortController->run()
+#8 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/port/add
+2014/10/16 10:01:25 [error] [php] Undefined variable: areaId (/home/admin/nginx/html/yii2/demos/blog/protected/controllers/PortController.php:108)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(286): PortController->runAction()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(265): PortController->runActionWithFilters()
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): PortController->run()
+#3 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/port/remove/portId/3
+2014/10/16 10:26:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413426397146
+HTTP_REFERER=http://weibo.com/u/3155651390
+---
+2014/10/16 11:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413429095950
+HTTP_REFERER=http://weibo.com/u/1013327935
+---
+2014/10/16 11:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413429646355
+HTTP_REFERER=http://weibo.com/u/1265490172
+---
+2014/10/16 11:43:36 [error] [exception.CException] exception 'CException' with message 'AreaController cannot find the requested view "add".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('add', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/AreaController.php(88): CController->render('add', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): AreaController->actionAdd()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('add')
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('area/add')
+#8 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/area/add
+HTTP_REFERER=http://121.199.53.139:8080/area/index
+---
+2014/10/16 11:54:37 [error] [php] Undefined variable: boat (/home/admin/nginx/html/yii2/demos/blog/protected/views/boat/add.php:50)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(869): BoatController->renderFile()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(782): BoatController->renderPartial()
+#2 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BoatController.php(105): BoatController->render()
+#3 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BoatController->actionAdd()
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(286): BoatController->runAction()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(265): BoatController->runActionWithFilters()
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): BoatController->run()
+#8 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/boat/add
+2014/10/16 11:54:53 [error] [php] Undefined variable: boat (/home/admin/nginx/html/yii2/demos/blog/protected/views/boat/add.php:50)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(869): BoatController->renderFile()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(782): BoatController->renderPartial()
+#2 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BoatController.php(105): BoatController->render()
+#3 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BoatController->actionAdd()
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(286): BoatController->runAction()
+#6 /home/admin/nginx/html/yii2/framework/web/CController.php(265): BoatController->runActionWithFilters()
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): BoatController->run()
+#8 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/boat/add
+2014/10/16 12:24:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413433448897
+HTTP_REFERER=http://weibo.com/u/3925263211
+---
+2014/10/16 12:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413434355590
+HTTP_REFERER=http://weibo.com/u/2017160061
+---
+2014/10/16 12:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413434894966
+HTTP_REFERER=http://weibo.com/u/3814561987
+---
+2014/10/16 13:13:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413436395623
+HTTP_REFERER=http://weibo.com/u/5117795989
+---
+2014/10/16 13:45:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413438329820
+HTTP_REFERER=http://weibo.com/u/1348898682
+---
+2014/10/16 13:46:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413438392554
+HTTP_REFERER=http://weibo.com/u/2147314174
+---
+2014/10/16 13:50:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413438605017
+HTTP_REFERER=http://weibo.com/u/3990467522
+---
+2014/10/16 14:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/comment/add".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/comment/add')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/comment/add?_wv=5&__rnd=1413440709261
+HTTP_REFERER=http://weibo.com/at/weibo?leftnav=1
+---
+2014/10/16 14:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413441637427
+HTTP_REFERER=http://weibo.com/u/1660768190
+---
+2014/10/16 14:53:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/16 14:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---
+2014/10/16 15:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/comment/add".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/comment/add')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/comment/add?_wv=5&__rnd=1413443720159
+HTTP_REFERER=http://weibo.com/at/weibo?leftnav=1
+---
+2014/10/16 15:17:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413443830414
+HTTP_REFERER=http://weibo.com/u/1914880192
+---
+2014/10/16 15:37:39 [error] [exception.CException] exception 'CException' with message 'BookController cannot find the requested view "undeal".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('undeal', Array, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(121): CController->render('undeal', Array)
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionUndeal()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('undeal')
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/undeal')
+#8 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/book/undeal
+HTTP_REFERER=http://121.199.53.139:8080/book/index
+---
+2014/10/16 15:42:44 [error] [exception.CException] exception 'CException' with message 'Property "Book.title" is not defined.' in /home/admin/nginx/html/yii2/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/db/ar/CActiveRecord.php(145): CComponent->__get('title')
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/views/book/undeal.php(45): CActiveRecord->__get('title')
+#2 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(126): require('/home/admin/ngi...')
+#3 /home/admin/nginx/html/yii2/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/admin/ngi...', Array, true)
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(869): CBaseController->renderFile('/home/admin/ngi...', Array, true)
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('undeal', Array, true)
+#6 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/BookController.php(121): CController->render('undeal', Array)
+#7 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): BookController->actionUndeal()
+#8 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/admin/nginx/html/yii2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('undeal')
+#12 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('book/undeal')
+#13 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/book/undeal
+HTTP_REFERER=http://121.199.53.139:8080/route/index
+---
+2014/10/16 15:45:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+HTTP_REFERER=http://121.199.53.139/
+---
+2014/10/16 16:02:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413446559697
+HTTP_REFERER=http://weibo.com/u/2552712120
+---
+2014/10/16 16:18:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413447478921
+HTTP_REFERER=http://weibo.com/u/1812397870
+---
+2014/10/16 16:23:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413447819891
+HTTP_REFERER=http://weibo.com/u/1516639697
+---
+2014/10/16 17:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413451058362
+HTTP_REFERER=http://weibo.com/u/1985247450
+---
+2014/10/16 17:29:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413451746899
+HTTP_REFERER=http://weibo.com/u/1771530713
+---
+2014/10/16 17:43:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/16 17:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413453103997
+HTTP_REFERER=http://weibo.com/u/1957407213
+---
+2014/10/16 18:00:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413453620566
+HTTP_REFERER=http://weibo.com/u/2689848575
+---
+2014/10/16 18:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413454672949
+HTTP_REFERER=http://weibo.com/u/2938599420
+---
+2014/10/16 18:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413456732229
+HTTP_REFERER=http://weibo.com/u/3854295943
+---
+2014/10/16 18:53:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413456817744
+HTTP_REFERER=http://weibo.com/u/2978967762
+---
+2014/10/16 19:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413457838636
+HTTP_REFERER=http://weibo.com/u/5281146698
+---
+2014/10/16 19:26:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413458770997
+HTTP_REFERER=http://weibo.com/u/2705141535
+---
+2014/10/16 19:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413459273456
+HTTP_REFERER=http://weibo.com/u/3322573162
+---
+2014/10/16 19:47:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413460050332
+HTTP_REFERER=http://weibo.com/u/1774562092
+---
+2014/10/16 20:05:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413461137262
+HTTP_REFERER=http://weibo.com/u/5201825908
+---
+2014/10/16 20:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413462849187
+HTTP_REFERER=http://weibo.com/u/1885103443
+---
+2014/10/16 20:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413464179096
+HTTP_REFERER=http://weibo.com/u/2652169951
+---
+2014/10/16 21:11:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/comment/add".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/comment/add')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/comment/add?_wv=5&__rnd=1413465078427
+HTTP_REFERER=http://weibo.com/at/weibo?leftnav=1
+---
+2014/10/16 21:47:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "aj/f/followed".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('aj/f/followed')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/aj/f/followed?_wv=5&__rnd=1413467253578
+HTTP_REFERER=http://weibo.com/u/2618661625
+---

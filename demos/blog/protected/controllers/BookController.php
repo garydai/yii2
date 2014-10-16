@@ -111,6 +111,30 @@ class BookController extends Controller
 	
         }
 
+	public function actionUndeal()
+	{
+		$criteria = new CDbCriteria; // 创建CDbCriteria对象
+                $criteria->condition = 'deal = 0'; // 设置查询条件
+               // echo $criteria->condition;
+                $book = Book::model()->findAll($criteria);
+
+		$this->render('undeal', array('book'=>$book));		
+	}
+
+
+
+        public function actionAll()
+        {
+                $criteria = new CDbCriteria; // 创建CDbCriteria对象
+                $criteria->condition = 'deal = 1'; // 设置查询条件
+               // echo $criteria->condition;
+                $book = Book::model()->findAll($criteria);
+
+                $this->render('all', array('book'=>$book));
+        }
+
+
+
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */

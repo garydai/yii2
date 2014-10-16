@@ -18,24 +18,24 @@ $this->breadcrumbs=array(
 
 
 
- <form class="form-horizontal" method="post" action="/boat/saveInfo">
+ <form class="form-horizontal" method="post" action="/area/addInfo">
     <fieldset>
       <div id="legend" class="">
-        <legend class="">邮轮信息</legend>
+        <legend class="">地区信息</legend>
       </div>
 	
         <table class="table">
                 <tr>
-                <td>邮轮名称</td>
+                <td>地区名称</td>
 
-                        <td> <input type="text" name="title" id="title"  value=<?php echo $boat->name ?> >
+                        <td> <input type="text" name="title" id="title"  >
 </td>
                 </tr>
 
 		<tr>
-                    <td>邮轮介绍</td>
+                    <td>地区介绍</td>
                     <td>
-                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" id="description"><?php echo $boat->description ?></textarea>
+                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" id="description"></textarea>
                     </td>
                 </tr>
 
@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
 
 	 <div>
 
-		<button class="btn btn-primary" type="submit" value= <?php echo $boat->id ?> id="submit" name="id" > 保存</button>
+		<button class="btn btn-primary" type="submit" id="submit" name="id" > 保存</button>
         </div>
 
     </fieldset>

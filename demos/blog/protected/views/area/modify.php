@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
 
 	 <div>
 
-		<button type="submit" value= <?php echo $area->id ?> id="submit" name="id" > 保存</button>
+		<button class="btn btn-primary" type="submit" value= <?php echo $area->id ?> id="submit" name="id" > 保存</button>
         </div>
 
     </fieldset>

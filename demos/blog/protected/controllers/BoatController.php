@@ -81,6 +81,31 @@ class BoatController extends Controller
 
         }
 
+        public function actionAddInfo()
+        {
+//              echo 1;
+//                if(Yii::app()->request->isAjaxRequest)
+                {
+                        $boat = new Boat;
+                        $boat->name = $_POST['title'];
+                        $boat->description = $_POST['description'];
+                        $boat->save();
+
+                        $this->redirect(Yii::app()->request->urlReferrer);
+
+//                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+                }
+
+        }
+
+        public function actionAdd()
+        {
+
+
+                $this->render('add',array());
+
+        }
+
 		
 	
 

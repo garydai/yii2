@@ -172,7 +172,7 @@ class RouteController extends Controller
 	public function actionAddInfo()
         {
 //              echo 1;
-                if(Yii::app()->request->isAjaxRequest)
+              //  if(Yii::app()->request->isAjaxRequest)
                 {
 			$route = new Route;
 			$route->name = $_POST['title'];

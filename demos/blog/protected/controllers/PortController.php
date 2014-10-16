@@ -64,6 +64,16 @@ class PortController extends Controller
 
         }
 
+
+        public function actionAdd()
+        {
+
+
+                $this->render('add',array());
+
+        }
+
+
         public function actionSaveInfo()
         {
                 Port::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'description'=>$_POST['description']));
@@ -71,11 +81,31 @@ class PortController extends Controller
 
         }
 
+
+
+        public function actionAddInfo()
+        {
+//              echo 1;
+//                if(Yii::app()->request->isAjaxRequest)
+                {
+                        $port = new Port;
+                        $port->name = $_POST['title'];
+                        $port->description = $_POST['description'];
+                        $port->save();
+
+			$this->redirect(Yii::app()->request->urlReferrer);
+
+//                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+                }
+
+        }
+
+
         public function actionRemove()
         {
                 $portId =  intval($_GET['portId']) ? intval($_GET['portId']) : '';
                 if(!$portId) exit();
-                $port=Area::model()->findByPk($areaId); // assuming there is a post whose ID is 10
+                $port=Port::model()->findByPk($portId); // assuming there is a post whose ID is 10
                 $port->delete();
                 //$this->actionIndex();
 

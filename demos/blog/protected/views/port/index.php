@@ -15,6 +15,9 @@ $this->breadcrumbs=array(
   <!-- Default panel contents -->
   <div class="panel-heading">港口信息</div>
   <!-- Table -->
+
+  <input type=button  class="btn btn-primary" value="新增港口" onclick="location.href =('/port/add')"/>
+
   <table class="table">
     
 

@@ -118,23 +118,15 @@ class PostController extends Controller
 	{
 
 
-/*
-		$criteria=new CDbCriteria(array(
-			'condition'=>'status='.Post::STATUS_PUBLISHED,
-			'order'=>'update_time DESC',
-			'with'=>'commentCount',
-		));
-		if(isset($_GET['tag']))
-			$criteria->addSearchCondition('tags',$_GET['tag']);
 
-		$dataProvider=new CActiveDataProvider('Post', array(
-			'pagination'=>array(
-				'pageSize'=>Yii::app()->params['postsPerPage'],
-			),
-			'criteria'=>$criteria,
-		));
-*/
-		$this->render('index',array(
+
+                $criteria = new CDbCriteria; // 创建CDbCriteria对象
+                $criteria->condition = 'deal = 0'; // 设置查询条件
+               // echo $criteria->condition;
+                $count = Book::model()->count($criteria);
+
+	
+		$this->render('index',array('count'=>$count
 		));
 	}
 

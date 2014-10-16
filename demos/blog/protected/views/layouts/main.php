@@ -51,7 +51,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">后台管理系统</a>
+      <a class="navbar-brand" href="/post/index">后台管理系统</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +60,16 @@
         <li class="active"><a href="/post/index">首页</a></li>
 
 
-	  <li><a href="/book/index">订单管理</a></li>
+
+
+       <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">订单管理<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/book/undeal">未处理订单</a></li>
+            <li><a href="/book/all">所有订单</a></li>
+	</ul>
+	</li>
+
 
         <li><a href="/route/index">航线管理</a></li>
 	
@@ -91,15 +100,32 @@
 $(function(){
 
 
-$(".navbar-nav").find("li").each(function(){
+	$(".navbar-nav").find("li").each(function()
+	{
 
-var a = $(this).find("a:first")[0];
-if ($(a).attr("href") === location.pathname){
-$(this).addClass("active");
-}else{
-$(this).removeClass("active");
-}
-});
+		var a = $(this).find("a:first")[0];
+		//alert($(a).attr("href"));
+	 	//alert(location.pathname);
+
+
+		if ($(a).attr("href") === location.pathname)
+		{
+			
+			$(this).addClass("active");
+		}
+		else
+		{
+			$(this).removeClass("active");
+		}
+
+
+                if(location.pathname === "/book/undeal" || location.pathname === "/book/all")
+                {
+                        $(".dropdown").addClass("active");
+                }
+
+
+	});
 })
 </script>
 
