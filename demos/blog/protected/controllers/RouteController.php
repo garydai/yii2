@@ -44,7 +44,7 @@ class RouteController extends Controller
 
 	//	header("Content-Type: text/html;charset=utf-8"); 
 		//$model = new Route;
-		$model = Route::model()->find('id=:id', array(':id'=>2));
+		$route = Route::model()->findAll();
 //		echo 1;
               //  $model=new ContactForm;
                // if(isset($_POST['ContactForm']))
@@ -58,7 +58,7 @@ class RouteController extends Controller
                               //  $this->refresh();
                         //}
                 //}
-                $this->render('index',array('model'=>$model));
+                $this->render('index',array('route'=>$route));
 
 	
         }
@@ -117,6 +117,24 @@ class RouteController extends Controller
 	}
 
 
+        public function actionAdd()
+        {
+
+
+
+                $boat = Boat::model()->findAll();
+
+                $area = Area::model()->findAll();
+
+
+                $port = Port::model()->findAll();
+
+                $this->render('add',array( 'boat'=>$boat, 'area'=>$area, 'port'=>$port));
+
+
+        }
+
+
 
 	public function actionGetInfo()
 	{
@@ -136,14 +154,52 @@ class RouteController extends Controller
 
 	public function actionSaveInfo()
         {
+//		echo 1;
+		if(Yii::app()->request->isAjaxRequest)
+                {
 
-		echo $_POST['port'];
-		$count =Route::model()->updateByPk(2,array('title'=>$_POST['title'],'area'=>$_POST['area'], 'port'=>$_POST['port'], 'days'=>$_POST['days'], 
-			'desription'=>$_POST['description'], 'start_time'=>$_POST['date'] )); 
-		if($count>0){ echo "success"; }else{ echo "fail"; }
+		//echo $_POST['title'];
+		$count =Route::model()->updateByPk($_POST['id'],array('name'=>$_POST['title'],'area'=>$_POST['area'], 'port'=>$_POST['port'], 'days'=>$_POST['days'], 
+			'description'=>$_POST['description'], 'start_time'=>$_POST['date'] )); 
+//		if($count>0){ echo "success"; }else{ echo "fail"; }
 
+//		Route::model()->updateByPk(2,array('name'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));
+                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+		}
 
 	}
+
+	public function actionAddInfo()
+        {
+//              echo 1;
+                if(Yii::app()->request->isAjaxRequest)
+                {
+			$route = new Route;
+			$route->name = $_POST['title'];
+			$route->area = $_POST['area'];
+			$route->port = $_POST['port'];
+			$route->days = $_POST['days'];
+			$route->description = $_POST['description'];
+			$route->start_time = $_POST['date'];
+			$route->save();
+                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+                }
+
+        }
+
+	public function actionRemove()
+	{
+                $routeId =  intval($_GET['routeId']) ? intval($_GET['routeId']) : '';
+                if(!$routeId) exit();
+		$route=Route::model()->findByPk($routeId); // assuming there is a post whose ID is 10
+		$route->delete();
+		//$this->actionIndex();
+
+		$this->redirect(Yii::app()->request->urlReferrer);
+
+	}
+
+
 
 
 }

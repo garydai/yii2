@@ -18,7 +18,8 @@ $this->breadcrumbs=array(
 
 
 
- <form class="form-horizontal" method="get" action="/route/saveInfo" >
+ <!--form class="form-horizontal" method="get" action="/route/saveInfo" -->
+	 <form class="form-horizontal">
     <fieldset>
       <div id="legend" class="">
         <legend class="">航线信息</legend>
@@ -28,7 +29,7 @@ $this->breadcrumbs=array(
                 <tr>
                 <td>航线名称</td>
 
-                        <td> <input type="text" name="title"   value=<?php echo $route->name ?> >
+                        <td> <input type="text" name="title" id="title"  value=<?php echo $route->name ?> >
 </td>
                 </tr>
 
@@ -37,7 +38,7 @@ $this->breadcrumbs=array(
 
                        <td>地区</td>
 			
-                        <td><select class="selectpicker area" name="area" >
+                        <td><select class="selectpicker area" name="area" id="area">
 
 
                                <?php if($area){ ?>
@@ -126,7 +127,7 @@ $this->breadcrumbs=array(
                 <tr>
                 <td>行程天数</td>
 
-                        <td> <input type="text" name="days"   value=<?php echo $route->days ?> >
+                        <td> <input type="text" name="days"  id="days" value=<?php echo $route->days ?> >
 		</td>
                 </tr>
 
@@ -137,7 +138,7 @@ $this->breadcrumbs=array(
 		<tr>
                     <td>航线介绍</td>
                     <td>
-                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" ><?php echo $route->description ?></textarea>
+                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" id="description"><?php echo $route->description ?></textarea>
                     </td>
                 </tr>
 
@@ -147,7 +148,8 @@ $this->breadcrumbs=array(
 
 	 <div>
 
-		<input type="submit" value="保存" id="submit" name="submit" />
+		<!--input type="submit" value="保存" id="submit" name="submit" /-->
+		 <button class="btn btn-primary " onclick="onsave(<?php echo $route->id?>)">保存</button>   
         </div>
 
     </fieldset>
@@ -162,7 +164,62 @@ $this->breadcrumbs=array(
 
 
 
+function onsave(route_id)
+{
 
+
+
+
+
+
+o = document.getElementById("port");
+	var t ="";
+	t += $("#port").val();
+	//alert($("#port").val());
+       $.ajax({
+
+            type:"post",
+            dataType:"json",//dataType (xml html script json jsonp text)
+            data:{
+			"id":route_id,
+			"title":$("#title").val(),
+			"area":$("#area").val(),
+			"port":t,
+			"boat":$("#boat").val(),
+			"days":$("#days").val(),
+			"description":$("#description").val(),
+			"date":$("#datepicker").val()
+			},
+           url:"/route/saveInfo",
+            success:function(json) {//成功获得的也是json对象
+                //$.fn.yiiGridView.update("ad-grid");
+
+
+                alert("success");
+                }
+
+
+
+
+        //    type:"get",
+          //  dataType:"json",//dataType (xml html script json jsonp text)
+         //   data:{id:2},
+          //  url:"/route/saveInfo",
+           // success:function(json) {//成功获得的也是json对象
+                //$.fn.yiiGridView.update("ad-grid");
+
+//
+  //             alert("success");
+    //            }
+
+
+        });
+
+
+
+
+
+}
 
 $(function() {
 
@@ -174,7 +231,7 @@ $('.selectpicker').selectpicker({
  //$('.area').selectpicker('val', ['济州','福冈']);
 
 
-
+	
        $.ajax({
             type:"get",
             dataType:"json",//dataType (xml html script json jsonp text)
@@ -186,12 +243,11 @@ $('.selectpicker').selectpicker({
 		$('.boat').selectpicker('val', json.boat);
 		$('.area').selectpicker('val', json.area);
 		var v = json.port.split(',');
-		
 		$('.port').selectpicker('val', v);
 
                 //alert("success")
 		}
-	})
+	});
 
 
 })

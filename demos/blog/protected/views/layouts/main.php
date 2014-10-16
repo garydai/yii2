@@ -6,22 +6,9 @@
 
 
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen11.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print11.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main11.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form11.css" />
 
         <script type="text/javascript" src=" <?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.1.min.js"></script>
-
-
-        <!--link rel="stylesheet" href= "<?php echo Yii::app()->request->baseUrl; ?>/css/style1.css" type="text/css" rel="stylesheet"/-->
-        <link rel="stylesheet" href= "<?php echo Yii::app()->request->baseUrl; ?>/css/style211111.css" type="text/css" rel="stylesheet"/>
-
 
 
 
@@ -76,6 +63,9 @@
 	  <li><a href="/book/index">订单管理</a></li>
 
         <li><a href="/route/index">航线管理</a></li>
+	
+	<li><a href="/boat/index">邮轮管理</a></li>
+
         <li><a href="/area/index">地区管理</a></li>
         <li><a href="/port/index">港口管理</a></li>
 
