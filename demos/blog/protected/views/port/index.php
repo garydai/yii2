@@ -24,12 +24,12 @@ $this->breadcrumbs=array(
 
                           <thead>
                             <tr>
-                               <td width="12%"  align="center">港口</td>
+                               <td align="center">港口</td>
                         
-                               <td width="12%"  align="center">港口介绍</td>
+                               <td align="center">港口介绍</td>
 
-                               <td width="12%" align="center">图片</td>
-                               <td width="12%" align="center">操作</td>
+                               <td align="center">图片</td>
+                               <td align="center">操作</td>
                             </tr>
                           </thead>
 

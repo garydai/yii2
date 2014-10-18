@@ -21,7 +21,7 @@ $this->breadcrumbs=array(
  <form class="form-horizontal" method="post" action="/port/saveInfo">
     <fieldset>
       <div id="legend" class="">
-        <legend class="">港口信息</legend>
+        <legend class="">修改港口信息</legend>
       </div>
 	
         <table class="table">
@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
 
 	 <div>
 
-		<button class="btn-primary" type="submit" value= <?php echo $port->id ?> id="submit" name="id" > 保存</button>
+		<button class="btn btn-primary" type="submit" value= <?php echo $port->id ?> id="submit" name="id" > 保存</button>
         </div>
 
     </fieldset>

@@ -33,7 +33,7 @@ $this->breadcrumbs=array(
 
                                <td  align="center">路过港口</td>
                                <td  align="center">出发时间</td>
-                               <td  align="center">旅游天数</td>
+                               <td  align="center">行程天数</td>
                                <td  align="center">价格</td>
                                <td  align="center">行程安排</td>
                                <td  align="center">操作</td>
@@ -66,12 +66,12 @@ $this->breadcrumbs=array(
                           <?php echo $route[$i]->days?>
                         </td>
                         <td align="center">
-                         <a href="/route/price/routeId/<?php echo $route[$i]->id;?>"><?php echo $route[$i]->price ?>元起</a>
+                         <a href= <?php if($route[$i]->price_id==NULL) echo "/price/add/routeId/".$route[$i]->id; else echo "/price/index/priceId/".$route[$i]->price_id; ?> ><?php if($route[$i]->price_id != NULL) echo $route[$i]->price.'元起'; else echo '添加价格'; ?></a>
 
                         </td>
                         
                          <td align="center"> 
-                            <a href="/route/schedule/routeId/<?php echo $route[$i]->id;?>">详情</a>
+                            <a href= <?php if($route[$i]->schedule != NULL) echo "/schedule/index/route_id/".$route[$i]->id; else echo "/schedule/modify/route_id/".$route[$i]->id ?>><?php if($route[$i]->schedule != NULL) echo "详情"; else echo "添加行程"; ?></a>
                         </td>
                         <td align="center"><a href="/route/modify/routeId/<?php echo $route[$i]->id;?>">修改</a>&nbsp; <a href="/route/remove/routeId/<?php echo $route[$i]->id;?>">删除</a></td>       
                       </tr>

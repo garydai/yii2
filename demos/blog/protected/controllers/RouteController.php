@@ -159,7 +159,7 @@ class RouteController extends Controller
                 {
 
 		//echo $_POST['title'];
-		$count =Route::model()->updateByPk($_POST['id'],array('name'=>$_POST['title'],'area'=>$_POST['area'], 'port'=>$_POST['port'], 'days'=>$_POST['days'], 
+		$count =Route::model()->updateByPk($_POST['id'],array('name'=>$_POST['title'],'area'=>$_POST['area'], 'port'=>$_POST['port'], 
 			'description'=>$_POST['description'], 'start_time'=>$_POST['date'] )); 
 //		if($count>0){ echo "success"; }else{ echo "fail"; }
 

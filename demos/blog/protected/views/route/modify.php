@@ -123,14 +123,13 @@ $this->breadcrumbs=array(
                 </td>
                 </tr>
 
-
+		<!--
                 <tr>
                 <td>行程天数</td>
 
-                        <td> <input type="text" name="days"  id="days" value=<?php echo $route->days ?> >
 		</td>
                 </tr>
-
+		-->
 
 		
 
@@ -156,8 +155,6 @@ $this->breadcrumbs=array(
   </form>
 
 
-</div>
-</div>
 
 
 <script type="text/javascript">
