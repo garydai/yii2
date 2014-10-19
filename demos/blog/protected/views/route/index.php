@@ -1,10 +1,3 @@
-<?php
-$this->pageTitle=Yii::app()->name ;
-$this->breadcrumbs=array(
-        '航线管理',
-);
-?>
-
 
 
 
@@ -61,7 +54,7 @@ $this->breadcrumbs=array(
 				<td   align="center">航线ID</td>
 
                                <td   align="center">航线名称</td>
-                        
+                       		  <td   align="center">邮轮公司</td> 
                                <td   align="center">邮轮</td>
 				<td align="center">地区</td>
                                <td  align="center">路过港口</td>
@@ -84,6 +77,8 @@ $this->breadcrumbs=array(
 			</td>
                         <td align="center" id="name">
                           <?php echo $route[$i]->name?>
+                        </td>
+			<td align="center" id="name">
                         </td>
                          <td align="center" id="bote">
                           <?php echo $route[$i]->boat?>
@@ -117,7 +112,5 @@ $this->breadcrumbs=array(
 
   </table>
 </div>
-
-
 
 
