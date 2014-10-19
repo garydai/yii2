@@ -38,6 +38,43 @@ class RouteController extends Controller
 	}
 
 
+
+	public function actionSearch()
+	{
+
+		$keyword = $_GET['keywords'];
+		$boat    = $_GET['boat'];
+		$area = $_GET['area'];
+		$str = '';
+		$model = NULL;
+		
+		if($keyword)
+		{
+			$str = 'name like '.'"'.'%'.$keyword.'%'.'"';
+		}
+		if($boat != 0)
+		{
+			if($str != '')
+				$str.=' and ';
+			$str.=' boat ='.'"'.$boat.'"';
+		}
+		if($area != 0)
+		{
+			if($str != '')
+				$str.=' and ';
+			$str.= '  area =" '.$area.'"';
+		}
+	//	echo $str;
+	        $criteria = new CDbCriteria; // 创建CDbCriteria对象
+                $criteria->condition = $str; // 设置查询条件
+                $model = Route::model()->findAll($criteria);
+		
+ 		$boat  = Boat::model()->findAll();
+                $area  = Area::model()->findAll();
+		
+		
+		$this->render('index', array('route'=>$model, 'boat'=>$boat, 'area'=>$area));
+	}
         public function actionIndex()
         {
 
@@ -45,6 +82,8 @@ class RouteController extends Controller
 	//	header("Content-Type: text/html;charset=utf-8"); 
 		//$model = new Route;
 		$route = Route::model()->findAll();
+		$boat  = Boat::model()->findAll();
+		$area  = Area::model()->findAll();
 //		echo 1;
               //  $model=new ContactForm;
                // if(isset($_POST['ContactForm']))
@@ -58,7 +97,7 @@ class RouteController extends Controller
                               //  $this->refresh();
                         //}
                 //}
-                $this->render('index',array('route'=>$route));
+                $this->render('index',array('route'=>$route, 'boat'=>$boat, 'area'=>$area));
 
 	
         }
