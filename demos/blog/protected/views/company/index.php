@@ -49,7 +49,7 @@ $this->breadcrumbs=array(
                         <td align="center" id="image">
                           <?php echo $company[$i]->image?>
                         </td>
-                        <td align="center"><a href="/port/modify/company_id/<?php echo $company[$i]->id;?>">修改</a>&nbsp; <a href="/port/remove/company_id/<?php echo $company[$i]->id;?>">删除</a></td>       
+                        <td align="center"><a href="/company/modify/company_id/<?php echo $company[$i]->id;?>">修改</a>&nbsp; <a href="/company/remove/company_id/<?php echo $company[$i]->id;?>">删除</a></td>       
                       </tr>
 				<?php }?>
 				<?php }?>

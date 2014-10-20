@@ -9959,3 +9959,98 @@ Stack trace:
 REQUEST_URI=/route/index
 HTTP_REFERER=http://121.199.53.139:8080/post/index
 ---
+2014/10/20 10:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---
+2014/10/20 10:26:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/20 10:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('add')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('company/add')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/company/add
+HTTP_REFERER=http://121.199.53.139:8080/company/index
+---
+2014/10/20 10:47:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/20 10:47:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/20 10:47:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/20 10:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/20 10:53:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/admin/nginx/html/yii2/framework/web/CController.php:483
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(270): CController->missingAction('add')
+#1 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('company/add')
+#3 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/company/add
+HTTP_REFERER=http://121.199.53.139:8080/company/index
+---
+2014/10/20 11:08:19 [error] [exception.CException] exception 'CException' with message 'CompanyController cannot find the requested view "add".' in /home/admin/nginx/html/yii2/framework/web/CController.php:878
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(782): CController->renderPartial('add', NULL, true)
+#1 /home/admin/nginx/html/yii2/demos/blog/protected/controllers/CompanyController.php(56): CController->render('add')
+#2 /home/admin/nginx/html/yii2/framework/web/actions/CInlineAction.php(49): CompanyController->actionAdd()
+#3 /home/admin/nginx/html/yii2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/admin/nginx/html/yii2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/admin/nginx/html/yii2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): CController->run('add')
+#7 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('company/add')
+#8 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#10 {main}
+REQUEST_URI=/company/add
+HTTP_REFERER=http://121.199.53.139:8080/company/index
+---
+2014/10/20 15:44:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+HTTP_REFERER=http://121.199.53.139/
+---

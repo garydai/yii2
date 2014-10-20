@@ -29,7 +29,7 @@ $this->breadcrumbs=array(
                 <tr>
                 <td>航线名称</td>
 
-                        <td> <input type="text" name="title" id="title"  value=<?php echo $route->name ?> >
+                        <td> <input class="form-control" style="width:200px;" type="text" name="title" id="title"  value=<?php echo $route->name ?> >
 </td>
                 </tr>
 
@@ -106,7 +106,7 @@ $this->breadcrumbs=array(
 
 
 		 <!--div id="datetimepicker" class="input-append date"-->  
-				<input type="text"  name="date" id="datepicker" data-date-format="yyyy-mm-dd" value= <?php echo $route->start_time?> />
+				<input type="text" class="form-control" style="width:200px;" name="date" id="datepicker" data-date-format="yyyy-mm-dd" value= <?php echo $route->start_time?> />
 
 			<!--/div-->
 			<script type="text/javascript">

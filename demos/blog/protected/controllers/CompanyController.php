@@ -51,6 +51,19 @@ class CompanyController extends Controller
         }
 
 		
+	public function actionAdd()
+	{
+		$this->render('add');
+	}
 	
+	public function actionAddInfo()
+	{
+		$company = new Company;
+		$company->name = $_POST['title'];
+		$company->description=$_POST['description'];
+		$company->save();
+
+		$this->redirect(Yii::app()->request->urlReferrer);	
+	}	
 
 }

@@ -37,7 +37,7 @@
 
 
 
-<div class="panel panel-default">
+<div class="panel panel-info">
   <!-- Default panel contents -->
   <div class="panel-heading">航线信息</div>
   <!-- Table -->

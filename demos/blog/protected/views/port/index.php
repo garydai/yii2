@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 
 
-<div class="panel panel-default">
+<div class="panel panel-info">
   <!-- Default panel contents -->
   <div class="panel-heading">港口信息</div>
   <!-- Table -->
@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
     
 
 
-                          <thead>
+                          <thead class="thead-text">
                             <tr>
                                <td align="center">港口</td>
                         

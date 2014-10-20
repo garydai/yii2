@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 
 
-<div class="panel panel-default">
+<div class="panel panel-info">
   <!-- Default panel contents -->
   <div class="panel-heading">地区信息</div>
   <!-- Table -->
