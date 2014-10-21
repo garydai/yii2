@@ -77,7 +77,7 @@ $this->breadcrumbs=array(
 
                        <td>港口</td>
 
-                        <td><select class="selectpicker port" multiple name="port" id="port">
+                        <td><select class="selectpicker port " multiple name="port" id="port">
 
 
                               <?php if($port){ ?>
@@ -137,7 +137,7 @@ $this->breadcrumbs=array(
 		<tr>
                     <td>航线介绍</td>
                     <td>
-                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" id="description"><?php echo $route->description ?></textarea>
+                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" class="form-control" id="description"><?php echo $route->description ?></textarea>
                     </td>
                 </tr>
 

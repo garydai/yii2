@@ -28,14 +28,14 @@ $this->breadcrumbs=array(
                 <tr>
                 <td>邮轮公司名称</td>
 
-                        <td> <input type="text" name="title" id="title"  />
+                        <td> <input type="text" class="form-control" style=width:100px;"" name="title" id="title"  />
 </td>
                 </tr>
 
 		<tr>
                     <td>公司介绍</td>
                     <td>
-                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" id="description"></textarea>
+                        <textarea style="margin: 0px; width: 600px; height: 100px;" class="from-control" name="description" id="description"></textarea>
                     </td>
                 </tr>
 

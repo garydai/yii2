@@ -36,7 +36,6 @@
 
 
 
-
 <div class="panel panel-info">
   <!-- Default panel contents -->
   <div class="panel-heading">航线信息</div>
@@ -49,7 +48,7 @@
     
 
 
-                          <thead>
+                          <thead class="test">
                             <tr>
 				<td   align="center">航线ID</td>
 
