@@ -1,6 +1,6 @@
 <?php
 
-class ScheduleController extends Controller
+class ScheduleController extends AdminController
 {
 	public $layout='column1';
 

@@ -11,13 +11,13 @@ $this->breadcrumbs=array(
 
 
 
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">内舱价格</div>
   <!-- Table -->
 
 
-  <input type=button  class="btn btn-primary" value="修改价格" onclick="location.href =('<?php echo "/price/modify/priceId/".$price->id ?>')" />
+  <button type=button  class="btn btn-success" value="修改价格" onclick="location.href =('<?php echo "/price/modify/priceId/".$price->id ?>')" />
 
   <table class="table">
     

@@ -1,6 +1,6 @@
 <?php
 
-class BookController extends Controller
+class BookController extends AdminController
 {
 	public $layout='column1';
 

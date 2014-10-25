@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">未处理订单</div>
   <!-- Table -->

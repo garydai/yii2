@@ -1,6 +1,6 @@
 <?php
 
-class AreaController extends Controller
+class AreaController extends AdminController
 {
 	public $layout='column1';
 

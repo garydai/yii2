@@ -1,6 +1,6 @@
 <?php
 
-class PriceController extends Controller
+class PriceController extends AdminController
 {
 	public $layout='column1';
 

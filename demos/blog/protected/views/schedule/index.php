@@ -9,12 +9,12 @@ $this->breadcrumbs=array(
 
 
 
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">行程安排</div>
 
 
-  <input type=button  class="btn btn-primary" value="修改行程" onclick="location.href =('<?php echo "/schedule/modify/route_id/".$route_id ?>') "/>
+  <input type=button  class="btn btn-success" value="修改行程" onclick="location.href =('<?php echo "/schedule/modify/route_id/".$route_id ?>') "/>
   <!-- Table -->
   <table class="table">
 

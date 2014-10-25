@@ -16,16 +16,67 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.Admin.models.*',
+		'application.modules.Admin.components.*',
+		
 	),
 
+	'modules' => array(
+
+
+
+                'gii'=>array(
+                        'class'=>'system.gii.GiiModule',
+                        'password'=>'123456',
+                        'ipFilters'=>array('115.236.45.142', '115.198.203.87', '125.118.0.146', '122.235.191.111'),
+            // 'newFileMode'=>0666,
+            // 'newDirMode'=>0777,
+	        ),
+		
+		'Admin',//=>array(
+
+
+            // enable cookie-based authentication
+           	//	 'class'=>'AdminUsers',
+          	 //	 'stateKeyPrefix'=>'admin',//设置后台session前缀
+           	//	 'allowAutoLogin'=>false,
+         	  //	 'loginUrl' =>array('/admin/adminuser/login'),
+        	//	),
+
+	
+	),
 	'defaultController'=>'post',
 
 	// application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
+			'allowAutoLogin'=>false,
 		),
+
+
+
+       'admin'=>array(
+            // enable cookie-based authentication
+            'class'=>'AdminUsers',
+            'stateKeyPrefix'=>'admin',//设置后台session前缀
+            'allowAutoLogin'=>false,
+           'loginUrl' =>array('/Admin/adminuser/login'),
+        ),
+
+
+	
+
+
+//	        'admin'=>array(
+            // enable cookie-based authentication
+  //      	    'class'=>'AdminUsers',
+//	            'stateKeyPrefix'=>'admin',//设置后台session前缀
+  //      	    'allowAutoLogin'=>false,
+//	            'loginUrl' =>array('/admin/adminuser/login'),
+  //      	),
+
+
 
 //		'db'=>array(
 //			'connectionString' => 'sqlite:protected/data/blog.db',
@@ -48,7 +99,12 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'post/<id:\d+>/<title:.*?>'=>'post/view',
+
+
+				 'gii'=>'gii',
+		        	    'gii/<controller:\w+>'=>'gii/<controller>',
+	        		    'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>',
+				'post/<id:\d+>/<title:.*?>' => 'post/view',
 				'posts/<tag:.*?>'=>'post/index',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),

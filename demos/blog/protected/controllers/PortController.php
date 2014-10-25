@@ -1,6 +1,6 @@
 <?php
 
-class PortController extends Controller
+class PortController extends AdminController
 {
 	public $layout='column1';
 

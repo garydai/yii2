@@ -11,13 +11,14 @@ $this->breadcrumbs=array(
 
 
 
-<div class="panel panel-info">
+<div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">地区信息</div>
   <!-- Table -->
 
 
- <input type=button  class="btn btn-primary" value="新增地区" onclick="location.href =('/area/add')"/>
+ <button type=button  class="btn btn-success" onclick="location.href =('/area/add')"> <span class="glyphicon glyphicon-plus"></span></button>
+ 
 
   <table class="table">
     

@@ -1,6 +1,6 @@
 <?php
 
-class BoatController extends Controller
+class BoatController extends AdminController
 {
 	public $layout='column1';
 
@@ -64,7 +64,7 @@ class BoatController extends Controller
 	
 	public function actionSaveInfo()
 	{
-		Boat::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'description'=>$_POST['description']));
+		Boat::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'description'=>$_POST['description'], 'zaikeshu'=>$_POST['zaikeshu'] , 'paishuiliang'=>$_POST['paishuiliang'], 'zuigaosudu'=>$_POST['zuigaosudu'], 'jiabanlouceng'=>$_POST['jiabanlouceng'], 'gongzuorenyuan'=>$_POST['gongzuorenyuan'], 'changdu'=>$_POST['changdu'], 'kuandu'=>$_POST['kuandu'], 'gaodu'=>$_POST['gaodu'] ));
 		$this->redirect(Yii::app()->request->urlReferrer);
 	
 	}
@@ -88,7 +88,15 @@ class BoatController extends Controller
                 {
                         $boat = new Boat;
                         $boat->name = $_POST['title'];
-                        $boat->description = $_POST['description'];
+			$boat->zaikeshu = $_POST['zaikeshu'];
+			$boat->paishuiliang = $_POST['paishuiliang'];
+                        $boat->zuigaosudu = $_POST['zuigaosudu'];
+                        $boat->jiabanlouceng = $_POST['jiabanlouceng'];
+                        $boat->gongzuorenyuan = $_POST['gongzuorenyuan'];
+                        $boat->changdu = $_POST['changdu'];
+                        $boat->kuandu = $_POST['kuandu'];
+                        $boat->gaodu = $_POST['gaodu'];
+			$boat->description = $_POST['description'];
                         $boat->save();
 
                         $this->redirect(Yii::app()->request->urlReferrer);

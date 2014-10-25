@@ -15,11 +15,20 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
+
+
+		echo 124111111;
 		$user=User::model()->find('LOWER(username)=?',array(strtolower($this->username)));
 		if($user===null)
+		{
+			echo 888;
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
+		}
 		else if(!$user->validatePassword($this->password))
+		{
+			echo $this->password;
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
+		}
 		else
 		{
 			$this->_id=$user->id;
@@ -34,6 +43,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function getId()
 	{
+		echo 22222222;
 		return $this->_id;
 	}
 }

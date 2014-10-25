@@ -16,7 +16,7 @@
 
 
 <link href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet">
-
+<link href="/css/gaga.css" rel="stylesheet">
 
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>

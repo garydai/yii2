@@ -1,6 +1,6 @@
 <?php
 
-class RouteController extends Controller
+class RouteController extends AdminController
 {
 	public $layout='column1';
 
