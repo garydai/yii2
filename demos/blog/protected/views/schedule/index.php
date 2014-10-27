@@ -26,6 +26,9 @@ $this->breadcrumbs=array(
 			       <td align="center">标题</td>
 
                                <td align="center">内容</td>
+
+				 <td align="center">用餐</td>
+				<td align="center">住宿</td>
 				
                             </tr>
                           </thead>
@@ -43,9 +46,10 @@ $this->breadcrumbs=array(
 
                         <td align="center"> <?php echo $schedule[$i]->title ?></td>
 
-                        <td align="center"> <?php echo $schedule[$i]->content ?></td>
+                        <td align="center"> <a href='<?php echo "/schedule/content/schedule_id/".$schedule[$i]->id?>'>详细信息</a> </td>
 
-
+			 <td align="center"> <?php echo $schedule[$i]->eat ?></td>
+			 <td align="center"> <?php echo $schedule[$i]->live ?></td>
                       </tr>
                     <?php }?>
                     <?php }?>

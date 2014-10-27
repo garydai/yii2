@@ -174,7 +174,43 @@ class ScheduleController extends AdminController
 
         }
 
+	public function actionContent()
+	{
 
-	
+                $schedule_id =  intval($_GET['schedule_id']) ? intval($_GET['schedule_id']) : '';
+                if(!$schedule_id) exit();
+		$schedule = Schedule::model()->findByPk($schedule_id);	
+		$this->render('content', array('schedule'=>$schedule));
+	}
+
+	public function actionUpload_image()
+	{
+		
+		if ($_FILES['file']['name']) 
+		{
+//		    echo $_FILES['file']['name'];
+	            if (!$_FILES['file']['error']) 
+		    {
+        	        $name = md5(rand(100, 200));
+                	$ext = explode('.', $_FILES['file']['name']);
+	                $filename = $name . '.' . $ext[1];
+        	        $destination = 'assets/images/' . $filename; //change this directory
+	                $location = $_FILES["file"]["tmp_name"];
+//			echo $location;
+               		move_uploaded_file($location, $destination);
+                	echo 'http://121.199.53.139:8080/assets/images/' . $filename;//change this URL
+        	    }
+	            else
+        	    {
+	              echo  $message = 'Ooops!  Your upload triggered the following error:  '.$_FILES['file']['error'];
+	            }
+       		}
+		
+	}	
+
+
+
+
+
 
 }

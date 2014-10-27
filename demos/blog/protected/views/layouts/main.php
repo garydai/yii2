@@ -157,7 +157,7 @@
 
     		    <li><a href="/area/index">地区管理</a></li>
      		   <li><a href="/port/index">港口管理</a></li>
-
+			<li><a href="/diary/index">游记管理</a></li>
 
             </ul>
         </div>
