@@ -116,14 +116,14 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <a class="navbar-brand" href="/post/index">后台管理系统</a>
     </div>
 
+    <div class="nav navbar-nav navbar-right">
+		 <li><a href="/Admin/adminuser/logout">登出</a></li>
+    </div>
+
+  </div>
 </nav>
 
 <!--
