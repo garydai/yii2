@@ -12959,3 +12959,87 @@ Stack trace:
 REQUEST_URI=/assets/images/f899139df5e1059396431415e770c6dd.jpg
 HTTP_REFERER=http://121.199.53.139:8080/schedule/content/schedule_id/35
 ---
+2014/10/27 15:29:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---
+2014/10/27 15:30:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---
+2014/10/27 15:33:04 [error] [php] Undefined index: data (/home/admin/nginx/html/yii2/demos/blog/protected/controllers/ScheduleController.php:215)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(286): ScheduleController->runAction()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(265): ScheduleController->runActionWithFilters()
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): ScheduleController->run()
+#3 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/schedule/save_content
+2014/10/27 15:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/27 15:33:28 [error] [php] Undefined index: data (/home/admin/nginx/html/yii2/demos/blog/protected/controllers/ScheduleController.php:215)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(286): ScheduleController->runAction()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(265): ScheduleController->runActionWithFilters()
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): ScheduleController->run()
+#3 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/schedule/save_content
+2014/10/27 15:35:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/27 15:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/27 15:45:01 [error] [php] Undefined variable: route_id (/home/admin/nginx/html/yii2/demos/blog/protected/controllers/ScheduleController.php:217)
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CController.php(286): ScheduleController->runAction()
+#1 /home/admin/nginx/html/yii2/framework/web/CController.php(265): ScheduleController->runActionWithFilters()
+#2 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(282): ScheduleController->run()
+#3 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CWebApplication->run()
+REQUEST_URI=/schedule/save_content
+2014/10/27 15:51:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+HTTP_REFERER=http://121.199.53.139/
+---
+2014/10/27 16:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manager/html".' in /home/admin/nginx/html/yii2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/admin/nginx/html/yii2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/html')
+#1 /home/admin/nginx/html/yii2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/admin/nginx/html/yii2/demos/blog/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/html
+---

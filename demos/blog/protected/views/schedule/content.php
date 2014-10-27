@@ -18,7 +18,7 @@ $this->breadcrumbs=array(
   <div class="panel-heading">行程</div>
   <!-- Table -->
 
-  <button type=button  class="btn btn-success" onclick="save()">保存</button>
+  <button type=button  class="btn btn-success" onclick="save(<?php echo $schedule->id ?>)">保存</button>
  </button>
 
 
@@ -66,7 +66,7 @@ $('#summernote').summernote({
                 contentType: false,
                 processData: false,
                 success: function(url) {
-			alert(url);	
+		//	alert(url);	
                     editor.insertImage(welEditable, url);
                 }
             });
@@ -75,13 +75,29 @@ $('#summernote').summernote({
 
 
 
-var save = function() {
+var save = function(id) {
   var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
+	
+	    $.ajax({
+		dataType: "json",
 
-	alert(aHTML);
-	document.write(aHTML);
-  $('.summernote').destroy();
+		 data:{
+			"id":id,
+                        "html":aHTML
+		},
+                type: "post",
+                url: "/schedule/save_content",
+                success: function(content) {
+                      alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+
+
+
+//  $('.summernote').destroy();
 };
 
 

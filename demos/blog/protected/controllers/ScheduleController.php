@@ -208,6 +208,17 @@ class ScheduleController extends AdminController
 		
 	}	
 
+	public function actionSave_content()
+	{
+		
+		$schedule_id =  intval($_POST['id']) ? intval($_POST['id']) : '';
+                if(!$schedule_id) exit();
+
+		Schedule::model()->updateByPk($schedule_id, array('content'=>$_POST['html']));
+
+	
+		echo CJSON::encode(array('title'=>$_POST['html']));
+	}
 
 
 

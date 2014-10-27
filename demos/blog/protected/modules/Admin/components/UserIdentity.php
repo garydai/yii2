@@ -28,19 +28,11 @@ class UserIdentity extends CUserIdentity
 		}
 		else
 		{
-			echo Yii::app()->admin->isGuest;
-
-			echo 'id='.Yii::app()->admin->getId();
 			$this->setState('id', $user->id);
 			$this->_id=$user->id;
-			echo '-';
-			echo Yii::app()->admin->isGuest;
 
-echo 'id='.Yii::app()->admin->getId();
-			echo '-';
 			$this->username=$user->username;
 			$this->errorCode=self::ERROR_NONE;
-			echo Yii::app()->admin->name;
 		}
 		return $this->errorCode==self::ERROR_NONE;
 	}
@@ -50,7 +42,6 @@ echo 'id='.Yii::app()->admin->getId();
 	 */
 	public function getId()
 	{
-		echo 'a11111111'.$this->_id;
 		return $this->_id;
 	}
 }

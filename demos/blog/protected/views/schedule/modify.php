@@ -46,13 +46,8 @@ $this->breadcrumbs=array(
                         <td align="center"> <input type="text" name="title" id="title"  value=<?php echo $schedule[$i]->title ?> ></td>
 
 
+				<td align="center"> <a href='<?php echo "/schedule/content/schedule_id/".$schedule[$i]->id?>'>详细信息</a> </td>
 
-                        <td>
-
- 				<textarea style="margin: 0px; width: 600px; height: 100px;" name="description" id="description"><?php echo $schedule[$i]->content ?></textarea>
-			</td>
-
-				
 
                         <td align="center" name="eat" ><input  type="text" value=<?php echo $schedule[$i]->eat?>>
                         </td>

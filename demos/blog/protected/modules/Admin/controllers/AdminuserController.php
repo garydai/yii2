@@ -18,9 +18,6 @@ class AdminuserController extends Controller
             if($r = $model->validate())
             {
 		
-		echo 'aftervalidate'. Yii::app()->admin->isGuest;
-
-		var_dump(Yii::app()->admin);	
 		 $this->redirect('/');
                 // form inputs are valid, do something here
                // $this->actionIndex();//若登陆成功则显示首页
