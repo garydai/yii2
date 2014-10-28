@@ -97,7 +97,7 @@
                         </td>
                         
                          <td align="center"> 
-                            <a href= <?php if($route[$i]->schedule != NULL) echo "/schedule/index/route_id/".$route[$i]->id; else echo "/schedule/modify/route_id/".$route[$i]->id ?>><?php if($route[$i]->schedule != NULL) echo "详情"; else echo "添加行程"; ?></a>
+                            <a href= <?php if($route[$i]->schedule != NULL) echo "/schedule/index/route_id/".$route[$i]->id; else echo "/schedule/add/route_id/".$route[$i]->id ?>><?php if($route[$i]->schedule != NULL) echo "详情"; else echo "添加行程"; ?></a>
                         </td>
                         <td align="center"><a href="/route/modify/routeId/<?php echo $route[$i]->id;?>"><span class="glyphicon glyphicon-pencil"</span></a>&nbsp;&nbsp; <a href="/route/remove/routeId/<?php echo $route[$i]->id;?>"><span class="glyphicon glyphicon-trash"</span></a></td>       
                       </tr>

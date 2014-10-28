@@ -69,34 +69,73 @@ class ScheduleController extends AdminController
         public function actionModify()
         {
 
-               $route_id =  intval($_GET['route_id']) ? intval($_GET['route_id']) : '';
-                if(!$route_id) exit();
+                $schedule_id =  intval($_GET['schedule_id']) ? intval($_GET['schedule_id']) : '';
+                if(!$schedule_id) exit();
 
-                $route = Route::model()->find('id=:id', array(':id'=>$route_id));
-                if(!$route_id) exit();
-                $scheduleId = $route->schedule;
+                $schedule = Schedule::model()->find('id=:id', array(':id'=>$schedule_id));
 
-		if($scheduleId != NULL)
-		{
-                	$arr = explode(',', $scheduleId);
-                	$str = str_replace(',', ' or id = ', $scheduleId);
-                //echo $str;
-                	$criteria = new CDbCriteria; // 创建CDbCriteria对象
-                	$criteria->condition = 'id = ' .$str; // 设置查询条件
-        //      echo $criteria->condition;
-                	$schedule = Schedule::model()->findAll($criteria);
+		$this->render('modify', array('schedule'=>$schedule));
 
-                	$this->render('modify', array('schedule'=>$schedule, 'route_id'=>$route->id));
-		}
-		else
-		{
-			$this->render('modify', array('schedule'=>NULL, 'route_id'=>$route->id));
-		}
+
+        
+	}
+
+
+
+
+        public function actionAdd()
+        {
+
+		$route_id = $_GET['route_id'];
+                $this->render('add', array('route_id'=>$route_id));
+
+
 
         }
 
 
 
+
+        public function actionAdd_schedule()
+        {
+
+
+		$schedule = new Schedule;
+		$schedule->title = $_POST['title'];
+		$schedule->content = $_POST['content'];
+		$schedule->day = $_POST['day'];
+		$schedule->eat = $_POST['eat'];
+		$schedule->live = $_POST['live'];
+
+		$schedule->save();
+
+		
+		$route_id = $_POST['route_id'];
+
+		$route = Route::model()->findByPk($route_id);
+		
+		$s = $route->schedule;
+		if($s == '' || $s == NULL)
+			$s = $schedule->id;
+		else
+			$s.=','.$schedule->id;
+
+		Route::model()->updateByPk($route_id, array('schedule'=>$s));
+
+		echo 1;
+
+
+        }
+
+
+
+	public function actionSave_schedule()
+	{
+		
+		 Schedule::model()->updateByPk($_POST['id'], array('title'=>$_POST['title'], 'title'=>$_POST['title'], 'content'=>$_POST['content'], 'day'=>$_POST['day'], 'eat'=>$_POST['eat'], 'live'=>$_POST['live']));
+                echo 1;
+
+	}
         public function actionSaveInfo()
         {
 
@@ -214,7 +253,7 @@ class ScheduleController extends AdminController
 		$schedule_id =  intval($_POST['id']) ? intval($_POST['id']) : '';
                 if(!$schedule_id) exit();
 
-		Schedule::model()->updateByPk($schedule_id, array('content'=>$_POST['html']));
+		Schedule::model()->updateByPk($schedule_id, array('content'=>$_POST['html'], 'title'=>$_POST['title']));
 
 	
 		echo CJSON::encode(array('title'=>$_POST['html']));

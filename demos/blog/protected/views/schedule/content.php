@@ -16,7 +16,40 @@ $this->breadcrumbs=array(
 
 
 
-<div class="summernote" id="summernote"><?php echo $schedule->content?></div>
+
+  <table class="table" id="schedule">
+
+
+          <tr>
+             <td >行程关键字</td>
+          </tr>
+
+
+          <tr >
+		 <td> <input type="text" style="width:400px"name="title" id="title"  value=<?php echo $schedule->title ?> > </td>
+
+          </tr>
+
+
+
+
+        <tr>
+                <td>行程内容</td>
+        </tr>
+
+        <tr>
+                <td>
+
+		<div class="summernote" id="summernote"><?php echo $schedule->content?></div>
+                </td>
+        </tr>
+
+
+
+          </table>
+
+
+
 
 
 </div>
@@ -70,13 +103,16 @@ $('#summernote').summernote({
 var save = function(id) {
   var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
+
+ var title = document.getElementById("title").value;
 	
 	    $.ajax({
 		dataType: "json",
 
 		 data:{
 			"id":id,
-                        "html":aHTML
+                        "html":aHTML,
+			"title":title
 		},
                 type: "post",
                 url: "/schedule/save_content",

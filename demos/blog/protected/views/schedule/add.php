@@ -2,7 +2,7 @@
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">修改行程安排</div>
+  <div class="panel-heading">新增行程安排</div>
 
    
   <!-- Table -->
@@ -17,7 +17,7 @@
 
           <tr >
 
-                <td> <input type="text" style="width:400px"name="title" id="day"  value=<?php echo $schedule->day ?> > </td>
+                <td> <input type="text" style="width:400px"name="title" id="day"   > </td>
 
 
         </tr>
@@ -31,7 +31,7 @@
 
           <tr >
 
-                <td> <input type="text" style="width:400px"name="title" id="eat"  value=<?php echo $schedule->eat ?> > </td>
+                <td> <input type="text" style="width:400px"name="title" id="eat"  > </td>
 
 
         </tr>
@@ -46,7 +46,7 @@
 
           <tr >
 
-                <td> <input type="text" style="width:400px"name="title" id="live"  value=<?php echo $schedule->live ?> > </td>
+                <td> <input type="text" style="width:400px"name="title" id="live"  > </td>
 
 
         </tr>
@@ -60,7 +60,7 @@
 
           <tr >
 
-                <td> <input type="text" style="width:400px"name="title" id="title"  value=<?php echo $schedule->title ?> > </td>
+                <td> <input type="text" style="width:400px"name="title" id="title"   > </td>
 
 
         </tr>
@@ -72,7 +72,7 @@
 
         <tr>
                 <td>
-                <div class="summernote" id="summernote"><?php echo $schedule->content?></div>
+                <div class="summernote" id="summernote"></div>
                 </td>
         </tr>
 
@@ -82,7 +82,7 @@
 
 
         <div>
-     <button class="btn btn-success " onclick="save(<?php echo $schedule->id ?>)">保存</button>
+     <button class="btn btn-success " onclick="save(<?php echo $route_id?>)">保存</button>
         </div>
 
 
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
 
 
-var save = function(id) {
+var save = function(route_id) {
   var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
   var title = document.getElementById("title").value;
@@ -153,7 +153,7 @@ var save = function(id) {
                 dataType: "json",
 
                  data:{
-                        "id":id,
+			"route_id":route_id,
                         "title":title,
 			"day":day,
 			"eat":eat,
@@ -161,7 +161,7 @@ var save = function(id) {
                         "content":aHTML
                 },
                 type: "post",
-                url: "/schedule/save_schedule",
+                url: "/schedule/add_schedule",
                 success: function() {
                       alert('success');
                   //  editor.insertImage(welEditable, url);
