@@ -36,7 +36,7 @@
 
 
 
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
 
 
@@ -175,6 +175,8 @@
     		    <li><a href="/area/index">地区管理</a></li>
      		   <li><a href="/port/index">港口管理</a></li>
 			<li><a href="/diary/index">游记管理</a></li>
+			<li><a href="/interest/index">景点管理</a></li>
+			<li><a href="/food/index">美食管理</a><li>	
 
             </ul>
         </div>
