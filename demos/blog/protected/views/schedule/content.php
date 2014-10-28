@@ -5,14 +5,6 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<link href="/summernote/summernote.css" rel="stylesheet">
-<script src="/summernote/summernote.min.js"></script>
-
-
-
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-
-
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">行程</div>
@@ -31,7 +23,7 @@ $this->breadcrumbs=array(
 
 
 
-<script>
+<script type="text/javascript">
 
 $(document).ready(function() {
 

@@ -52,13 +52,13 @@ class RouteController extends AdminController
 		{
 			$str = 'name like '.'"'.'%'.$keyword.'%'.'"';
 		}
-		if($boat != 0)
+		if($boat )
 		{
 			if($str != '')
 				$str.=' and ';
 			$str.=' boat ='.'"'.$boat.'"';
 		}
-		if($area != 0)
+		if($area )
 		{
 			if($str != '')
 				$str.=' and ';

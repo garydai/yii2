@@ -15,11 +15,28 @@
 		<link href="/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-<link href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="/css/gaga.css" rel="stylesheet">
+	<link href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/gaga.css" rel="stylesheet">
 
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+
+
+
+	<script type="text/javascript" src="/silviomoreto-bootstrap-select-83d5a1b/js/bootstrap-select.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" media="screen"  href="/bootstrap-datepicker-master/css/datepicker3.css">
+	<script type="text/javascript"  src="/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>
+
+
+	<link href="/summernote/summernote.css" rel="stylesheet">
+	<script src="/summernote/summernote.min.js"></script>
+
+
+
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
 
 

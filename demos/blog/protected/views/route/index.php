@@ -44,7 +44,7 @@
     
 
 
-                          <thead class="test">
+                          <thead >
                             <tr>
 				<td   align="center">航线ID</td>
 

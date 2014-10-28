@@ -6,16 +6,6 @@ $this->breadcrumbs=array(
 ?>
 
 
-<script type="text/javascript" src="/silviomoreto-bootstrap-select-83d5a1b/js/bootstrap-select.js"></script>
-
-
-<link rel="stylesheet" type="text/css" href="/css/bootstrap-select.min.css">
- <link rel="stylesheet" type="text/css" media="screen"  href="/bootstrap-datepicker-master/css/datepicker3.css">  
-   <script type="text/javascript"  src="/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>  
-
-
-
-
 
 
  <!--form class="form-horizontal" method="get" action="/route/saveInfo" -->
