@@ -1,5 +1,14 @@
 
 
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li><a href="/interest/index">景点管理</a></li>
+  <li class="active">新增景点</li>
+</ol>
+
+
+
+
 <div class="panel panel-primary">
   <!-- Default panel contents -->
   <div class="panel-heading">增加景点</div>

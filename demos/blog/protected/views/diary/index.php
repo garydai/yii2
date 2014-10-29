@@ -1,4 +1,14 @@
 
+
+
+
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li class="active">游记管理</li>
+</ol>
+
+
+
 <form method="post" id="search-form" class="form-inline text-right" action="/diary/search">
         <input type="text" name="keywords" class="form-control" value="" placeholder="输入邮轮名称关键字搜
 索"/>

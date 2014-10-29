@@ -1,4 +1,12 @@
 
+
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li class="active">美食管理</li>
+</ol>
+
+
+
 <form method="post" id="search-form" class="form-inline text-right" action="/food/search">
         <input type="text" name="keywords" class="form-control" value="" placeholder="输入美食标题关键字搜
 索"/>

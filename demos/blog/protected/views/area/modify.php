@@ -1,9 +1,8 @@
-<?php
-$this->pageTitle=Yii::app()->name ;
-$this->breadcrumbs=array(
-        '航线管理',
-);
-?>
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li><a href="/area/index">地区管理</a></li>
+  <li class="active">修改地区</li>
+</ol>
 
 
 <script type="text/javascript" src="/silviomoreto-bootstrap-select-83d5a1b/js/bootstrap-select.js"></script>

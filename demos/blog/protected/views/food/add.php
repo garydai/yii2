@@ -1,8 +1,15 @@
 
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li><a href="/food/index">美食管理</a></li>
+  <li class="active">新增美食</li>
+</ol>
+
+
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">增加美食</div>
+  <div class="panel-heading">新增美食</div>
 
    
 

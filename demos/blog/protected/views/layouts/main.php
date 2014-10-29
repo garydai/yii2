@@ -169,14 +169,15 @@
 
 
       		 <li><a href="/route/index">航线管理</a></li>
-   	     <li><a href="/company/index">邮轮公司管理</a></li>
+      	         <li><a href="/company/index">邮轮公司管理</a></li>
        		 <li><a href="/boat/index">邮轮管理</a></li>
 
-    		    <li><a href="/area/index">地区管理</a></li>
-     		   <li><a href="/port/index">港口管理</a></li>
-			<li><a href="/diary/index">游记管理</a></li>
-			<li><a href="/interest/index">景点管理</a></li>
-			<li><a href="/food/index">美食管理</a><li>	
+    		 <li><a href="/area/index">地区管理</a></li>
+     		 <li><a href="/port/index">港口管理</a></li>
+		 <li><a href="/diary/index">游记管理</a></li>
+		 <li><a href="/interest/index">景点管理</a></li>
+		 <li><a href="/food/index">美食管理</a><li>	
+		 <li><a href="/room/index">舱房管理</a><li>
 
             </ul>
         </div>

@@ -1,4 +1,11 @@
 
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li><a href="/diary/index">游记管理</a></li>
+  <li class="active">修改游记</li>
+</ol>
+
+
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->

@@ -1,4 +1,13 @@
 
+
+
+
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li class="active">景点管理</li>
+</ol>
+
+
 <form method="post" id="search-form" class="form-inline text-right" action="/diary/search">
         <input type="text" name="keywords" class="form-control" value="" placeholder="输入景点名称关键字搜
 索"/>

@@ -1,3 +1,7 @@
+<ol class="breadcrumb">
+  <li><a href="/post/index">首页</a></li>
+  <li class="active">邮轮公司管理</li>
+</ol>
 
 
 
