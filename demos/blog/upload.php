@@ -6,12 +6,12 @@
  * email:denghuien@mischair.com  
  * site:http://mischair.com  
  */ 
-	if (isset($_POST["PHPSESSID"])) {
-		session_id($_POST["PHPSESSID"]);
-	}
+//	if (isset($_POST["PHPSESSID"])) {
+//		session_id($_POST["PHPSESSID"]);
+//	}
 	session_start();
 
-	unset($_SESSION['upload_tem']);
+	//unset($_SESSION['upload_tem']);
 	ini_set("html_errors", "0");
 	if (!isset($_FILES["Filedata"]) || !is_uploaded_file($_FILES["Filedata"]["tmp_name"]) || $_FILES["Filedata"]["error"] != 0) {
 		echo "错误:无效的上传!";

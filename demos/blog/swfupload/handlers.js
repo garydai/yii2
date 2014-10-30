@@ -233,7 +233,9 @@ function addImage(src,progress)
 	img_container.removeChild(img_container.childNodes[0]);
 	var newImg = document.createElement("img");
 	newImg.className = 'mini-image-view';
-	var source = src;
+	alert(src);
+	var source = src.replace('thumb','images');
+	alert(source);
 	newImg.setAttribute('source',source);
 	img_container.appendChild(newImg);
 	if (newImg.filters) 

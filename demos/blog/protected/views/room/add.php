@@ -128,7 +128,7 @@ $(document).ready(function(e) {
 				
 	  <tr >
 	    <td><select class="selectpicker company" name="company" id="company">
-
+			<option>请选择所属邮轮公司</option>
                       <?php if($company){ ?>
                       <?php for($i =0 ;$i< count($company) ; $i++){?>
                         <option><?php echo $company[$i]->name ?> </option>
@@ -149,6 +149,7 @@ $(document).ready(function(e) {
 
           <tr >
             <td><select class="selectpicker boat" name="boat" id="boat">
+			 <option>请选择所属邮轮</option>
 
                       <?php if($boat){ ?>
                       <?php for($i =0 ;$i< count($boat) ; $i++){?>
@@ -169,25 +170,36 @@ $(document).ready(function(e) {
         </tr>
 
         <tr>
+
+
+
+                <td>
+                        <div class="fluid" id="divFileProgressContainer1">
+
+
+                        </div><!--  进度条容器  -->
+
+
+                        <br /><p style="" id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
+                        <p id="spanUpladErrorInfo1"></p>
+                </td>
+
+		
         </tr>
 
 		
 	<tr>
-		<td>美食内容</td>
+		<td>舱房介绍</td>
 	</tr>
 
 	<tr>
 
 
 		<td>
-                        <div class="fluid" id="divFileProgressContainer1">
-                                                               
-                        
-                        </div><!--  进度条容器  -->
-                        
-                        
-                        <br /><p style="" id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
-                        <p id="spanUpladErrorInfo1"></p>
+
+			<div class="summernote" id="summernote"></div>
+
+
                 </td>
 	</tr>
 
@@ -223,28 +235,40 @@ $(document).ready(function() {
 	});
 
 
-	        $('#summernote_room').summernote({
-                  height: 400,                 // set editor height
-
-		toolbar: [
-    //[groupname, [button list]]
-     
- 			   ['insert', ['picture']],
-			  ],
-
-                onImageUpload: function(files, editor, welEditable)
-                {
-                        sendFile(files[0], editor, welEditable);
-                }
-
-        });
-
-
-
 //  $('.summernote').destroy();
 
 
 });
+
+
+
+$("#company").on('change', function () 
+{
+
+
+	var company =  $('.company').val()
+	    $.ajax({
+                dataType: "json",
+
+                 data:{
+                        "company":company
+                },
+                type: "post",
+                url: "/room/select_boat",
+                success: function(option) {
+
+			 $("#boat").html(option['option']);
+		         $('.boat').selectpicker('refresh');
+
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+
+
+});
+
+
 
 
         function sendFile(file, editor, welEditable) {
@@ -259,7 +283,7 @@ $(document).ready(function() {
 
 
 
-                processData: false,
+                erocessData: false,
                 success: function(url) {
                 //      alert(url);
                     editor.insertImage(welEditable, url);
@@ -271,20 +295,28 @@ $(document).ready(function() {
 
 
 var save = function() {
-  var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
+	var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-  var port = $('.port').val();
-  var title = document.getElementById("title").value;
+	var company = $('.company').val();
+	var boat = $('.boat').val();
+
+	var thumb = $('.mini-image-view').attr("src");
+
+	var source = $('.mini-image-view').attr("source");
+	var style = document.getElementById("style").value;
 
             $.ajax({
                 dataType: "json",
 
                  data:{
-                        "title":title,
-			"port":port,
-                        "content":aHTML
+                        "style":style,
+			"company":company,
+			"boat":boat,
+                        "content":aHTML,
+			"thumb":thumb,
+			"source":source
                 },
-                type: "post",
+                type: "POST",
                 url: "/room/add_room",
                 success: function() {
                       alert('success');

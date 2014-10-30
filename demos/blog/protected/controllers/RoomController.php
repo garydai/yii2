@@ -44,7 +44,7 @@ class RoomController extends AdminController
 
 	//	header("Content-Type: text/html;charset=utf-8"); 
 		//$model = new Route;
-		$boat = Room::model()->findAll();
+		$boat = Boat::model()->findAll();
 		$room = Room::model()->findAll();
           //      $this->render('index',array('port'=>$port));
 		$this->render('index', array('room'=>$room, 'boat'=>$boat));
@@ -60,9 +60,10 @@ class RoomController extends AdminController
                 $room = Room::model()->find('id=:id', array(':id'=>$room_id));
                 if(!$room) exit();
 		
-		$port = Port::model()->findAll();
+		$company = Company::model()->findAll();
+		$boat = Boat::model()->findAll();
 		
-                $this->render('modify',array('port'=>$port, 'room'=>$room));
+                $this->render('modify',array('boat'=>$boat, 'room'=>$room, 'company'=>$company));
 
         }
 
@@ -79,7 +80,8 @@ class RoomController extends AdminController
 
         public function actionSave_room()
         {
-                Room::model()->updateByPk($_POST['id'], array('title'=>$_POST['title'], 'port'=>$_POST['port'], 'content'=>$_POST['content']));
+                Room::model()->updateByPk($_POST['id'], array('style'=>$_POST['style'], 'content'=>$_POST['content'], 
+			'company'=>$_POST['company'], 'source'=>$_POST['source'], 'thumb'=>$_POST['thumb'], 'boat'=>$_POST['boat']));
 		echo 1;
 
         }
@@ -88,13 +90,18 @@ class RoomController extends AdminController
 
         public function actionAdd_room()
         {
-//              echo 1;
 //                if(Yii::app()->request->isAjaxRequest)
                 {
+
+
                         $room = new Room;
-                        $room->title = $_POST['title'];
+                        $room->style = $_POST['style'];
                         $room->content = $_POST['content'];
-			$room->port = $_POST['port'];
+			$room->company = $_POST['company'];
+			$room->source = $_POST['source'];
+			$room->thumb = $_POST['thumb'];
+			$room->boat = $_POST['boat'];
+
                         $room->save();
 
 			//$this->redirect(Yii::app()->request->urlReferrer);
@@ -117,6 +124,32 @@ class RoomController extends AdminController
 
         }
 
+	public function actionSelect_boat()
+	{
+		
+		
+
+
+		$company =  $_POST['company'];
+		
+                if(!$company) exit();
+
+		$criteria = new CDbCriteria; // 创建CDbCriteria对象
+
+		$criteria->select='name';
+                $criteria->condition = 'company = "'.$company.'"'; // 设置查询条件
+                $model = Boat::model()->findAll($criteria);
+		$ret = '';
+		foreach($model as $value)
+		{
+			$ret .= '<option>'.$value->name.'</option>';
+		}
+
+		echo CJSON::encode(array('option'=>$ret));
+
+		
+
+	}
 
 
         public function actionSearch()
