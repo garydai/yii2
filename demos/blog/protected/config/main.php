@@ -60,7 +60,7 @@ return array(
             // enable cookie-based authentication
             'class'=>'AdminUsers',
             'stateKeyPrefix'=>'admin',//设置后台session前缀
-            'allowAutoLogin'=>false,
+            'allowAutoLogin'=>true,
            'loginUrl' =>array('/Admin/adminuser/login'),
         ),
 

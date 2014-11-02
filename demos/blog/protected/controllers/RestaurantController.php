@@ -98,10 +98,8 @@ class RoomController extends AdminController
                         $room->style = $_POST['style'];
                         $room->content = $_POST['content'];
 			$room->company = $_POST['company'];
-			if(isset($_POST['source']))
-				$room->source = $_POST['source'];
-			if(isset($_POST['thumb']))
-				$room->thumb = $_POST['thumb'];
+			$room->source = $_POST['source'];
+			$room->thumb = $_POST['thumb'];
 			$room->boat = $_POST['boat'];
 
                         $room->save();
@@ -126,24 +124,11 @@ class RoomController extends AdminController
 
         }
 
-        public function actionRemove_selected()
-        {
-
-
-		if($_GET['room_id'] != '')
-		{
-                	$room_id = explode(',', $_GET['room_id']);
-			var_dump($room_id);
-                	//$room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
-                	Room::model()->deleteByPk($room_id);
-
-                	//$this->redirect(Yii::app()->request->urlReferrer);
-		}
-        }
-
-
 	public function actionSelect_boat()
 	{
+		
+		
+
 
 		$company =  $_POST['company'];
 		
@@ -162,7 +147,10 @@ class RoomController extends AdminController
 
 		echo CJSON::encode(array('option'=>$ret));
 
+		
+
 	}
+
 
         public function actionSearch()
         {
@@ -198,55 +186,6 @@ class RoomController extends AdminController
         }
 
 
-	public function actionData()
-	{
-		var_dump($_POST);
-	}
-	public function actionGet_data()
-	{
-	//	var_dump($_POST);
-		$count = Room::model()->count();	
-		$criteria = new CDbCriteria;
-		if($_POST['searchPhrase'] !='')
-		{
-			$criteria->condition='style like '.'"%'.$_POST['searchPhrase'].'%" or  boat like '.'"%'.$_POST['searchPhrase'].'%" or company like '.'"%'.$_POST['searchPhrase'].'%"';
-		}
-		if(isset($_POST['sort']['id'] ))
-		{
-			
-			$criteria->order = " id  {$_POST['sort']['id']} ";
-		}
-		else if(isset($_POST['sort']['style']))
-		{			
-			 $criteria->order = "style {$_POST['sort']['style']} ";
-		}
-		else if(isset($_POST['sort']['boat']))
-		{
-
-			 $criteria->order = "boat {$_POST['sort']['boat']} ";
-		}
-		else if(isset($_POST['sort']['company']))
-		{
-
-			 $criteria->order = "company {$_POST['sort']['company']}' ";
-		}
-	//	var_dump($criteria);
-		//$criteria->condition= ;
-		$criteria->limit = $_POST['rowCount'];
-		$criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
 	
-		$model = Room::model()->findAll($criteria);
-	//	var_dump($model);
-		$arr = array();
-		foreach($model as $o)
-		{
-			$json = array('id'=>intval($o->id), 'style'=>$o->style, 'boat'=>$o->boat, 'company'=>$o->company);
-			array_push($arr, $json);
-		
-		}
-	//	var_dump( $arr);	
-		echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
-			
-	}	
 
 }

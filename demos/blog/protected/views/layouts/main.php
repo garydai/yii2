@@ -12,8 +12,7 @@
 
 
 
-		<link href="/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
-
+	<link href="/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<link href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/gaga.css" rel="stylesheet">
@@ -38,6 +37,10 @@
 
 	<link href="/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
+
+
+        <script type="text/javascript"  src="/jquery.bootgrid/jquery.bootgrid.min.js"></script>
+	<link href="/jquery.bootgrid/jquery.bootgrid.css" rel="stylesheet">
 
 
 
