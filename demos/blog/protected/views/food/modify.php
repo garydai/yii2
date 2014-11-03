@@ -1,3 +1,12 @@
+<script type="text/javascript" src="/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/swfupload/handlers.js"></script>
+<link href="/swfupload/swfupload.css" rel="stylesheet" type="text/css" />
+<style>
+.edui-default .edui-editor,.edui-default .edui-editor-toolbarboxouter{border-radius:0;}
+</style>
+
+<script type="text/javascript"  src="/js/gaga.js"></script>
+
 
 
 <ol class="breadcrumb">

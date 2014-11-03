@@ -109,13 +109,79 @@ class DiaryController extends AdminController
         {
                 $diary_id =  intval($_GET['diary_id']) ? intval($_GET['diary_id']) : '';
                 if(!$diary_id) exit();
-                $diary=Diary::model()->findByPk($diary_id); // assuming there is a post whose ID is 10
-                $diary->delete();
+		Diary::model()->deleteByPk($diary_id);
                 //$this->actionIndex();
 
-                $this->redirect(Yii::app()->request->urlReferrer);
+                //$this->redirect(Yii::app()->request->urlReferrer);
 
         }
+
+
+       public function actionRemove_selected()
+        {
+
+
+                if($_GET['diary_id'] != '')
+                {
+                        $diary_id = explode(',', $_GET['diary_id']);
+                        //$room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
+                        Diary::model()->deleteByPk($diary_id);
+
+                        //$this->redirect(Yii::app()->request->urlReferrer);
+                }
+        }
+
+
+
+        public function actionGet_data()
+        {
+        //      var_dump($_POST);
+                $count = Diary::model()->count();
+                $criteria = new CDbCriteria;
+                if($_POST['searchPhrase'] !='')
+                {
+                        $criteria->condition='title like '.'"%'.$_POST['searchPhrase'].'%" or  boat like '.'"%'.$_POST['searchPhrase'].'%" or company like '.'"%'.$_POST['searchPhrase'].'%"';
+                }
+                if(isset($_POST['sort']['id'] ))
+                {
+
+                        $criteria->order = " id  {$_POST['sort']['id']} ";
+                }
+                else if(isset($_POST['sort']['title']))
+                {
+                         $criteria->order = "style {$_POST['sort']['title']} ";
+                }
+                else if(isset($_POST['sort']['boat']))
+                {
+
+                         $criteria->order = "boat {$_POST['sort']['boat']} ";
+                }
+                else if(isset($_POST['sort']['company']))
+                {
+
+                         $criteria->order = "company {$_POST['sort']['company']}' ";
+                }
+        //      var_dump($criteria);
+                //$criteria->condition= ;
+                $criteria->limit = $_POST['rowCount'];
+                $criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
+
+                $model = Diary::model()->findAll($criteria);
+        //      var_dump($model);
+                $arr = array();
+                foreach($model as $o)
+                {
+                        $json = array('id'=>intval($o->id), 'title'=>$o->title, 'boat'=>$o->boat, 'company'=>$o->company);
+                        array_push($arr, $json);
+
+                }
+        //      var_dump( $arr);        
+                echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+        }
+
+
+
 
 
 

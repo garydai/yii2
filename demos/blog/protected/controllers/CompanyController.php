@@ -66,4 +66,43 @@ class CompanyController extends AdminController
 		$this->redirect(Yii::app()->request->urlReferrer);	
 	}	
 
+
+        public function actionGet_data()
+        {
+        //      var_dump($_POST);
+                $count = Company::model()->count();
+                $criteria = new CDbCriteria;
+                if($_POST['searchPhrase'] !='')
+                {
+                        $criteria->condition='name like '.'"%'.$_POST['searchPhrase'].'%" ';
+                }
+                if(isset($_POST['sort']['id'] ))
+                {
+
+                        $criteria->order = " id  {$_POST['sort']['id']} ";
+                }
+                else if(isset($_POST['sort']['company']))
+                {
+                         $criteria->order = "name {$_POST['sort']['company']} ";
+                }
+                $criteria->limit = $_POST['rowCount'];
+                $criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
+
+                $model = Company::model()->findAll($criteria);
+        //      var_dump($model);
+                $arr = array();
+                foreach($model as $o)
+                {
+                        $json = array('id'=>intval($o->id), 'company'=>$o->name);
+                        array_push($arr, $json);
+
+                }
+        //      var_dump( $arr);        
+                echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+        }
+
+
+
+
 }

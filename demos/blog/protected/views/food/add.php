@@ -1,4 +1,15 @@
 
+<script type="text/javascript" src="/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/swfupload/handlers.js"></script>
+<link href="/swfupload/swfupload.css" rel="stylesheet" type="text/css" />
+<style>
+.edui-default .edui-editor,.edui-default .edui-editor-toolbarboxouter{border-radius:0;}
+</style>
+
+<script type="text/javascript"  src="/js/gaga.js"></script>
+
+
+
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
   <li><a href="/food/index">美食管理</a></li>
@@ -19,10 +30,7 @@
 
           <tr>
              <td >相关港口</td>
-          </tr>
-			    
 				
-	  <tr >
 	    <td><select class="selectpicker port" name="port" id="port">
 
                       <?php if($port){ ?>
@@ -40,10 +48,6 @@
 
           <tr>
              <td >美食标题</td>
-          </tr>
-
-
-          <tr >
 
 		<td> <input type="text" style="width:400px"name="title" id="title"   > </td>
 
@@ -54,9 +58,6 @@
 		
 	<tr>
 		<td>美食内容</td>
-	</tr>
-
-	<tr>
 		<td>
 		<div class="summernote" id="summernote"></div>
 		</td>

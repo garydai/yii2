@@ -228,15 +228,103 @@ class RouteController extends AdminController
 
 	public function actionRemove()
 	{
-                $routeId =  intval($_GET['routeId']) ? intval($_GET['routeId']) : '';
+                $routeId =  intval($_GET['route_id']) ? intval($_GET['route_id']) : '';
                 if(!$routeId) exit();
-		$route=Route::model()->findByPk($routeId); // assuming there is a post whose ID is 10
-		$route->delete();
-		//$this->actionIndex();
-
-		$this->redirect(Yii::app()->request->urlReferrer);
+		Route::model()->deleteByPk($routeId);
 
 	}
+
+
+        public function actionRemove_selected()
+        {
+
+
+                if($_GET['route_id'] != '')
+                {
+                        $route_id = explode(',', $_GET['route_id']);
+                        var_dump($route_id);
+                        //$room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
+                        Route::model()->deleteByPk($route_id);
+
+                        //$this->redirect(Yii::app()->request->urlReferrer);
+                }
+        }
+
+        public function actionGet_data()
+        {
+        //      var_dump($_POST);
+                $count = Route::model()->count();
+                $criteria = new CDbCriteria;
+                if($_POST['searchPhrase'] !='')
+                {
+                        $criteria->condition='name like '.'"%'.$_POST['searchPhrase'].'%" or boat like '.'"%'.$_POST['searchPhrase'].'%" or port like '.'"%'.$_POST['searchPhrase'].'%"';
+		}
+                if(isset($_POST['sort']['id'] ))
+                {
+
+                        $criteria->order = " id  {$_POST['sort']['id']} ";
+                }
+                else if(isset($_POST['sort']['port']))
+                {
+                         $criteria->order = "port {$_POST['sort']['port']} ";
+                }
+                else if(isset($_POST['sort']['name']))
+                {
+                         $criteria->order = "name {$_POST['sort']['name']} ";
+                }
+
+                else if(isset($_POST['sort']['company']))
+                {
+                         $criteria->order = "company {$_POST['sort']['company']} ";
+                }
+                else if(isset($_POST['sort']['boat']))
+                {
+                         $criteria->order = "boat {$_POST['sort']['boat']} ";
+                }
+                else if(isset($_POST['sort']['start_time']))
+                {
+                         $criteria->order = "start_time {$_POST['sort']['start_time']} ";
+                }
+                else if(isset($_POST['sort']['price']))
+                {
+                         $criteria->order = "price {$_POST['sort']['price']} ";
+                }
+
+                $criteria->limit = $_POST['rowCount'];
+                $criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
+
+                $model = Route::model()->findAll($criteria);
+        //      var_dump($model);
+                $arr = array();
+                foreach($model as $o)
+                {
+			$price = '';
+			$schedule = '';
+			if($o->price_id == NUll)
+			{
+				$price = '<a href= "/price/add/routeId/'.$o->id.'">添加价格</a>';
+			
+			}
+			else
+			{
+				$price = '<a href="/price/index/priceId/'.$o->price_id.'">'.$o->price.'元起'.'</a>';
+			}
+			if($o->schedule != NULL)
+			{
+				$schedule = '<a href="/schedule/index/route_id/'.$o->id.'">详情</a>';
+			}
+			else
+			{
+				$schedule = '<a href="/schedule/add/route_id/'.$o->id.'">添加行程</a>';
+			}
+                        $json = array('id'=>intval($o->id), 'port'=>$o->port, 'name'=>$o->name, 'boat'=>$o->boat, 'start_time'=>$o->start_time, 'price'=>$price, 'schedule'=>$schedule, 'days'=>$o->days);
+                        array_push($arr, $json);
+
+                }
+        //      var_dump( $arr);        
+                echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+        }
 
 
 

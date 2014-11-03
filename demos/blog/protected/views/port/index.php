@@ -16,45 +16,109 @@
   <button type=button  class="btn btn-success"onclick="location.href =('/port/add')"> <span class="glyphicon glyphicon-plus"></span></button>
  </button>
 
-  <table class="table">
-    
 
 
-                          <thead class="thead-text">
-                            <tr>
-                               <td align="center">港口</td>
-                        
-                               <td align="center">港口介绍</td>
+        <table id="grid-selection" class="table table-condensed table-hover table-striped">
+                <thead>
+                 <tr>
+                        <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
+                        <th data-column-id="port">港口</th>
+                        <th data-column-id="commands"data-formatter="commands" data-sortable="false">操作</th>
+                </tr>
+                </thead>
+        </table>
 
-                               <td align="center">图片</td>
-                               <td align="center">操作</td>
-                            </tr>
-                          </thead>
 
-                  <tbody>
-
-                      		<?php if($port){ ?>
-                                <?php for($i =0 ;$i< count($port) ; $i++){?>
-
-                      <tr>
-                        <td align="center" id="name">
-                          <?php echo $port[$i]->name?>
-                        </td>
-                         <td align="center" id="description">
-                          <?php echo $port[$i]->description?>
-                        </td>
-
-                        <td align="center" id="image">
-                          <?php echo $port[$i]->image?>
-                        </td>
-                        <td align="center"><a href="/port/modify/portId/<?php echo $port[$i]->id;?>">修改</a>&nbsp; <a href="/port/remove/portId/<?php echo $port[$i]->id;?>">删除</a></td>       
-                      </tr>
-				<?php }?>
-				<?php }?>
-                 </tbody>
-
-  </table>
+        <div>
+        <button class="btn btn-success " onclick="remove1()">删除</button>
+        </div>
 </div>
+
+<script type="text/javascript">
+
+var rowIds = [];
+
+var grid = $("#grid-selection").bootgrid({
+    ajax: true,
+    post: function ()
+    {
+        /* To accumulate custom parameter with the request object */
+        return {
+        };
+    },
+
+    rowCount: [20,30,40],
+    url: "/port/get_data/",
+    selection: true,
+    multiSelect: true,
+    formatters: {
+         "commands": function(column, row)
+        {
+        
+            return "<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"" + row.id + "\"><span class=\"glyphicon glyphicon-pencil\"></span></button> " + 
+                "<button type=\"button\" class=\"btn btn-xs btn-default command-delete\" data-row-id=\"" + row.id + "\"><span class=\"glyphicon glyphicon-trash\"></span></button>";
+        }
+    }
+}).on("selected.rs.jquery.bootgrid", function(e, rows)
+{
+    for (var i = 0; i < rows.length; i++)
+    {
+        rowIds.push(rows[i].id);
+    }
+   // alert("Select: " + rowIds.join(","));
+}).on("deselected.rs.jquery.bootgrid", function(e, rows)
+{
+    for (var i = 0; i < rows.length; i++)
+    {
+        rowIds.push(rows[i].id);
+    }
+   // alert("Deselect: " + rowIds.join(","));
+}).on("loaded.rs.jquery.bootgrid", function()
+{
+    grid.find(".command-edit").on("click", function(e)
+    {
+
+         location.href = "/port/modify/port_id/" + $(this).data("row-id");
+
+//        alert("You pressed edit on row: " + $(this).data("row-id"));
+    }).end().find(".command-delete").on("click", function(e)
+    {
+        var rows = Array();
+        rows[0] = $(this).data("row-id");
+        $.ajax({
+                type: "get",
+                url: "/port/remove/port_id/" + rows[0],
+                success: function() {
+                      //alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+
+
+        $("#grid-selection").bootgrid('reload');
+    });
+});
+
+function remove1()
+{
+        //alert(1);
+        
+        //alert(rowIds.join(","));
+       $.ajax({
+                type: "get",
+                url: "/port/remove_selected/port_id/" + rowIds.join(","),
+                success: function() {
+                      //alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+        $("#grid-selection").bootgrid('reload');
+}
+
+</script>
+
 
 
 

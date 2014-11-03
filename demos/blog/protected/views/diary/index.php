@@ -1,30 +1,9 @@
 
-
-
-
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
   <li class="active">游记管理</li>
 </ol>
 
-
-
-<form method="post" id="search-form" class="form-inline text-right" action="/diary/search">
-        <input type="text" name="keywords" class="form-control" value="" placeholder="输入邮轮名称关键字搜
-索"/>
-        <select name="boat" class="w-auto form-control">
-            <option value="0">选择邮轮</option>
-
-                                <?php if($boat){ ?>
-                                <?php for($i =0 ;$i< count($boat) ; $i++){?>
-                                <option><?php echo $boat[$i]->name ?> </option>
-
-                                <?php }?>
-                                <?php }?>
-
-                    </select>
-        <input type="submit" resubmit="false" form-id="search-form" class="btn btn-success" value="搜索" />
-    </form>
 
 
 <div class="panel panel-primary">
@@ -34,48 +13,119 @@
 
 
   <button type=button  class="btn btn-success " onclick="location.href =('/diary/add')"> <span class="glyphicon glyphicon-plus"></span></button>
-  <table class="table">
 
 
 
-                          <thead >
-                            <tr>
-                               <td width="100px">游记id</td>
-                               <td align="center">游记标题</td>
-                               <td align="center">相关邮轮</td>
-                               <td align="center">操作</td>
-                            </tr>
-                          </thead>
 
 
+        <table id="grid-selection" class="table table-condensed table-hover table-striped">
+                <thead>
+                 <tr>
+                        <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
+                        <th data-column-id="title">游记标题</th>
+                        <th data-column-id="boat">相关邮轮</th>
+                        <th data-column-id="company">相关邮轮公司</th>
+                        <th data-column-id="commands"data-formatter="commands" data-sortable="false">操作</th>
+                </tr>
+                </thead>
+        </table>
 
-                  <tbody>
 
-                                <?php if($diary){ ?>
-                                <?php for($i =0 ;$i< count($diary) ; $i++){?>
-
-                      <tr>
-                        <td align="center" id="id">
-                                <?php echo $diary[$i]->id?>
-                        </td>
- 			
-                        <td align="center" id="title">
-                                <?php echo $diary[$i]->title?>
-                        </td>
-                        <td align="center" id="boat">
-                                <?php echo $diary[$i]->boat?>
-                        </td>
-			<td align="center"><a href="/diary/modify/diary_id/<?php echo $diary[$i]->id;?>"><span class="glyphicon glyphicon-pencil"</span></a>&nbsp;&nbsp; <a href="/diary/remove/diary_id/<?php echo $diary[$i]->id;?>"><span class="glyphicon glyphicon-trash"</span></a>
-			</td>
-
-			
-		      </tr>
-			 <?php }?>
-                         <?php }?>
-		</tbody>
-
+        <div>
+        <button class="btn btn-success " onclick="remove1()">删除</button>
+        </div>
  </table>
 </div>
+<script type="text/javascript">
+
+var rowIds = [];
+
+var grid = $("#grid-selection").bootgrid({
+    ajax: true,
+    post: function ()
+    {
+        /* To accumulate custom parameter with the request object */
+        return {
+        };
+    },
+
+    rowCount: [20,30,40],
+    url: "/diary/get_data/",
+    selection: true,
+    multiSelect: true,
+    formatters: {
+         "commands": function(column, row)
+        {
+        
+            return "<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"" + row.id + "\"><span class=\"glyphicon glyphicon-pencil\"></span></button> " + 
+                "<button type=\"button\" class=\"btn btn-xs btn-default command-delete\" data-row-id=\"" + row.id + "\"><span class=\"glyphicon glyphicon-trash\"></span></button>";
+        }
+    }
+}).on("selected.rs.jquery.bootgrid", function(e, rows)
+{
+    for (var i = 0; i < rows.length; i++)
+    {
+        rowIds.push(rows[i].id);
+    }
+   // alert("Select: " + rowIds.join(","));
+}).on("deselected.rs.jquery.bootgrid", function(e, rows)
+{
+    for (var i = 0; i < rows.length; i++)
+    {
+        rowIds.push(rows[i].id);
+    }
+   // alert("Deselect: " + rowIds.join(","));
+}).on("loaded.rs.jquery.bootgrid", function()
+{
+    grid.find(".command-edit").on("click", function(e)
+    {
+
+         location.href = "/diary/modify/diary_id/" + $(this).data("row-id");
+
+//        alert("You pressed edit on row: " + $(this).data("row-id"));
+    }).end().find(".command-delete").on("click", function(e)
+    {
 
 
 
+ 	rows = Array();
+        rows[0] = $(this).data("row-id");
+
+//      location.href = "/room/remove/room_id" + rows[0];
+        $.ajax({
+                type: "get",
+                url: "/diary/remove/modify_id/" + rows[0],
+                success: function() {
+                      //alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+
+
+        $("#grid-selection").bootgrid('reload');
+    });
+});
+
+function remove1()
+{
+        //alert(1);
+        
+        //alert(rowIds.join(","));
+       $.ajax({
+                type: "get",
+                url: "/diary/remove_selected/diary_id/" + rowIds.join(","),
+                success: function() {
+                      //alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+
+
+        $("#grid-selection").bootgrid('reload');
+
+        
+
+}
+</script>

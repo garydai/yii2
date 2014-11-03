@@ -52,7 +52,7 @@ class AreaController extends AdminController
 
         public function actionModify()
         {
-	        $areaId =  intval($_GET['areaId']) ? intval($_GET['areaId']) : '';
+	        $areaId =  intval($_GET['area_id']) ? intval($_GET['area_id']) : '';
                 if(!$areaId) exit();
 
                 $area = Area::model()->find('id=:id', array(':id'=>$areaId));
@@ -73,13 +73,29 @@ class AreaController extends AdminController
         {
                 $areaId =  intval($_GET['areaId']) ? intval($_GET['areaId']) : '';
                 if(!$areaId) exit();
-                $area=Area::model()->findByPk($areaId); // assuming there is a post whose ID is 10
-                $area->delete();
+                //$area=Area::model()->findByPk($areaId); // assuming there is a post whose ID is 10
+                //$area->delete();
                 //$this->actionIndex();
-
-                $this->redirect(Yii::app()->request->urlReferrer);
+		Area::model()->findByPk($areaId);
+                //$this->redirect(Yii::app()->request->urlReferrer);
 
         }
+
+
+	public function actionRemove_selected()
+        {
+
+
+                if($_GET['area_id'] != '')
+                {
+                        $area_id = explode(',', $_GET['area_id']);
+                        //$room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
+                        Area::model()->deleteByPk($area_id);
+
+                        //$this->redirect(Yii::app()->request->urlReferrer);
+                }
+        }
+
 
         public function actionAdd()
         {
@@ -106,8 +122,82 @@ class AreaController extends AdminController
                 }
 
         }
+        public function actionGet_data()
+        {
+        //      var_dump($_POST);
+                $count = Area::model()->count();
+                $criteria = new CDbCriteria;
+                if($_POST['searchPhrase'] !='')
+                {
+                        $criteria->condition='name like '.'"%'.$_POST['searchPhrase'].'%" ';
+                }
+                if(isset($_POST['sort']['id'] ))
+                {
+
+                        $criteria->order = " id  {$_POST['sort']['id']} ";
+                }
+                else if(isset($_POST['sort']['area']))
+                {
+                         $criteria->order = "name {$_POST['sort']['area']} ";
+                }
+                $criteria->limit = $_POST['rowCount'];
+                $criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
+
+                $model = Area::model()->findAll($criteria);
+        //      var_dump($model);
+                $arr = array();
+                foreach($model as $o)
+                {
+                        $json = array('id'=>intval($o->id), 'area'=>$o->name);
+                        array_push($arr, $json);
+
+                }
+        //      var_dump( $arr);        
+                echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+        }
+
+        public function actionAdd_area()
+        {
+//                if(Yii::app()->request->isAjaxRequest)
+                {
 
 
+                        $area = new Area;
+                        $area->name = $_POST['title'];
+                        $area->description = $_POST['content'];
+                        if(isset($_POST['source']))
+                                $area->source = $_POST['source'];
+                        if(isset($_POST['thumb']))
+                                $area->thumb = $_POST['thumb'];
+
+                        $area->save();
+
+                        echo 1;
+                }
+
+        }
+
+        public function actionSave_area()
+        {
+
+
+
+                $source = '';
+                $thumb = '';
+                if(isset($_POST['source']))
+                {
+                        $source = $_POST['source'];
+                }
+                if(isset($_POST['thumb']))
+                {
+                        $thumb = $_POST['thumb'];
+                }
+
+                Area::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'description'=>$_POST['content'], 'source'=>$source, 'thumb'=>$thumb));
+                echo 1;
+
+        }
 	
 	
 

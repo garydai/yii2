@@ -80,8 +80,20 @@ class RoomController extends AdminController
 
         public function actionSave_room()
         {
+
+
+		$source = '';
+		$thumb = '';
+		if(isset($_POST['source']))
+		{
+			$source = $_POST['source'];
+		}
+		if(isset($_POST['thumb']))
+		{
+			$thumb = $_POST['thumb'];
+		}
                 Room::model()->updateByPk($_POST['id'], array('style'=>$_POST['style'], 'content'=>$_POST['content'], 
-			'company'=>$_POST['company'], 'source'=>$_POST['source'], 'thumb'=>$_POST['thumb'], 'boat'=>$_POST['boat']));
+			'company'=>$_POST['company'], 'source'=>$source, 'thumb'=>$thumb, 'boat'=>$_POST['boat']));
 		echo 1;
 
         }
@@ -118,10 +130,7 @@ class RoomController extends AdminController
         {
                 $room_id =  intval($_GET['room_id']) ? intval($_GET['room_id']) : '';
                 if(!$room_id) exit();
-                $room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
-                $room->delete();
-                //$this->actionIndex();
-
+		$Room::model()->deleteByPk($room_id);
                 $this->redirect(Yii::app()->request->urlReferrer);
 
         }

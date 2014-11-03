@@ -19,10 +19,8 @@
 
           <tr>
              <td >相关邮轮</td>
-          </tr>
 			    
 				
-	  <tr >
 	    <td><select class="selectpicker boat" name="boat" id="boat">
 
                       <?php if($boat){ ?>
@@ -40,10 +38,8 @@
 
           <tr>
              <td >游记标题</td>
-          </tr>
 
 
-          <tr >
 
 		<td> <input type="text" style="width:400px"name="title" id="title"  value=<?php echo $diary->title ?> > </td>
 
@@ -54,9 +50,7 @@
 		
 	<tr>
 		<td>游记内容</td>
-	</tr>
 
-	<tr>
 		<td>
 		<div class="summernote" id="summernote"><?php echo $diary->content?></div>
 		</td>

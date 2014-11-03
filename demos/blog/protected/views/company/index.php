@@ -13,45 +13,108 @@
   <button type=button  class="btn btn-success" onclick="location.href =('/company/add')"> <span class="glyphicon glyphicon-plus"></span></button>
 
 
-  <table class="table">
-    
+
+        <table id="grid-selection" class="table table-condensed table-hover table-striped">
+                <thead>
+                 <tr>
+                        <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
+                        <th data-column-id="company">邮轮公司</th>
+                        <th data-column-id="commands"data-formatter="commands" data-sortable="false">操作</th>
+                </tr>
+                </thead>
+        </table>
 
 
-                          <thead>
-                            <tr>
-                               <td align="center">邮轮公司</td>
-                        
-                               <td align="center">公司介绍</td>
-
-                               <td align="center">图片</td>
-                               <td align="center">操作</td>
-                            </tr>
-                          </thead>
-
-                  <tbody>
-
-                      		<?php if($company){ ?>
-                                <?php for($i =0 ;$i< count($company) ; $i++){?>
-
-                      <tr>
-                        <td align="center" id="name">
-                          <?php echo $company[$i]->name?>
-                        </td>
-                         <td align="center" id="description">
-                          <?php echo $company[$i]->description?>
-                        </td>
-
-                        <td align="center" id="image">
-                          <?php echo $company[$i]->image?>
-                        </td>
-                        <td align="center"><a href="/company/modify/company_id/<?php echo $company[$i]->id;?>">修改</a>&nbsp; <a href="/company/remove/company_id/<?php echo $company[$i]->id;?>">删除</a></td>       
-                      </tr>
-				<?php }?>
-				<?php }?>
-                 </tbody>
-
-  </table>
+        <div>
+        <button class="btn btn-success " onclick="remove1()">删除</button>
+        </div>
 </div>
+
+
+<script type="text/javascript">
+
+var rowIds = [];
+
+var grid = $("#grid-selection").bootgrid({
+    ajax: true,
+    post: function ()
+    {
+        /* To accumulate custom parameter with the request object */
+        return {
+        };
+    },
+
+    rowCount: [20,30,40],
+    url: "/company/get_data/",
+    selection: true,
+    multiSelect: true,
+    formatters: {
+         "commands": function(column, row)
+        {
+        
+            return "<button type=\"button\" class=\"btn btn-xs btn-default command-edit\" data-row-id=\"" + row.id + "\"><span class=\"glyphicon glyphicon-pencil\"></span></button> " + 
+                "<button type=\"button\" class=\"btn btn-xs btn-default command-delete\" data-row-id=\"" + row.id + "\"><span class=\"glyphicon glyphicon-trash\"></span></button>";
+        }
+    }
+}).on("selected.rs.jquery.bootgrid", function(e, rows)
+{
+    for (var i = 0; i < rows.length; i++)
+    {
+        rowIds.push(rows[i].id);
+    }
+   // alert("Select: " + rowIds.join(","));
+}).on("deselected.rs.jquery.bootgrid", function(e, rows)
+{
+    for (var i = 0; i < rows.length; i++)
+    {
+        rowIds.push(rows[i].id);
+    }
+   // alert("Deselect: " + rowIds.join(","));
+}).on("loaded.rs.jquery.bootgrid", function()
+{
+    grid.find(".command-edit").on("click", function(e)
+    {
+
+         location.href = "/company/modify/company_id/" + $(this).data("row-id");
+
+//        alert("You pressed edit on row: " + $(this).data("row-id"));
+    }).end().find(".command-delete").on("click", function(e)
+    {
+        var rows = Array();
+        rows[0] = $(this).data("row-id");
+        $.ajax({
+                type: "get",
+                url: "/company/remove/company_id/" + rows[0],
+                success: function() {
+                      //alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+
+
+        $("#grid-selection").bootgrid('reload');
+    });
+});
+
+function remove1()
+{
+        //alert(1);
+        
+        //alert(rowIds.join(","));
+       $.ajax({
+                type: "get",
+                url: "/company/remove_selected/company_id/" + rowIds.join(","),
+                success: function() {
+                      //alert('success');
+                  //  editor.insertImage(welEditable, url);
+                }
+            });
+
+        $("#grid-selection").bootgrid('reload');
+}
+
+</script>
 
 
 
