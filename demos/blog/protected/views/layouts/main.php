@@ -181,7 +181,11 @@
 		 <li><a href="/food/index">美食管理</a><li>	
 		 <li><a href="/room/index">舱房管理</a><li>
 
-            </ul>
+                 <li><a href="/restaurant/index">餐厅管理</a><li>
+
+                 <li><a href="/entertainment/index">娱乐管理</a><li>
+
+    </ul>
         </div>
 
 

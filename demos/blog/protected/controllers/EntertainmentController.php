@@ -1,6 +1,6 @@
 <?php
 
-class RoomController extends AdminController
+class EntertainmentController extends AdminController
 {
 	public $layout='column1';
 
@@ -44,26 +44,25 @@ class RoomController extends AdminController
 
 	//	header("Content-Type: text/html;charset=utf-8"); 
 		//$model = new Route;
-		$boat = Boat::model()->findAll();
-		$room = Room::model()->findAll();
+		$entertainment = Entertainment::model()->findAll();
           //      $this->render('index',array('port'=>$port));
-		$this->render('index', array('room'=>$room, 'boat'=>$boat));
+		$this->render('index', array('entertainment'=>$entertainment ));
 	
         }
 	
 
         public function actionModify()
         {
-                $room_id =  intval($_GET['room_id']) ? intval($_GET['room_id']) : '';
-                if(!$room_id) exit();
+                $entertainment_id =  intval($_GET['entertainment_id']) ? intval($_GET['entertainment_id']) : '';
+                if(!$entertainment_id) exit();
 
-                $room = Room::model()->find('id=:id', array(':id'=>$room_id));
-                if(!$room) exit();
+                $entertainment = Entertainment::model()->find('id=:id', array(':id'=>$entertainment_id));
+                if(!$entertainment) exit();
 		
 		$company = Company::model()->findAll();
 		$boat = Boat::model()->findAll();
 		
-                $this->render('modify',array('boat'=>$boat, 'room'=>$room, 'company'=>$company));
+                $this->render('modify',array('boat'=>$boat, 'entertainment'=>$entertainment, 'company'=>$company));
 
         }
 
@@ -78,31 +77,45 @@ class RoomController extends AdminController
         }
 
 
-        public function actionSave_room()
+        public function actionSave_entertainment()
         {
-                Room::model()->updateByPk($_POST['id'], array('style'=>$_POST['style'], 'content'=>$_POST['content'], 
-			'company'=>$_POST['company'], 'source'=>$_POST['source'], 'thumb'=>$_POST['thumb'], 'boat'=>$_POST['boat']));
+
+
+		$source = '';
+		$thumb = '';
+		if(isset($_POST['source']))
+		{
+			$source = $_POST['source'];
+		}
+		if(isset($_POST['thumb']))
+		{
+			$thumb = $_POST['thumb'];
+		}
+                Entertainment::model()->updateByPk($_POST['id'], array('style'=>$_POST['style'], 'content'=>$_POST['content'], 
+			'company'=>$_POST['company'], 'source'=>$source, 'thumb'=>$thumb, 'boat'=>$_POST['boat']));
 		echo 1;
 
         }
 
 
 
-        public function actionAdd_room()
+        public function actionAdd_entertainment()
         {
 //                if(Yii::app()->request->isAjaxRequest)
                 {
 
 
-                        $room = new Room;
-                        $room->style = $_POST['style'];
-                        $room->content = $_POST['content'];
-			$room->company = $_POST['company'];
-			$room->source = $_POST['source'];
-			$room->thumb = $_POST['thumb'];
-			$room->boat = $_POST['boat'];
+                        $entertainment = new Entertainment;
+                        $entertainment->style = $_POST['style'];
+                        $entertainment->content = $_POST['content'];
+			$entertainment->company = $_POST['company'];
+			if(isset($_POST['source']))
+				$entertainment->source = $_POST['source'];
+			if(isset($_POST['thumb']))
+				$entertainment->thumb = $_POST['thumb'];
+			$entertainment->boat = $_POST['boat'];
 
-                        $room->save();
+                        $entertainment->save();
 
 			//$this->redirect(Yii::app()->request->urlReferrer);
 			echo 1;
@@ -114,21 +127,31 @@ class RoomController extends AdminController
 
         public function actionRemove()
         {
-                $room_id =  intval($_GET['room_id']) ? intval($_GET['room_id']) : '';
-                if(!$room_id) exit();
-                $room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
-                $room->delete();
-                //$this->actionIndex();
-
+                $entertainment_id =  intval($_GET['entertainment_id']) ? intval($_GET['entertainment_id']) : '';
+                if(!$entertainment_id) exit();
+		$Entertainment::model()->deleteByPk($entertainment_id);
                 $this->redirect(Yii::app()->request->urlReferrer);
 
         }
 
+        public function actionRemove_selected()
+        {
+
+
+		if($_GET['entertainment_id'] != '')
+		{
+                	$entertainment_id = explode(',', $_GET['entertainment_id']);
+			var_dump($entertainment_id);
+                	//$entertainment = Entertainment::model()->findByPk($entertainment_id); // assuming there is a post whose ID is 10
+                	Entertainment::model()->deleteByPk($entertainment_id);
+
+                	//$this->redirect(Yii::app()->request->urlReferrer);
+		}
+        }
+
+
 	public function actionSelect_boat()
 	{
-		
-		
-
 
 		$company =  $_POST['company'];
 		
@@ -147,10 +170,7 @@ class RoomController extends AdminController
 
 		echo CJSON::encode(array('option'=>$ret));
 
-		
-
 	}
-
 
         public function actionSearch()
         {
@@ -177,15 +197,64 @@ class RoomController extends AdminController
                 }
                 $criteria = new CDbCriteria; // 创建CDbCriteria对象
                 $criteria->condition = $str; // 设置查询条件
-                $model = Room::model()->findAll($criteria);
+                $model = Entertainment::model()->findAll($criteria);
 
                 $port  = Port::model()->findAll();
 
 
-                $this->render('index', array('room'=>$model, 'port'=>$port));
+                $this->render('index', array('entertainment'=>$model, 'port'=>$port));
         }
 
 
+	public function actionData()
+	{
+		var_dump($_POST);
+	}
+	public function actionGet_data()
+	{
+	//	var_dump($_POST);
+		$count = Entertainment::model()->count();	
+		$criteria = new CDbCriteria;
+		if($_POST['searchPhrase'] !='')
+		{
+			$criteria->condition='style like '.'"%'.$_POST['searchPhrase'].'%" or  boat like '.'"%'.$_POST['searchPhrase'].'%" or company like '.'"%'.$_POST['searchPhrase'].'%"';
+		}
+		if(isset($_POST['sort']['id'] ))
+		{
+			
+			$criteria->order = " id  {$_POST['sort']['id']} ";
+		}
+		else if(isset($_POST['sort']['style']))
+		{			
+			 $criteria->order = "style {$_POST['sort']['style']} ";
+		}
+		else if(isset($_POST['sort']['boat']))
+		{
+
+			 $criteria->order = "boat {$_POST['sort']['boat']} ";
+		}
+		else if(isset($_POST['sort']['company']))
+		{
+
+			 $criteria->order = "company {$_POST['sort']['company']}' ";
+		}
+	//	var_dump($criteria);
+		//$criteria->condition= ;
+		$criteria->limit = $_POST['rowCount'];
+		$criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
 	
+		$model = Entertainment::model()->findAll($criteria);
+	//	var_dump($model);
+		$arr = array();
+		foreach($model as $o)
+		{
+			$json = array('id'=>intval($o->id), 'style'=>$o->style, 'boat'=>$o->boat, 'company'=>$o->company);
+			array_push($arr, $json);
+		
+		}
+	//	var_dump( $arr);	
+		echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+			
+	}	
 
 }

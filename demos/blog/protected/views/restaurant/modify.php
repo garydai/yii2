@@ -10,15 +10,15 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li><a href="/room/index">舱房管理</a></li>
-  <li class="active">修改舱房</li>
+  <li><a href="/restaurant/index">餐厅管理</a></li>
+  <li class="active">修改餐厅</li>
 </ol>
 
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">修改舱房</div>
+  <div class="panel-heading">修改餐厅</div>
 
    
 
@@ -32,13 +32,9 @@
 
 
           <tr>
-             <td >舱房类型</td>
-          </tr>
+             <td >餐厅类型</td>
 
-
-          <tr >
-
-                <td> <input type="text" style="width:400px"name="style" id="style" value=<?php echo $room->style ?> ></td>
+                <td> <input type="text" style="width:400px"name="style" id="style" value=<?php echo $restaurant->style ?> ></td>
 
 
         </tr>
@@ -48,15 +44,11 @@
 	
           <tr>
              <td >相关邮轮公司</td>
-          </tr>
-			    
-				
-	  <tr >
 	    <td><select class="selectpicker company" name="company" id="company">
 			<option>请选择所属邮轮公司</option>
                       <?php if($company){ ?>
                       <?php for($i =0 ;$i< count($company) ; $i++){?>
-                        <option <?php if($company[$i]->name == $room->company) echo 'selected="selected"' ?>><?php echo $company[$i]->name ?> </option>
+                        <option <?php if($company[$i]->name == $restaurant->company) echo 'selected="selected"' ?>><?php echo $company[$i]->name ?> </option>
 
                       <?php }?>
                       <?php }?>
@@ -69,16 +61,12 @@
 
 	  <tr>
              <td >相关邮轮</td>
-          </tr>
-
-
-          <tr >
             <td><select class="selectpicker boat" name="boat" id="boat">
 			 <option>请选择所属邮轮</option>
 
                       <?php if($boat){ ?>
                       <?php for($i =0 ;$i< count($boat) ; $i++){?>
-                        <option <?php if($boat[$i]->name == $room->boat) echo 'selected="selected"' ?> ><?php echo $boat[$i]->name ?> </option>
+                        <option <?php if($boat[$i]->name == $restaurant->boat) echo 'selected="selected"' ?> ><?php echo $boat[$i]->name ?> </option>
 
                       <?php }?>
                       <?php }?>
@@ -91,10 +79,7 @@
 
 
         <tr>
-                <td>舱房图片</td>
-        </tr>
-
-        <tr>
+                <td>餐厅图片</td>
 
 
 
@@ -103,10 +88,10 @@
 
 
 
-			<?php if($room->thumb){ ?>
+			<?php if($restaurant->thumb){ ?>
 			<div class="row-fluid upload-thumb-box" id="old_thumb_34">
                                 <div class="span3">
-                                                <img src=<?php if($room->thumb) echo $room->thumb; ?> source=<?php if($room->source) echo $room->source;  ?> style="height: 80px;" class="mini-image-view">
+                                                <img src=<?php if($restaurant->thumb) echo $restaurant->thumb; ?> source=<?php if($restaurant->source) echo $restaurant->source;  ?> style="height: 80px;" class="mini-image-view">
                                 </div>
                                 <div class="span8">
                                     <p>
@@ -128,15 +113,12 @@
 
 		
 	<tr>
-		<td>舱房介绍</td>
-	</tr>
-
-	<tr>
+		<td>餐厅介绍</td>
 
 
 		<td>
 
-			<div class="summernote" id="summernote"><?php echo $room->content?></div>
+			<div class="summernote" id="summernote"><?php echo $restaurant->content?></div>
 
 
                 </td>
@@ -148,7 +130,7 @@
 
 
 	<div>
-     <button class="btn btn-success " onclick="save(<?php echo $room->id ?>)">保存</button>
+     <button class="btn btn-success " onclick="save(<?php echo $restaurant->id ?>)">保存</button>
 	</div>
 
 </div>
@@ -193,7 +175,7 @@ $("#company").on('change', function ()
                         "company":company
                 },
                 type: "post",
-                url: "/room/select_boat",
+                url: "/restaurant/select_boat",
                 success: function(option) {
 
 			 $("#boat").html(option['option']);
@@ -257,7 +239,7 @@ var save = function(id) {
 			"source":source
                 },
                 type: "POST",
-                url: "/room/save_room",
+                url: "/restaurant/save_restaurant",
                 success: function() {
                       alert('success');
                   //  editor.insertImage(welEditable, url);

@@ -44,10 +44,9 @@ class RoomController extends AdminController
 
 	//	header("Content-Type: text/html;charset=utf-8"); 
 		//$model = new Route;
-		$boat = Boat::model()->findAll();
 		$room = Room::model()->findAll();
           //      $this->render('index',array('port'=>$port));
-		$this->render('index', array('room'=>$room, 'boat'=>$boat));
+		$this->render('index', array('room'=>$room ));
 	
         }
 	

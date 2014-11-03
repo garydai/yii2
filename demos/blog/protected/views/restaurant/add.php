@@ -10,15 +10,15 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li><a href="/room/index">舱房管理</a></li>
-  <li class="active">新增舱房</li>
+  <li><a href="/restaurant/index">餐厅管理</a></li>
+  <li class="active">新增餐厅</li>
 </ol>
 
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">新增舱房</div>
+  <div class="panel-heading">新增餐厅</div>
 
    
 
@@ -32,26 +32,17 @@
 
 
           <tr>
-             <td >舱房类型</td>
-          </tr>
-
-
-          <tr >
+             <td >餐厅类型</td>
 
                 <td> <input type="text" style="width:400px"name="style" id="style" > </td>
 
 
         </tr>
 
-
-
 	
           <tr>
              <td >相关邮轮公司</td>
-          </tr>
-			    
 				
-	  <tr >
 	    <td><select class="selectpicker company" name="company" id="company">
 			<option>请选择所属邮轮公司</option>
                       <?php if($company){ ?>
@@ -69,10 +60,6 @@
 
 	  <tr>
              <td >相关邮轮</td>
-          </tr>
-
-
-          <tr >
             <td><select class="selectpicker boat" name="boat" id="boat">
 			 <option>请选择所属邮轮</option>
 
@@ -91,12 +78,7 @@
 
 
         <tr>
-                <td>舱房图片</td>
-        </tr>
-
-        <tr>
-
-
+                <td>餐厅图片</td>
 
                 <td>
                         <div class="fluid" id="divFileProgressContainer1">
@@ -114,11 +96,7 @@
 
 		
 	<tr>
-		<td>舱房介绍</td>
-	</tr>
-
-	<tr>
-
+		<td>餐厅介绍</td>
 
 		<td>
 
@@ -179,7 +157,7 @@ $("#company").on('change', function ()
                         "company":company
                 },
                 type: "post",
-                url: "/room/select_boat",
+                url: "/restaurant/select_boat",
                 success: function(option) {
 
 			 $("#boat").html(option['option']);
@@ -242,7 +220,7 @@ var save = function() {
 			"source":source
                 },
                 type: "POST",
-                url: "/room/add_room",
+                url: "/restaurant/add_restaurant",
                 success: function() {
                       alert('success');
                   //  editor.insertImage(welEditable, url);

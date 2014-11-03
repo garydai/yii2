@@ -12,7 +12,7 @@
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
   <li><a href="/company/index">邮轮公司管理</a></li>
-  <li class="active">新增邮轮公司信息</li>
+  <li class="active">修改邮轮公司信息</li>
 </ol>
 
 
@@ -26,7 +26,7 @@
                 <tr>
                 <td>邮轮公司名称</td>
 
-                        <td> <input type="text" name="title" id="title"  >
+                        <td> <input type="text" name="title" id="title"  value=<?php echo $company->name ?> >
 </td>
                 </tr>
 
@@ -38,6 +38,20 @@
                         <div class="fluid" id="divFileProgressContainer1">
 
 
+
+                        <?php if($company->thumb){ ?>
+                        <div class="row-fluid upload-thumb-box" id="old_thumb_34">
+                                <div class="span3">
+                                                <img src=<?php if($company->thumb) echo $company->thumb; ?> source=<?php if($company->source) echo $company->source;  ?> style="height: 80px;" class="mini-image-view">
+                                </div>
+                                <div class="span8">
+                                    <p>
+                                        <i title="删除" class="btn btn-danger hand deleteBtn J_thumb_delete" elm-id="old_thumb_34">删除</i>
+                                    </p>
+                                </div>
+                            </div>
+
+                        <?php } ?>
                         </div><!--  进度条容器  -->
 
 
@@ -58,7 +72,7 @@
 
 	                <td>
 
-                        <div class="summernote" id="summernote"></div>
+                        <div class="summernote" id="summernote"><?php echo $company->description?></div>
 
         	        </td>
 
@@ -68,7 +82,7 @@
 
 	 <div>
 
-		<button class="btn btn-primary" onclick="save()"  > 保存</button>
+		<button class="btn btn-primary" onclick="save(<?php echo $company->id ?>)"  > 保存</button>
         </div>
 
 </div>
@@ -130,13 +144,14 @@ var save = function(id) {
                 dataType: "json",
 
                  data:{
+                        "id":id,
                         "title":title,
                         "content":aHTML,
                         "thumb":thumb,
                         "source":source
                 },
                 type: "POST",
-                url: "/company/add_company",
+                url: "/company/save_company",
                 success: function() {
                       alert('success');
                 }

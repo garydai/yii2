@@ -103,6 +103,61 @@ class CompanyController extends AdminController
         }
 
 
+        public function actionModify()
+        {
+                $company_id =  intval($_GET['company_id']) ? intval($_GET['company_id']) : '';
+                if(!$company_id) exit();
+
+                $company = Company::model()->find('id=:id', array(':id'=>$company_id));
+                if(!$company) exit();
+
+                $this->render('modify',array('company'=>$company));
+
+        }
+
+
+        public function actionSave_company()
+        {
+
+                $source = '';
+                $thumb = '';
+                if(isset($_POST['source']))
+                {
+                        $source = $_POST['source'];
+                }
+                if(isset($_POST['thumb']))
+                {
+                        $thumb = $_POST['thumb'];
+                }
+
+                Company::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'description'=>$_POST['content'], 'source'=>$source, 'thumb'=>$thumb));
+                echo 1;
+
+        }
+
+
+
+        public function actionAdd_company()
+        {
+//                if(Yii::app()->request->isAjaxRequest)
+                {
+
+
+                        $company = new Company;
+                        $company->name = $_POST['title'];
+                        $company->description = $_POST['content'];
+                        if(isset($_POST['source']))
+                                $company->source = $_POST['source'];
+                        if(isset($_POST['thumb']))
+                                $company->thumb = $_POST['thumb'];
+
+                        $company->save();
+
+                        echo 1;
+                }
+
+        }
+
 
 
 }
