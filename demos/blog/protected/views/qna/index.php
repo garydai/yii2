@@ -1,52 +1,38 @@
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li class="active">邮轮管理</li>
+  <li class="active">问答管理</li>
 </ol>
 
 
-<style type="text/css">
-
-.bootgrid-table th > .test11 {
 
 
-	width: 50px;
-}
-	
--->
-
-</style>
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
- <div class="panel-heading">航线信息</div>
+  <div class="panel-heading">问答</div>
   <!-- Table -->
 
+  <button type=button  class="btn btn-success"onclick="location.href =('/qna/add')"> <span class="glyphicon glyphicon-plus"></span></button>
+ </button>
 
-  <button type=button  class="btn btn-success " onclick="location.href =('/route/add')"> <span class="glyphicon glyphicon-plus"></span></button>
 
 
         <table id="grid-selection" class="table table-condensed table-hover table-striped">
                 <thead>
                  <tr>
-                        <th headerCssClass="test11" data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
-                        <th data-column-id="name">航线名称</th>
-                        <th data-column-id="boat">邮轮</th>
-                        <th data-column-id="port">路过港口</th>
-			<th data-column-id="style">航线类型</th>
-                        <th data-column-id="start_time">出发时间</th>
-                        <th data-column-id="days">行程天数</th>
-                        <th data-column-id="price">价格</th>
-                        <th data-column-id="schedule">行程安排</th>
-
+                        <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
+                        <th data-column-id="title">标题</th>
                         <th data-column-id="commands"data-formatter="commands" data-sortable="false">操作</th>
                 </tr>
                 </thead>
         </table>
 
 
+        <div>
+        <button class="btn btn-success " onclick="remove1()">删除</button>
+        </div>
 </div>
-
 
 <script type="text/javascript">
 
@@ -62,7 +48,7 @@ var grid = $("#grid-selection").bootgrid({
     },
 
     rowCount: [20,30,40],
-    url: "/route/get_data/",
+    url: "/qna/get_data/",
     selection: true,
     multiSelect: true,
     formatters: {
@@ -92,7 +78,7 @@ var grid = $("#grid-selection").bootgrid({
     grid.find(".command-edit").on("click", function(e)
     {
 
-         location.href = "/route/modify/route_id/" + $(this).data("row-id");
+         location.href = "/qna/modify/qna_id/" + $(this).data("row-id");
 
 //        alert("You pressed edit on row: " + $(this).data("row-id"));
     }).end().find(".command-delete").on("click", function(e)
@@ -101,7 +87,7 @@ var grid = $("#grid-selection").bootgrid({
         rows[0] = $(this).data("row-id");
         $.ajax({
                 type: "get",
-                url: "/route/remove/route_id/" + rows[0],
+                url: "/qna/remove/qna_id/" + rows[0],
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);
@@ -121,7 +107,7 @@ function remove1()
         //alert(rowIds.join(","));
        $.ajax({
                 type: "get",
-                url: "/route/remove_selected/route_id/" + rowIds.join(","),
+                url: "/qna/remove_selected/qna_id/" + rowIds.join(","),
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);

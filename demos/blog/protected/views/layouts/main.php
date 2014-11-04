@@ -14,7 +14,7 @@
 
 	<link href="/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<link href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<!--link href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet"-->
 	<link href="/css/gaga.css" rel="stylesheet">
 
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -35,7 +35,7 @@
 
 
 
-	<link href="/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 
@@ -184,7 +184,8 @@
                  <li><a href="/restaurant/index">餐厅管理</a><li>
 
                  <li><a href="/entertainment/index">娱乐管理</a><li>
-
+	
+		<li><a href="/qna/index">问答管理</a><li>
     </ul>
         </div>
 

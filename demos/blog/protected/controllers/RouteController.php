@@ -81,9 +81,9 @@ class RouteController extends AdminController
 
 	//	header("Content-Type: text/html;charset=utf-8"); 
 		//$model = new Route;
-		$route = Route::model()->findAll();
-		$boat  = Boat::model()->findAll();
-		$area  = Area::model()->findAll();
+		//$route = Route::model()->findAll();
+		//$boat  = Boat::model()->findAll();
+		//$area  = Area::model()->findAll();
 //		echo 1;
               //  $model=new ContactForm;
                // if(isset($_POST['ContactForm']))
@@ -97,7 +97,7 @@ class RouteController extends AdminController
                               //  $this->refresh();
                         //}
                 //}
-                $this->render('index',array('route'=>$route, 'boat'=>$boat, 'area'=>$area));
+                $this->render('index');
 
 	
         }
@@ -128,7 +128,7 @@ class RouteController extends AdminController
 	public function actionModify()
 	{
 
-                $routeId =  intval($_GET['routeId']) ? intval($_GET['routeId']) : '';
+                $routeId =  intval($_GET['route_id']) ? intval($_GET['route_id']) : '';
                 if(!$routeId) exit();
 
                 $route = Route::model()->find('id=:id', array(':id'=>$routeId));
@@ -147,10 +147,11 @@ class RouteController extends AdminController
 		
 		$area = Area::model()->findAll();
 
+		$company = Company::model()->findAll();
 	
 		$port = Port::model()->findAll();
 	
-                $this->render('modify',array('route'=>$route, 'days'=>$route->days, 'boat'=>$boat, 'area'=>$area, 'port'=>$port));
+                $this->render('modify',array('route'=>$route, 'days'=>$route->days, 'boat'=>$boat, 'area'=>$area, 'port'=>$port, 'company'=>$company));
 
 		
 	}
@@ -165,10 +166,12 @@ class RouteController extends AdminController
 
                 $area = Area::model()->findAll();
 
+		$company = Company::model()->findAll();
 
                 $port = Port::model()->findAll();
 
-                $this->render('add',array( 'boat'=>$boat, 'area'=>$area, 'port'=>$port));
+		
+                $this->render('add',array( 'boat'=>$boat, 'area'=>$area, 'port'=>$port, 'company'=>$company));
 
 
         }
@@ -197,13 +200,26 @@ class RouteController extends AdminController
 		if(Yii::app()->request->isAjaxRequest)
                 {
 
+
+
+                $source = '';
+                $thumb = '';
+                if(isset($_POST['source']))
+                {
+                        $source = $_POST['source'];
+                }
+                if(isset($_POST['thumb']))
+                {
+                        $thumb = $_POST['thumb'];
+                }
+
+
+
+
 		//echo $_POST['title'];
 		$count =Route::model()->updateByPk($_POST['id'],array('name'=>$_POST['title'],'area'=>$_POST['area'], 'port'=>$_POST['port'], 
-			'description'=>$_POST['description'], 'start_time'=>$_POST['date'] )); 
-//		if($count>0){ echo "success"; }else{ echo "fail"; }
-
-//		Route::model()->updateByPk(2,array('name'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));
-                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+			'description'=>$_POST['description'], 'start_time'=>$_POST['date'] ,'source'=>$source, 'thumb'=>$thumb, 'style'=>$_POST['style'], 'company'=>$_POST['company'])); 
+		echo 1;
 		}
 
 	}
@@ -213,15 +229,34 @@ class RouteController extends AdminController
 //              echo 1;
               //  if(Yii::app()->request->isAjaxRequest)
                 {
+	
+
+
+                $source = '';
+                $thumb = '';
+                if(isset($_POST['source']))
+                {
+                        $source = $_POST['source'];
+                }
+                if(isset($_POST['thumb']))
+                {
+                        $thumb = $_POST['thumb'];
+                }
+
+
 			$route = new Route;
 			$route->name = $_POST['title'];
 			$route->area = $_POST['area'];
 			$route->port = $_POST['port'];
+			$route->style = $_POST['style'];
+			$route->company = $_POST['company'];
+			$route->source = $source;
+			$route->thumb = $thumb;
 			$route->days = $_POST['days'];
 			$route->description = $_POST['description'];
 			$route->start_time = $_POST['date'];
 			$route->save();
-                        echo CJSON::encode(array('title'=>$_POST['title'], 'area'=>$_POST['area'], 'port'=>$_POST['port']));//Yii 的方法将数组处理成json数据
+			echo 1;
                 }
 
         }
@@ -317,7 +352,20 @@ class RouteController extends AdminController
 			{
 				$schedule = '<a href="/schedule/add/route_id/'.$o->id.'">添加行程</a>';
 			}
-                        $json = array('id'=>intval($o->id), 'port'=>$o->port, 'name'=>$o->name, 'boat'=>$o->boat, 'start_time'=>$o->start_time, 'price'=>$price, 'schedule'=>$schedule, 'days'=>$o->days);
+			$style= '';
+			if($o->style and 1 )
+			{
+				$style .='|显示';
+			}
+			if($o->style and 2)
+			{
+				$style .= '|特价';
+			}
+			if($o->style and 4)
+			{
+				$style .= '|推荐';
+			}
+                        $json = array('id'=>intval($o->id), 'port'=>$o->port, 'name'=>$o->name, 'boat'=>$o->boat, 'start_time'=>$o->start_time, 'price'=>$price, 'schedule'=>$schedule, 'days'=>$o->days, 'style'=>$style);
                         array_push($arr, $json);
 
                 }

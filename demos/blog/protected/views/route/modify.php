@@ -1,33 +1,30 @@
+<script type="text/javascript" src="/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/swfupload/handlers.js"></script>
+<link href="/swfupload/swfupload.css" rel="stylesheet" type="text/css" />
+<style>
+.edui-default .edui-editor,.edui-default .edui-editor-toolbarboxouter{border-radius:0;}
+</style>
+
+<script type="text/javascript"  src="/js/gaga.js"></script>
+
+
+
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
   <li><a href="/route/index">航线管理</a></li>
-  <li class="active">新增航线</li>
+  <li class="active">修改航线</li>
 </ol>
 
 
 
-<script type="text/javascript" src="/silviomoreto-bootstrap-select-83d5a1b/js/bootstrap-select.js"></script>
 
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">修改航线信息</div>
 
-<link rel="stylesheet" type="text/css" href="http://silviomoreto.github.io/bootstrap-select/bootstrap-select.min.css">
- <link rel="stylesheet" type="text/css" media="screen"  href="/bootstrap-datepicker-master/css/datepicker3.css">  
-   <script type="text/javascript"  src="/bootstrap-datepicker-master/js/bootstrap-datepicker.js"></script>  
-
-
-
-
-
-
- <!--form class="form-horizontal" method="get" action="/route/saveInfo" -->
-	 <form class="form-horizontal">
-    <fieldset>
-      <div id="legend" class="">
-        <legend class="">航线信息</legend>
-      </div>
-	
         <table class="table">
                 <tr>
-                <td>航线名称</td>
+                <td class="col-md-1">航线名称</td>
 
                         <td> <input class="form-control" style="width:200px;" type="text" name="title" id="title"  value=<?php echo $route->name ?> >
 </td>
@@ -54,22 +51,39 @@
                 </tr>
 
 
-                 <tr>
+          <tr>
+             <td >相关邮轮公司</td>
+            <td><select class="selectpicker company" name="company" id="company">
+                        <option>请选择所属邮轮公司</option>
+                      <?php if($company){ ?>
+                      <?php for($i =0 ;$i< count($company) ; $i++){?>
+                        <option <?php if($company[$i]->name == $route->company) echo 'selected="selected"' ?>><?php echo $company[$i]->name ?> </option>
 
-                       <td>邮轮</td>
-			
-                        <td><select class="selectpicker boat" name="boat" id="boat" >
-				
-				<?php if($boat){ ?>
-			        <?php for($i =0 ;$i< count($boat) ; $i++){?>
-				<option><?php echo $boat[$i]->name ?> </option>
-				
-				<?php }?>
-				<?php }?>
-				</select>
-                        </td>
+                      <?php }?>
+                      <?php }?>
 
-                </tr>
+                 </select>
+             </td>
+        </tr>
+
+
+
+          <tr>
+             <td >相关邮轮</td>
+            <td><select class="selectpicker boat" name="boat" id="boat">
+                         <option>请选择所属邮轮</option>
+
+                      <?php if($boat){ ?>
+                      <?php for($i =0 ;$i< count($boat) ; $i++){?>
+                        <option <?php if($boat[$i]->name == $route->boat) echo 'selected="selected"' ?> ><?php echo $boat[$i]->name ?> </option>
+
+                      <?php }?>
+                      <?php }?>
+
+                 </select>
+             </td>
+        </tr>
+
 
 
 
@@ -80,9 +94,9 @@
                         <td><select class="selectpicker port " multiple name="port" id="port">
 
 
-                              <?php if($port){ ?>
-                                <?php for($i =0 ;$i< count($port) ; $i++){?>
-                                <option><?php echo $port[$i]->name ?> </option>
+                              <?php if($port){  $arr = explode(',', $route->port); ?>
+                                <?php for($i =0 ;$i< count($port) ; $i++) {?>
+                                <option <?php  for($j=0;$j<count($arr); $j++) if($port[$i]->name == $arr[$j]) echo 'selected="selected"' ?> ><?php echo $port[$i]->name ?> </option>
 
                                 <?php }?>
                                 <?php }?>
@@ -123,22 +137,82 @@
                 </td>
                 </tr>
 
-		<!--
-                <tr>
-                <td>行程天数</td>
+		
+		<tr>
+			<td>
+				航线类型
+			</td>
+			<td>
+			   <div class="checkbox" >
+			      <label>
+			      <input type="checkbox" id="show" <?php if($route->style & 1) echo 'checked="true"'?> > 显示
+			      </label>
+			   </div>
+			   
+                           <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="cheap" <?php if($route->style & 2) echo 'checked="true"'?> > 特价
+                              </label>
+                           </div>
+                          <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="recommend" <?php if($route->style & 4) echo 'checked="true"'?> > 推荐
+                              </label>
+                           </div>
 
-		</td>
-                </tr>
-		-->
 
 		
+			</td>
+		</tr>
 
 
-		<tr>
+
+
+        <tr>
+                <td>航线图片</td>
+
+                <td>
+                        <div class="fluid" id="divFileProgressContainer1">
+
+
+
+                        <?php if($route->thumb){ ?>
+                        <div class="row-fluid upload-thumb-box" id="old_thumb_34">
+                                <div class="span3">
+                                                <img src=<?php if($route->thumb) echo $route->thumb; ?> source=<?php if($route->source) echo $route->source;  ?> style="height: 80px;" class="mini-image-view">
+                                </div>
+                                <div class="span8">
+                                    <p>
+                                        <i title="删除" class="btn btn-danger hand deleteBtn J_thumb_delete" elm-id="old_thumb_34">删除</i>
+                                    </p>
+                                </div>
+                            </div>
+
+                        <?php } ?>
+                        </div><!--  进度条容器  -->
+
+
+                        <br /><p style="" id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
+                        <p id="spanUpladErrorInfo1"></p>
+                </td>
+
+
+        </tr>
+
+
+
+
+
+
+                <tr>
                     <td>航线介绍</td>
-                    <td>
-                        <textarea style="margin: 0px; width: 600px; height: 100px;" name="description" class="form-control" id="description"><?php echo $route->description ?></textarea>
-                    </td>
+
+                        <td>
+
+                        <div class="summernote" id="summernote"><?php echo $route->description?></div>
+
+                        </td>
+
                 </tr>
 
 
@@ -151,13 +225,56 @@
 		 <button class="btn btn-primary " onclick="onsave(<?php echo $route->id?>)">保存</button>   
         </div>
 
-    </fieldset>
-  </form>
-
+</div>
 
 
 
 <script type="text/javascript">
+
+
+
+
+
+$(document).ready(function() {
+
+
+
+        $('#summernote').summernote({
+                  height: 400,                 // set editor height
+
+                onImageUpload: function(files, editor, welEditable)
+                {
+                        sendFile(files[0], editor, welEditable);
+                }
+
+        });
+
+
+//  $('.summernote').destroy();
+
+
+});
+
+
+         function sendFile(file, editor, welEditable) {
+            data = new FormData();
+            data.append("file", file);
+            $.ajax({
+                data: data,
+                type: "POST",
+                url: "/schedule/upload_image",
+                cache: false,
+                contentType: false,
+
+
+
+                erocessData: false,
+                success: function(url) {
+                //      alert(url);
+                    editor.insertImage(welEditable, url);
+                }
+            });
+        }
 
 
 
@@ -169,9 +286,26 @@ function onsave(route_id)
 
 
 
-o = document.getElementById("port");
+	var show = document.getElementById("show").checked;
+	var cheap = document.getElementById("cheap").checked;
+	var recommend = document.getElementById("recommend").checked;
+	var style = 0;
+	if(show == true)
+		style = 1;
+	if(cheap == true)
+		style += 2;
+	if(recommend == true)
+		style += 4;
 	var t ="";
 	t += $("#port").val();
+
+
+        var thumb = $('.mini-image-view').attr("src");
+
+        var source = $('.mini-image-view').attr("source");
+
+	var aHTML = $('.summernote').code(); 
+
 	//alert($("#port").val());
        $.ajax({
 
@@ -182,10 +316,14 @@ o = document.getElementById("port");
 			"title":$("#title").val(),
 			"area":$("#area").val(),
 			"port":t,
+			"style":style,
 			"boat":$("#boat").val(),
+			"company":$("#company").val(),
 			"days":$("#days").val(),
-			"description":$("#description").val(),
-			"date":$("#datepicker").val()
+			"description":aHTML,
+			"date":$("#datepicker").val(),
+			"source":source,
+			"thumb":thumb
 			},
            url:"/route/saveInfo",
             success:function(json) {//成功获得的也是json对象
@@ -225,199 +363,7 @@ $('.selectpicker').selectpicker({
   });
 
 
- //$('.area').selectpicker('val', ['济州','福冈']);
-
-
-	
-       $.ajax({
-            type:"get",
-            dataType:"json",//dataType (xml html script json jsonp text)
-	    data:{id:2},
-            url:"/route/getInfo",
-            success:function(json) {//成功获得的也是json对象
-                //$.fn.yiiGridView.update("ad-grid");
-
-		$('.boat').selectpicker('val', json.boat);
-		$('.area').selectpicker('val', json.area);
-		var v = json.port.split(',');
-		$('.port').selectpicker('val', v);
-
-                //alert("success")
-		}
-	});
 
 
 })
 </script>
-<!--
-
-<div>
-    <ul id="index-tabs" class="nav nav-tabs">
-        <li><a class="active" href="http://www.biapost.com/demo/admin.php?m=index&c=index&a=index" data-toggle="tab">Tab Header 1</a></li>
-        <li><a href="/your_url_2" data-toggle="tab">Tab Header 2</a></li>
-    </ul>
-</div>
-
-
--->
-
-<!--
-<div class="tabbable">
-    <ul class="nav nav-tabs" id="myTabs">    
-        <li><a href="#home"  class="active" data-toggle="tab">Home</a></li>
-        <li><a href="#foo" data-toggle="tab">Foo</a></li>
-        <li><a href="#bar" data-toggle="tab">Bar</a></li>
-    </ul>
- 
-    <div class="tab-content">
-        <div class="tab-pane active" id="home"></div>
-        <div class="tab-pane" id="foo"></div>
-        <div class="tab-pane" id="bar">Some static text. (displayed if AJAX request fails)</div>
-    </div>
-</div>
--->
-<!--
-
-<div class="hero-unit clearfix">
-			<div class="col-md-12">
-
-    <div class="tabbable">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="active"><a class="glyphicon glyphicon-th-list" href="javascript:void(0)">文章列表</a></li>
-            <li><a class="glyphicon glyphicon-th-list" href="http://www.biapost.com/demo/admin.php?m=content&c=article&a=indexchoice"><em>精选文章</em></a></li>
-            <li><a class="glyphicon glyphicon-plus" href="http://www.biapost.com/demo/admin.php?m=content&c=article&a=add"><em>添加文章</em></a></li>
-        </ul>
-    </div>
-
-</div>
-</div>
-
--->
-<!--
-<ul id="myTab" class="nav nav-tabs">
-   <li class="active"> <a class="glyphicon glyphicon-th-list" data-toggle="tab"  >航线</a> </li>
-   <li><a href="#boat" data-toggle="tab" onclick='showPage("tab1", "tab1.php")'>邮轮</a></li>
-   <li><a href="#port" data-toggle="tab">路过港口</a></li>
-   <li><a href="#start" data-toggle="tab">出发时间</a></li>
-   <li><a href="#days" data-toggle="tab">旅游天数</a></li>
-</ul>
-
-
-
-<div>
-<div id="myTabContent" class="tab-content">
-  
-</div>
-</div>
--->
-<!--
-<div class="tab-pane fade in active" id="route">
-
-						<select id="example1">
-							<option value="cheese" selected>Cheese</option>
-							<option value="tomatoes">Tomatoes</option>
-							<option value="mozarella">Mozzarella</option>
-							<option value="mushrooms">Mushrooms</option>
-							<option value="pepperoni">Pepperoni</option>
-							<option value="onions">Onions</option>
-						</select>
-
-</div>
-
- <div class="tab-pane fade" id="boat">
--->
-
-
-<!-- Build your select: -->
-<!--select class="multiselect" multiple="multiple"-->
-
-
-<!--/select-->
- 
-<!-- Initialize the plugin: -->
-<!--
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.multiselect').multiselect();
-  });
-
-  function showPage(var1, var2)
-  {
-
-
-	var aa=	'  <select id="example1"><option value="cheese" selected>Cheese</option><option value="tomatoes">Tomatoes</option><option value="mozarella">Mozzarella</option><option value="mushrooms">Mushrooms</option></select>';
-   document.getElementById("boat").innerHTML = aa;
-
-  }
-
-
-
-    $(function() {
-
-
-
-	var baseURL = '/index.php/book/index';
-        //load content for first tab and initialize
-	//alert(baseURL);
-	  $.get(baseURL, function (data) {
-	//	alert(1);
-	//	document.write(data);
-        	        $('#home').html(data);
-        //$('#home').load(baseURL, function() {
-
-		//alert(baseURL);
-          //  $('#myTabs').tab(); //initialize tabs
-        });    
-
-
-        $('#myTabs').bind("show", function(e) {   
-
-
-
-
-
- $.get(baseURL, function (data) {
-        //      alert(1);
-        //      document.write(data);
-                        $('#home').html(data);
-
-});
-
-		alert(1); 
-           var pattern=/#.+/gi //use regex to get anchor(==selector)
-           var contentID = e.target.toString().match(pattern)[0]; //get anchor        
-		alert(contentID); 
-           //load content for selected tab
-            $(contentID).load(baseURL+contentID.replace('#',''), function(){
-                $('#myTabs').tab(); //reinitialize tabs
-            });
-        });
-    });
-
-
-
-
-</script>
-
--->
-
-<!--
-   </div>
-
-   <div class="tab-pane fade" id="port">
-
-
-
-   </div>
-
-   <div class="tab-pane fade" id="start">
-      <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
-   </div>
-   <div class="tab-pane fade" id="days">
-      <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
-      </p>
-   </div>
-</div>
-
-
--->
