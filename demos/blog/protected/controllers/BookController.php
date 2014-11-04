@@ -113,13 +113,15 @@ class BookController extends AdminController
 
 	public function actionUndeal()
 	{
-		$criteria = new CDbCriteria; // 创建CDbCriteria对象
-                $criteria->condition = 'deal = 0'; // 设置查询条件
-               // echo $criteria->condition;
-                $book = Book::model()->findAll($criteria);
-
-		$this->render('undeal', array('book'=>$book));		
+		$this->render('undeal');		
 	}
+
+
+        public function actionDone()
+        {
+                $this->render('done');
+        }
+
 
 
 
@@ -143,4 +145,161 @@ class BookController extends AdminController
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+        public function actionGet_undeal_data()
+        {
+        //      var_dump($_POST);
+                $criteria = new CDbCriteria;
+		$criteria->condition = 'deal = 0';
+                if($_POST['searchPhrase'] !='')
+                {
+                        $criteria->addCondition(' route_id like "%'.$_POST['searchPhrase'].'%" or route_title like "%'.$_POST['searchPhrase'].'%" or room like "%'.$_POST['searchPhrase'].'%" or start_time like "%'.$_POST['searchPhrase'].'%" or count like "%'.$_POST['searchPhrase'].'%" or customer like "%'.$_POST['searchPhrase'].'%" or phone like "%'.$_POST['searchPhrase'].'%" or book_time like "%'.$_POST['searchPhrase'].'%" or insurance like "%'.$_POST['searchPhrase'].'%" ', 'AND');
+                }
+                if(isset($_POST['sort']['id'] ))
+                {
+
+                        $criteria->order = " id  {$_POST['sort']['id']} ";
+                }
+                else if(isset($_POST['sort']['route_id']))
+                {
+                         $criteria->order = "route_id {$_POST['sort']['route_id']} ";
+                }
+                else if(isset($_POST['sort']['route_title']))
+                {
+                         $criteria->order = "route_title {$_POST['sort']['route_title']} ";
+                }
+
+                else if(isset($_POST['sort']['room']))
+                {
+                         $criteria->order = "room {$_POST['sort']['room']} ";
+                }
+
+                else if(isset($_POST['sort']['start_time']))
+                {
+                         $criteria->order = "start_time {$_POST['sort']['start_time']} ";
+                }
+
+                else if(isset($_POST['sort']['count']))
+                {
+                         $criteria->order = "count {$_POST['sort']['count']} ";
+                }
+
+                else if(isset($_POST['sort']['customer']))
+                {
+                         $criteria->order = "customer {$_POST['sort']['customer']} ";
+                }
+                else if(isset($_POST['sort']['phone']))
+                {
+                         $criteria->order = "phone {$_POST['sort']['phone']} ";
+                }
+
+                else if(isset($_POST['sort']['book_time']))
+                {
+                         $criteria->order = "book_time {$_POST['sort']['book_time']} ";
+                }
+                else if(isset($_POST['sort']['insurance']))
+                {
+                         $criteria->order = "insurance {$_POST['sort']['insurance']} ";
+                }
+
+                $criteria->limit = $_POST['rowCount'];
+                $criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
+
+                $model = Book::model()->findAll($criteria);
+        //      var_dump($model);
+                $arr = array();
+		$count 	= count($model);
+                foreach($model as $o)
+                {
+			$insu = '无';
+			if($o->insurance != 0)
+				$insu = '有';
+                        $json = array('id'=>intval($o->id), 'route_id'=>$o->route_id, 'route_title'=>$o->route_title, 'room'=>$o->room, 'count'=>$o->count, 'start_time'=>$o->start_time, 'customer'=>$o->customer, 'phone'=>$o->phone, 'insurance'=>$insu, 'book_time'=>$o->book_time);
+                        array_push($arr, $json);
+
+                }
+        //      var_dump( $arr);
+                echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+        }
+
+
+	function actionGet_done_data()
+        {
+        //      var_dump($_POST);
+                $criteria = new CDbCriteria;
+                $criteria->condition = 'deal = 1';
+                if($_POST['searchPhrase'] !='')
+                {
+                        $criteria->addCondition(' route_id like "%'.$_POST['searchPhrase'].'%" or route_title like "%'.$_POST['searchPhrase'].'%" or room like "%'.$_POST['searchPhrase'].'%" or start_time like "%'.$_POST['searchPhrase'].'%" or count like "%'.$_POST['searchPhrase'].'%" or customer like "%'.$_POST['searchPhrase'].'%" or phone like "%'.$_POST['searchPhrase'].'%" or book_time like "%'.$_POST['searchPhrase'].'%" or insurance like "%'.$_POST['searchPhrase'].'%" ', 'AND');
+                }
+                if(isset($_POST['sort']['id'] ))
+                {
+
+                        $criteria->order = " id  {$_POST['sort']['id']} ";
+                }
+                else if(isset($_POST['sort']['route_id']))
+                {
+                         $criteria->order = "route_id {$_POST['sort']['route_id']} ";
+                }
+                else if(isset($_POST['sort']['route_title']))
+                {
+                         $criteria->order = "route_title {$_POST['sort']['route_title']} ";
+                }
+
+                else if(isset($_POST['sort']['room']))
+                {
+                         $criteria->order = "room {$_POST['sort']['room']} ";
+                }
+
+                else if(isset($_POST['sort']['start_time']))
+                {
+                         $criteria->order = "start_time {$_POST['sort']['start_time']} ";
+                }
+
+                else if(isset($_POST['sort']['count']))
+                {
+                         $criteria->order = "count {$_POST['sort']['count']} ";
+                }
+
+                else if(isset($_POST['sort']['customer']))
+                {
+
+
+			$criteria->order = "customer {$_POST['sort']['customer']} ";
+                }
+                else if(isset($_POST['sort']['phone']))
+                {
+                         $criteria->order = "phone {$_POST['sort']['phone']} ";
+                }
+
+                else if(isset($_POST['sort']['book_time']))
+                {
+                         $criteria->order = "book_time {$_POST['sort']['book_time']} ";
+                }
+                else if(isset($_POST['sort']['insurance']))
+                {
+                         $criteria->order = "insurance {$_POST['sort']['insurance']} ";
+                }
+
+                $criteria->limit = $_POST['rowCount'];
+                $criteria->offset= (intval($_POST['current']) -1)*$_POST['rowCount'];
+
+                $model = Book::model()->findAll($criteria);
+        //      var_dump($model);
+                $arr = array();
+                $count  = count($model);
+                foreach($model as $o)
+                {
+                        $insu = '无';
+                        if($o->insurance != 0)
+                                $insu = '有';
+                        $json = array('id'=>intval($o->id), 'route_id'=>$o->route_id, 'route_title'=>$o->route_title, 'room'=>$o->room, 'count'=>$o->count, 'start_time'=>$o->start_time, 'customer'=>$o->customer, 'phone'=>$o->phone, 'insurance'=>$insu, 'book_time'=>$o->book_time);
+                        array_push($arr, $json);
+
+                }
+        //      var_dump( $arr);
+                echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+        }
 }

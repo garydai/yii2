@@ -1,13 +1,13 @@
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li class="active">未处理订单</li>
+  <li class="active">已完成订单</li>
 </ol>
 
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">未处理订单</div>
+  <div class="panel-heading">已完成订单</div>
   <!-- Table -->
 
 
@@ -54,7 +54,7 @@ var grid = $("#grid-selection").bootgrid({
     },
 
     rowCount: [20,30,40],
-    url: "/book/get_undeal_data/",
+    url: "/book/get_done_data/",
     selection: true,
     multiSelect: true,
     formatters: {

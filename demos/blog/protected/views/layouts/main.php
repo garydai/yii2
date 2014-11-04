@@ -165,7 +165,7 @@
           			<a href="#" class="dropdown-toggle" data-toggle="dropdown">订单管理<span class="caret"></span></a>
           		<ul class="dropdown-menu" role="menu">
             			<li><a href="/book/undeal">未处理订单</a></li>
-            			<li><a href="/book/all">所有订单</a></li>
+            			<li><a href="/book/done">已完成订单</a></li>
         		</ul>
         		</li>
 
