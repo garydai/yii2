@@ -1,0 +1,8 @@
+.bar_container{width:auto}
+.mini-bar-border{width:100px;height:100px;float:left;margin-left:3px;margin-top:3px;border:1px #cccccc solid;font-size:12px}
+.pre_text{position: relative;top: -60px;text-align:center}
+.filler{width:0%;height:100px;background:#AEABAA;}
+.operate_text{position: relative; bottom: 26px;background:#000;opacity:.5;color:#fff;filter: Alpha(opacity=50);}
+.del_text{cursor:pointer;visibility:hidden}
+.cancel_text{cursor:pointer;visibility:hidden;margin-left:36%}
+
