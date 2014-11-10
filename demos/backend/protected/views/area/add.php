@@ -1,6 +1,6 @@
-<script type="text/javascript" src="/swfupload/swfupload.js"></script>
-<script type="text/javascript" src="/swfupload/handlers.js"></script>
-<link href="/swfupload/swfupload.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/3rd/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/3rd/swfupload/handlers.js"></script>
+<link href="/3rd/swfupload/swfupload.css" rel="stylesheet" type="text/css" />
 <style>
 .edui-default .edui-editor,.edui-default .edui-editor-toolbarboxouter{border-radius:0;}
 </style>

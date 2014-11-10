@@ -24,7 +24,7 @@ window.onload = function ()
                 file_queued_handler:fileQueued,
 
                 /*按钮设置*/
-                button_image_url : "/swfupload/uploadButton.jpg",
+                button_image_url : "/3rd/swfupload/uploadButton.jpg",
                 button_placeholder_id : "spanButtonPlaceholder1",//上按钮占位符元素的ID
                 button_width: 60,
                 button_height: 60,
@@ -36,7 +36,7 @@ window.onload = function ()
                 button_cursor: SWFUpload.CURSOR.HAND,
 
                 /*flash文件设置*/
-                flash_url : "/swfupload/swfupload.swf",
+                flash_url : "/3rd/swfupload/swfupload.swf",
 
                 /*通常的配置项  可通通过 this.customSettings.upload_target  访问到*/
                 custom_settings :
