@@ -97,7 +97,7 @@
                         </div><!--  进度条容器  -->
 
 
-                        <br /><p style=<?php if($port->thumb) echo "display:none;"; else echo ""; ?> id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
+                        <br /><p style=<?php if($boat->thumb) echo "display:none;"; else echo ""; ?> id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
                         <p id="spanUpladErrorInfo1"></p>
                 </td>
 
