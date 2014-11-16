@@ -84,7 +84,7 @@ var grid = $("#grid-selection").bootgrid({
         rows[0] = $(this).data("row-id");
         $.ajax({
                 type: "get",
-                url: "/company/remove/company_id/" + rows[0],
+                url: "/company/remove_selected/company_id/" + rows[0],
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);

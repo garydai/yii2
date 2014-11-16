@@ -11,8 +11,8 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li><a href="/area/index">地区管理</a></li>
-  <li class="active">修改地区</li>
+  <li><a href="/area/index">第二级地区管理</a></li>
+  <li class="active">修改第二级地区</li>
 </ol>
 
 
@@ -20,7 +20,7 @@
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">修改地区信息</div>
+  <div class="panel-heading">修改第二级地区信息</div>
 	
         <table class="table">
                 <tr>
@@ -31,6 +31,23 @@
                 </tr>
 
 
+
+                <tr>
+                <td>所属第一级地区</td>
+
+
+            <td><select class="selectpicker continent" name="continent" id="continent">
+                      <?php if($continent){ ?>
+                      <?php for($i =0 ;$i< count($continent) ; $i++){?>
+                        <option <?php if($continent[$i]->name == $continent ) echo 'selected="selected"' ?>><?php echo $continent[$i]->name ?> </option>
+
+                      <?php }?>
+                      <?php }?>
+
+                 </select>
+             </td>
+
+
         <tr>
 	        <td>地区图片</td>
 
@@ -38,12 +55,13 @@
                         <div class="fluid" id="divFileProgressContainer1">
 
 
+	
+				<?php if($area['thumb']) { $arr_t = explode(',', $area->thumb); $arr_s = explode(',', $area->source); for($i=0;$i<count($arr_t); $i++)  { ?>
 
-                        <?php if($area->thumb){ ?>
                         <div class="row-fluid upload-thumb-box" id="old_thumb_34">
                                 <div class="span3">
-                                                <img src=<?php if($area->thumb) echo $area->thumb; ?> source=<?php if($area->source) echo $area->source;  ?> style="height: 80px;" class="mini-image-view">
-                                </div>
+                                <img src=<?php if($arr_t[$i]) echo $arr_t[$i]; ?> source=<?php if($arr_s[$i]) echo $arr_s[$i];  ?> style="height: 80px;" class="mini-image-view">
+				</div>
                                 <div class="span8">
                                     <p>
                                         <i title="删除" class="btn btn-danger hand deleteBtn J_thumb_delete" elm-id="old_thumb_34">删除</i>
@@ -51,11 +69,11 @@
                                 </div>
                             </div>
 
-                        <?php } ?>
+                        <?php }} ?>
                         </div><!--  进度条容器  -->
 
 
-                        <br /><p style=<?php if($area->thumb) echo "display:none;"; else echo ""; ?> id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
+                        <br /><p  id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
                         <p id="spanUpladErrorInfo1"></p>
                 </td>
 
@@ -135,17 +153,25 @@ $(document).ready(function() {
 var save = function(id) {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
+        
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
 
-        var source = $('.mini-image-view').attr("source");
-        var title = document.getElementById("title").value;
 
+        var continent = $('.continent').val();
+
+	var title = document.getElementById("title").value;
             $.ajax({
                 dataType: "json",
 
                  data:{
                         "id":id,
                         "title":title,
+			"continent":continent,
                         "content":aHTML,
                         "thumb":thumb,
                         "source":source

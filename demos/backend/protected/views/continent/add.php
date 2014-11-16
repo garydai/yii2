@@ -13,30 +13,32 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li><a href="/port/index">港口管理</a></li>
-  <li class="active">新增港口</li>
+  <li><a href="/continent/index">第一级地区管理</a></li>
+  <li class="active">新增第一级地区</li>
 </ol>
 
 
 
 <div class="panel panel-primary">
   <!-- Default panel contents -->
-  <div class="panel-heading">新增港口</div>
+  <div class="panel-heading">新增第一级地区</div>
 
 
 
 
         <table class="table">
-                <tr>
-                <td>港口名称</td>
+		<tr>
+
+                <td>地区名称</td>
 
                         <td> <input type="text" name="title" id="title" >
-</td>
+			</td>
                 </tr>
 
 
+
         <tr>
-                <td>港口图片</td>
+                <td>地区图片</td>
 
                 <td>
                         <div class="fluid" id="divFileProgressContainer1">
@@ -53,7 +55,7 @@
 
 
                 <tr>
-                    <td>港口介绍</td>
+                    <td>地区介绍</td>
 
                         <td>
 
@@ -120,16 +122,18 @@ $(document).ready(function() {
 var save = function() {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-	var source = '';
-	var thumb = '';
 
-	$(".mini-image-view").each(function(){
-   		thumb += $(this).attr("src") + ',';
-		source += $(this).attr("source") + ',';
-  	});
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
+
+
+
 
         var title = document.getElementById("title").value;
-
             $.ajax({
                 dataType: "json",
 
@@ -140,7 +144,7 @@ var save = function() {
                         "source":source.substring(0,source.length-1)
                 },
                 type: "POST",
-                url: "/port/add_port",
+                url: "/continent/add_continent",
                 success: function() {
                       alert('success');
                 }

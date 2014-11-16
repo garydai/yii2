@@ -205,9 +205,15 @@ var save = function() {
 	var company = $('.company').val();
 	var boat = $('.boat').val();
 
-	var thumb = $('.mini-image-view').attr("src");
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
 
-	var source = $('.mini-image-view').attr("source");
+
+
 	var style = document.getElementById("style").value;
 
             $.ajax({

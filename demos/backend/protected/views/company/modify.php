@@ -38,11 +38,11 @@
                         <div class="fluid" id="divFileProgressContainer1">
 
 
-
-                        <?php if($company->thumb){ ?>
-                        <div class="row-fluid upload-thumb-box" id="old_thumb_34">
+	                        <?php if($company->thumb) { $arr_t = explode(',', $company->thumb); $arr_s = explode(',', $company->source); for($i=0;$i<count($arr_t); $i++)  { ?>
+        	                <div class="row-fluid upload-thumb-box" id="old_thumb_34">
                                 <div class="span3">
-                                                <img src=<?php if($company->thumb) echo $company->thumb; ?> source=<?php if($company->source) echo $company->source;  ?> style="height: 80px;" class="mini-image-view">
+                                                <img src=<?php if($arr_t[$i]) echo $arr_t[$i]; ?> source=<?php if($arr_s[$i]) echo $arr_s[$i];  ?> style="height: 80px;" class="mini-image-view">
+
                                 </div>
                                 <div class="span8">
                                     <p>
@@ -135,10 +135,16 @@ $(document).ready(function() {
 var save = function(id) {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
+        
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
 
-        var source = $('.mini-image-view').attr("source");
-        var title = document.getElementById("title").value;
+
+	var title = document.getElementById("title").value;
 
             $.ajax({
                 dataType: "json",

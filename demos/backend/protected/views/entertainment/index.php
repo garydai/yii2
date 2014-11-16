@@ -91,7 +91,7 @@ var grid = $("#grid-selection").bootgrid({
 //	location.href = "/entertainment/remove/entertainment_id" + rows[0];
 	$.ajax({
                 type: "get",
-                url: "/entertainment/remove/entertainment_id/" + rows[0],
+                url: "/entertainment/remove_selected/entertainment_id/" + rows[0],
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);

@@ -13,8 +13,8 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li><a href="/area/index">地区管理</a></li>
-  <li class="active">新增地区</li>
+  <li><a href="/area/index">第二级地区管理</a></li>
+  <li class="active">新增第二级地区</li>
 </ol>
 
 
@@ -27,12 +27,30 @@
 
 
         <table class="table">
+
                 <tr>
                 <td>地区名称</td>
 
                         <td> <input type="text" name="title" id="title" >
-</td>
+		</td>
                 </tr>
+
+
+
+          <tr>
+             <td >所属第一级地区</td>
+            <td><select class="selectpicker continent" name="continent" id="continent">
+
+                      <?php if($continent){ ?>
+                      <?php for($i =0 ;$i< count($continent) ; $i++){?>
+                        <option><?php echo $continent[$i]->name ?> </option>
+
+                      <?php }?>
+                      <?php }?>
+
+                 </select>
+             </td>
+        </tr>
 
 
         <tr>
@@ -120,16 +138,24 @@ $(document).ready(function() {
 var save = function() {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
 
-        var source = $('.mini-image-view').attr("source");
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
+
+
+  	var continent = $('.continent').val();
+
         var title = document.getElementById("title").value;
-
             $.ajax({
                 dataType: "json",
 
                  data:{
                         "title":title,
+			"continent":continent,
                         "content":aHTML,
                         "thumb":thumb,
                         "source":source

@@ -1,7 +1,7 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li class="active">第二级地区管理</li>
+  <li class="active">第一级地区管理</li>
 </ol>
 
 
@@ -14,7 +14,7 @@
   <!-- Table -->
 
 
- <button type=button  class="btn btn-success" onclick="location.href =('/area/add')"> <span class="glyphicon glyphicon-plus"></span></button>
+ <button type=button  class="btn btn-success" onclick="location.href =('/continent/add')"> <span class="glyphicon glyphicon-plus"></span></button>
 
 
 
@@ -24,8 +24,7 @@
                 <thead>
                  <tr>
                         <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
-			<th data-column-id="continent">第一级地区</th>
-                        <th data-column-id="area">第二级地区</th>
+                        <th data-column-id="name">地区</th>
                         <th data-column-id="commands"data-formatter="commands" data-sortable="false">操作</th>
                 </tr>
                 </thead>
@@ -55,7 +54,7 @@ var grid = $("#grid-selection").bootgrid({
     },
 
     rowCount: [20,30,40],
-    url: "/area/get_data/",
+    url: "/continent/get_data/",
     selection: true,
     multiSelect: true,
     formatters: {
@@ -85,7 +84,7 @@ var grid = $("#grid-selection").bootgrid({
     grid.find(".command-edit").on("click", function(e)
     {
 
-         location.href = "/area/modify/area_id/" + $(this).data("row-id");
+         location.href = "/continent/modify/continent_id/" + $(this).data("row-id");
 
 //        alert("You pressed edit on row: " + $(this).data("row-id"));
     }).end().find(".command-delete").on("click", function(e)
@@ -94,7 +93,7 @@ var grid = $("#grid-selection").bootgrid({
         rows[0] = $(this).data("row-id");
         $.ajax({
                 type: "get",
-                url: "/area/remove_selected/area_id/" + rows[0],
+                url: "/continent/remove_selected/continent_id/" + rows[0],
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);
@@ -114,7 +113,7 @@ function remove1()
         //alert(rowIds.join(","));
        $.ajax({
                 type: "get",
-                url: "/area/remove_selected/area_id/" + rowIds.join(","),
+                url: "/continent/remove_selected/continent_id/" + rowIds.join(","),
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);

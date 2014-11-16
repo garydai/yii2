@@ -21,10 +21,6 @@
 
           <tr>
              <td >相关港口</td>
-          </tr>
-			    
-				
-	  <tr >
 	    <td><select class="selectpicker port" name="port" id="port">
 
                       <?php if($port){ ?>
@@ -42,10 +38,6 @@
 
           <tr>
              <td >景点标题</td>
-          </tr>
-
-
-          <tr >
 
 		<td> <input type="text" style="width:400px"name="title" id="title"   > </td>
 
@@ -56,9 +48,6 @@
 		
 	<tr>
 		<td>景点内容</td>
-	</tr>
-
-	<tr>
 		<td>
 		<div class="summernote" id="summernote"></div>
 		</td>

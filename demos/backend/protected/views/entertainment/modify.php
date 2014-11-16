@@ -87,11 +87,11 @@
                         <div class="fluid" id="divFileProgressContainer1">
 
 
-
-			<?php if($entertainment->thumb){ ?>
-			<div class="row-fluid upload-thumb-box" id="old_thumb_34">
+                        <?php if($entertainment->thumb) { $arr_t = explode(',', $entertainment->thumb); $arr_s = explode(',', $entertainment->source); for($i=0;$i<count($arr_t); $i++)  { ?>
+                        <div class="row-fluid upload-thumb-box" id="old_thumb_34">
                                 <div class="span3">
-                                                <img src=<?php if($entertainment->thumb) echo $entertainment->thumb; ?> source=<?php if($entertainment->source) echo $entertainment->source;  ?> style="height: 80px;" class="mini-image-view">
+                                                <img src=<?php if($arr_t[$i]) echo $arr_t[$i]; ?> source=<?php if($arr_s[$i]) echo $arr_s[$i];  ?> style="height: 80px;" class="mini-image-view">
+
                                 </div>
                                 <div class="span8">
                                     <p>
@@ -221,9 +221,15 @@ var save = function(id) {
 	var company = $('.company').val();
 	var boat = $('.boat').val();
 
-	var thumb = $('.mini-image-view').attr("src");
+	
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
 
-	var source = $('.mini-image-view').attr("source");
+
 	var style = document.getElementById("style").value;
 
             $.ajax({

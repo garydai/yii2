@@ -173,7 +173,15 @@
       	         <li><a href="/company/index">邮轮公司管理</a></li>
        		 <li><a href="/boat/index">邮轮管理</a></li>
 
-    		 <li><a href="/area/index">地区管理</a></li>
+		 <li class="areadown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">目的地管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                                <li><a href="/continent/index">第一级地区</a></li>
+                                <li><a href="/area/index">第二级地区</a></li>
+                        </ul>
+                        </li>
+	
+				
      		 <li><a href="/port/index">港口管理</a></li>
 		 <li><a href="/diary/index">游记管理</a></li>
 		 <li><a href="/interest/index">景点管理</a></li>
@@ -221,6 +229,11 @@ $(function(){
                 if(location.pathname === "/book/undeal" || location.pathname === "/book/all")
                 {
                         $(".dropdown").addClass("active");
+                }
+
+                if(location.pathname === "/area/index" || location.pathname === "/area/second")
+                {
+                        $(".areadown").addClass("active");
                 }
 
 

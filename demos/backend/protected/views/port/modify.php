@@ -39,10 +39,10 @@
 
 
 
-                        <?php if($port->thumb){ ?>
+                        <?php if($port->thumb) { $arr_t = explode(',', $port->thumb); $arr_s = explode(',', $port->source); for($i=0;$i<count($arr_t); $i++)  { ?>
                         <div class="row-fluid upload-thumb-box" id="old_thumb_34">
                                 <div class="span3">
-                                                <img src=<?php if($port->thumb) echo $port->thumb; ?> source=<?php if($port->source) echo $port->source;  ?> style="height: 80px;" class="mini-image-view">
+                                                <img src=<?php if($arr_t[$i]) echo $arr_t[$i]; ?> source=<?php if($arr_s[$i]) echo $arr_s[$i];  ?> style="height: 80px;" class="mini-image-view">
                                 </div>
                                 <div class="span8">
                                     <p>
@@ -51,11 +51,11 @@
                                 </div>
                             </div>
 
-                        <?php } ?>
+                        <?php }} ?>
                         </div><!--  进度条容器  -->
 
 
-                        <br /><p style= <?php if($port->thumb) echo "display:none;"; else echo ""; ?> id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
+                        <br /><p  id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
                         <p id="spanUpladErrorInfo1"></p>
                 </td>
 
@@ -82,7 +82,7 @@
 
 	 <div>
 
-		<button class="btn btn-primary" onclick="save(<?php echo $port->id ?>)"  > 保存</button>
+		<button class="btn btn-primary" onclick="save(<?php echo $port['id'] ?>)"  > 保存</button>
         </div>
 
 </div>
@@ -135,9 +135,13 @@ $(document).ready(function() {
 var save = function(id) {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
+	var thumb = '';
+	var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
 
-        var source = $('.mini-image-view').attr("source");
         var title = document.getElementById("title").value;
 
             $.ajax({

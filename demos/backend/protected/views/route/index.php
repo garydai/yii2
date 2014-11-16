@@ -35,7 +35,6 @@
                         <th data-column-id="port">路过港口</th>
 			<th data-column-id="style">航线类型</th>
                         <th data-column-id="start_time">出发时间</th>
-                        <th data-column-id="days">行程天数</th>
                         <th data-column-id="price">价格</th>
                         <th data-column-id="schedule">行程安排</th>
 

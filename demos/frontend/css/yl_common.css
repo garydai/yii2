@@ -124,7 +124,7 @@ li.wq_header_mycount, li.wq_header_currency {padding-right: 23px;text-align: cen
 
 .wq_header_bottom_wrapper {position: relative;z-index: 99;background-color: #fff;height: 144px;border-bottom: 2px solid #909090;box-shadow: 0px 1px 3px #909090;}
 .wq_header_bottom {position: relative;width: 1000px;height: 100%;margin: 0 auto;}
-#wq_logo {position: absolute;float: left;left: 10px;top: 31px;width: 180px;height: 47px;background: url(//dn-woqu.qbox.me/a1184/img/common/woqu-common.png) no-repeat;}
+#wq_logo {position: absolute;float: left;left: 10px;top: 31px;width: 180px;height: 47px;background: url(/images/logo.png) no-repeat;}
 .header_search_wrapper {position: absolute;top: 42px;right: 0;width: 420px;height: 36px;background-color: #0aaa96;}
 .search_icon {position: absolute;}
 .header_input_wrapper {position: relative;top: 2px;left: 2px;text-indent: 8px;border: none;width: 366px;height: 32px;background-color: #fff;}

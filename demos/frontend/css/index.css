@@ -4,7 +4,8 @@
  */
 .wq_body_wrapper {padding-top: 30px;} 
 .wq_index_part{position: relative;background:#fff;margin-bottom: 30px;min-height: 90px;}
-.wq_index_part_title{position: absolute;top: 21px;left: 0;width: 140px;height: 40px;line-height: 40px;text-indent: 30px;color: #fff;font-size: 24px;background-color: #0aaa96;}
+.wq_index_part_title{position: absolute;top: 21px;left: 0;width: 160px;height: 40px;line-height: 40px;text-indent: 25px;color: #fff;font-size: 24px;background-color: #009acd;}
+
 .img_slide_animte {display: block;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 .img_scale_animte {display: block;-webkit-transition: all 0.6s ease-in-out;-moz-transition: all 0.6s ease-in-out;-o-transition: all 0.6s ease-in-out;-ms-transition: all 0.6s ease-in-out;transition: all 0.6s ease-in-out;}
 .img_slide_animte_wrapper:hover .img_slide_animte {-webkit-transform: translateX(-10px);-moz-transform: translateX(-10px);-o-transform: translateX(-10px);transform: translateX(-10px);}
@@ -56,7 +57,7 @@
 .count_down span {font-size: 18px;color: #333;padding: 0 5px;}
 .count_down i {position: absolute;top: 3px;left: 0;width: 18px;height: 18px;background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) 0 -130px no-repeat;}
 .hot_wrapper {position: relative;margin-top: 10px;background-color: #fff;padding: 20px;height: 192px;}
-.hot_wrapper h3 {font-size: 18px;color: #333;border-bottom: 2px solid #0aaa96;padding-bottom: 4px;display: inline-block;}
+.hot_wrapper h3 {font-size: 18px;color: #333;border-bottom: 2px solid #009acd;padding-bottom: 4px;display: inline-block;}
 .ie7 .hot_wrapper h3 {display: inline;zoom: 1;}
 .hot_box {position: absolute;top: 0;left: 0;}
 .hot_list {float: left;overflow: hidden;width: 710px;background-color: #fff;}
@@ -80,10 +81,10 @@
 .guide_slide li {float: left;}
 #guideSC {position: absolute;bottom: 8px;right: 0;}
 #guideSC li {float: left;width: 8px;height: 8px;background-color: #fff;margin-right: 8px;cursor: pointer;border-radius: 50%;}
-#guideSC li.active {background-color: #0aaa96;}
+#guideSC li.active {background-color: #009acd;}
 
 .notice_wrapper {height: 205px;background-color: #fff;padding: 15px;margin-top: 10px;}
-.notice_wrapper h3 {font-size: 18px;color: #333;border-bottom: 2px solid #0aaa96;width: 40px;padding-bottom: 4px;text-align: center;}
+.notice_wrapper h3 {font-size: 18px;color: #333;border-bottom: 2px solid #009acd;width: 40px;padding-bottom: 4px;text-align: center;}
 .notice_wrapper ul {padding-top: 10px;}
 .notice_wrapper ul li {line-height: 28px;}
 .notice_wrapper ul li a {display: block;color: #333;font-size: 14px;text-indent: -7px;padding-left: 6px;}
@@ -94,11 +95,11 @@
 .rc_list li {float: left;}
 .rentcar_controller {position: absolute;bottom: 8px;right: 0;}
 .rentcar_controller li {float: left;width: 8px;height: 8px;background-color: #fff;margin-right: 8px;cursor: pointer;border-radius: 50%;}
-li.rc_active {background-color: #0aaa96;}
+li.rc_active {background-color: #009acd;}
 
 
 .strategy_wrapper {float: left;background-color: #fff;height: 294px;padding: 15px;}
-.strategy_wrapper h3 {display: inline-block;padding-bottom: 4px;font-size: 16px;color: #333;border-bottom: 2px solid #0aaa96;}
+.strategy_wrapper h3 {display: inline-block;padding-bottom: 4px;font-size: 16px;color: #333;border-bottom: 2px solid #009acd;}
 .ie7 .strategy_wrapper h3 {zoom: 1;display: inline;}
 .strategy_link {display: block;padding-top: 20px;}
 .strategy_link:hover .strategy_title {color: #f08300;}
@@ -117,7 +118,7 @@ li.no_mr {margin-right: 0;}
  * +++++++++++++++++
  */
 .local_trip_map{float: left;width: 263px;padding: 34px 0 0 29px;overflow: hidden;}
-.local_trip_title{padding-left: 32px;color: #0aaa96;font-size: 30px;font-weight: bold;padding: 95px 0 17px 0;}
+.local_trip_title{padding-left: 32px;color: #009acd;font-size: 30px;font-weight: bold;padding: 95px 0 17px 0;}
 .local_trip_container{width: 260px;position: relative;}
 .local_trip_pos_list{padding: 0 20px 30px 12px;}
 .local_trip_pos_li{display: block;float: left;margin-right: 4px;padding-left: 3px;margin-top: 6px;background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -359px -314px;position: relative;padding-right: 3px;}
@@ -125,7 +126,7 @@ li.no_mr {margin-right: 0;}
 .local_trip_pos_li a{display: block;padding: 3px;font-size: 14px;background-color: #bdbdbd;height: 16px;line-height: 14px;}
 .local_trip_pos_li a:visited{color: #fff;}
 .local_trip_pos_li:hover{background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -359px -346px;}
-.local_trip_pos_li:hover a{background-color: #0aaa96;}
+.local_trip_pos_li:hover a{background-color: #009acd;}
 .local_trip_pos_li:hover .lt_radius_right{background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -398px -346px;}
 .local_trip_main{float: right;width: 656px;position: relative;margin-right: 20px;}
 .local_trip_area{padding-top: 33px;height: 50px;}
@@ -133,9 +134,9 @@ li.no_mr {margin-right: 0;}
 .local_trip_area_li a{display: block;float: left;font-size: 16px;padding: 3px 4px 4px;line-height: 18px;color: #333;}
 .la_radius_right{display: block;width: 3px;height: 25px;float: left;}
 .la_sharp{display: none;width: 10px;height: 5px;position: absolute;background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -373px -94px;top: 25px;left: 50%;margin-left: -5px;}
-.local_trip_area_li:hover, .active{background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -354px -69px;}
-.local_trip_area_li:hover a, .active a{background-color: #0aaa96;color: #fff;}
-.local_trip_area_li:hover .la_radius_right, .active .la_radius_right{background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -398px -69px;}
+.local_trip_area_li:hover, .active{background: url(/images/index.png) no-repeat -354px -69px;}
+.local_trip_area_li:hover a, .active a{background-color: #009acd;color: #fff;}
+.local_trip_area_li:hover .la_radius_right, .active .la_radius_right{background: url(/images/index.png) no-repeat -398px -69px;}
 .local_trip_area_li:hover .la_sharp, .active .la_sharp{display: block;}
 .local_trip_more{display: block;background-position: 0 -188px;background-repeat: no-repeat;position: absolute;right: 0;top: 35px;height: 21px;color: #848484;font-size: 14px;line-height: 21px;text-align: center;}
 .local_trip_more:visited{color: #848484;}
@@ -155,7 +156,7 @@ li.no_mr {margin-right: 0;}
 .local_trip_price_s{position: absolute;padding: 0 4px;height: 24px;line-height: 24px;z-index: 2;right: 0;top: 9px;text-align: center;background-color: #f08300;}
 .local_trip_right:hover .local_trip_txt_s{color: #f08300;}
 .lj_hotline {padding: 15px 0;}
-.lj_hotline h4 {width: 70px;padding-bottom: 4px;font-size: 16px;color: #333;border-bottom: 2px solid #0aaa96;text-align: center;}
+.lj_hotline h4 {width: 70px;padding-bottom: 4px;font-size: 16px;color: #333;border-bottom: 2px solid #009acd;text-align: center;}
 .lj_hotline ul {padding-top: 10px;}
 .lj_hotline li a {color: #848484;font-size: 14px;line-height: 26px;}
 .lj_hotline li a:hover {color: #f08300;}
@@ -172,7 +173,7 @@ li.no_mr {margin-right: 0;}
 .trip_play_title span{display: block;float: left;height: 50px;font-weight: bold;color: #848484;}
 span.trip_play_title_en{font-size: 12px;font-family: verdana;}
 .trip_play_title_ico{display: block;float: left;width: 31px;height: 50px;background-position: 0 -278px;background-repeat: no-repeat;}
-.trip_play_title_ls .trip_play_title_ch{padding: 5px 8px 7px 1px;font-size: 30px;height: 38px;line-height: 38px;color: #0aaa96;}
+.trip_play_title_ls .trip_play_title_ch{padding: 5px 8px 7px 1px;font-size: 30px;height: 38px;line-height: 38px;color: #009acd;}
 .trip_play_title_ls .trip_play_title_en{padding-top: 26px;height: 24px;padding-right: 2px;}
 .trip_play_title_ls i {position: absolute;top: 20px;left: 153px;width: 27px;height: 50px;background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat 0 -178px;}
 .ie7 .trip_play_title_ls .trip_play_title_ch{padding: 5px 0 7px 1px;font-size: 30px;height: 38px;line-height: 38px;}
@@ -210,7 +211,7 @@ li.no_mr {margin-right: 0;}
 .tpl_count {position: absolute;bottom: 3px;right: 10px;color: #fff;font-size: 16px;z-index: 3;padding-left: 30px;}
 .tpl_count i {position: absolute;width: 15px;height: 15px;background: url(//dn-woqu.qbox.me/a414/img/page/index/index-all.png) no-repeat -27px -130px;left: 8px;top: 4px;}
 .tpl_info {position: relative;height: 72px;background-color: #f2f4f7;padding: 7px 10px;}
-.tpl_info h3 {font-size: 18px;color: #0aaa96;font-weight: bold;line-height: 32px;}
+.tpl_info h3 {font-size: 18px;color: #009acd;font-weight: bold;line-height: 32px;}
 .tpl_info p {font-size: 14px;color: #848484;}
 .theme_product_list li:hover .tpl_info p {color: #f08300;}
 .tpl_info > span {position: absolute;color: #f08300;font-size: 11px;right: 10px;top: 10px;}
@@ -273,7 +274,7 @@ li.no_mr {margin-right: 0;}
  * +++++++++++++++
  */
 .rentcar_container{float: left;width: 570px;position: relative;}
-.rentcar_title{font-size: 16px;color: #333;padding: 4px 0;margin: 85px 10px 16px 24px;border-bottom: 2px solid #0aaa96;}
+.rentcar_title{font-size: 16px;color: #333;padding: 4px 0;margin: 85px 10px 16px 24px;border-bottom: 2px solid #009acd;}
 .rentcar_container .local_trip_more{top: 90px;right: 10px;}
 .rentcar_list{padding: 0 0 7px 24px;}
 .rentcar_li{position: relative;padding: 0 10px 10px 0;display: block;float: left;}
@@ -305,7 +306,7 @@ li.no_mr {margin-right: 0;}
 .wq_fqa_part {background-color: transparent;}
 .info_section {float: left;width: 320px;height: 316px;margin-right: 20px;background-color: #fff;}
 .info_section_last {margin-right: 0;}
-.info_section h3 {padding: 18px 0 4px 0;font-size: 18px;color: #333;margin-left: 15px;border-bottom: 2px solid #0aaa96;display: inline-block;}
+.info_section h3 {padding: 18px 0 4px 0;font-size: 18px;color: #333;margin-left: 15px;border-bottom: 2px solid #009acd;display: inline-block;}
 .ie7 .info_section h3 {display: inline;zoom: 1;}
 .info_list {margin: 0 15px;padding-top: 10px;}
 .media_list {margin-right: 5px;}

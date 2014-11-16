@@ -4,201 +4,70 @@ class HomeController extends Controller
 {
 	public $layout='column2';
 
+	public $a = null;
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
 	private $_model;
 
-	/**
-	 * @return array action filters
-	 */
-	public function filters()
-	{
-		return array(
-			'accessControl', // perform access control for CRUD operations
-		);
-	}
-
-	/**
-	 * Specifies the access control rules.
-	 * This method is used by the 'accessControl' filter.
-	 * @return array access control rules
-	 */
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to access 'index' and 'view' actions.
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated users to access all actions
-				'users'=>array('@'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
-
-	/**
-	 * Displays a particular model.
-	 */
-	public function actionView()
-	{
-		$post=$this->loadModel();
-		$comment=$this->newComment($post);
-
-		$this->render('view',array(
-			'model'=>$post,
-			'comment'=>$comment,
-		));
-	}
-
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new Post;
-		if(isset($_POST['Post']))
-		{
-			$model->attributes=$_POST['Post'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionUpdate()
-	{
-		$model=$this->loadModel();
-		if(isset($_POST['Post']))
-		{
-			$model->attributes=$_POST['Post'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'index' page.
-	 */
-	public function actionDelete()
-	{
-		if(Yii::app()->request->isPostRequest)
-		{
-			// we only allow deletion via POST request
-			$this->loadModel()->delete();
-
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_GET['ajax']))
-				$this->redirect(array('index'));
-		}
-		else
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-	}
-
-	/**
-	 * Lists all models.
-	 */
 	public function actionIndex()
 	{
 
 
-
-
-	
-		$this->render('index');
+		$this->a = '1';
+		$criteria = new CDbCriteria; // 创建CDbCriteria对象
+                $criteria->condition = "(style & 2) !=0"; // 设置查询条件
+                $cheap = Route::model()->findAll($criteria);
+		$criteria->condition = '(style&4) !=0';
+		$hot = Route::model()->findAll($criteria);
+		$area = Area::model()->findAll();
+		$criteria1 = new CDbCriteria; // 创建CDbCriteria对象
+                $criteria1->select = "title"; // 设置查询条件
+		$criteria1->limit = 8;
+		$diary = Diary::model()->findAll($criteria1);
+		
+		$this->render('index', array('hot'=>$hot, 'cheap'=>$cheap, 'area'=>$area, 'diary'=>$diary));
 	}
 
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new Post('search');
-		if(isset($_GET['Post']))
-			$model->attributes=$_GET['Post'];
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
 
-	/**
-	 * Suggests tags based on the current user input.
-	 * This is called via AJAX when the user is entering the tags input.
-	 */
-	public function actionSuggestTags()
+	public function actionGet_route()
 	{
-		if(isset($_GET['q']) && ($keyword=trim($_GET['q']))!=='')
+
+		$criteria = new CDbCriteria;
+		$criteria->limit = 8;  
+		$area = Area::model()->findAll($criteria);
+
+		$html = '<ul class="local_trip_pro" id="local_trip_content_list" data-blockid="recommend_localjoin">';
+		for($j = 0; $j < count($area); $j ++)
 		{
-			$tags=Tag::model()->suggestTags($keyword);
-			if($tags!==array())
-				echo implode("\n",$tags);
-		}
-	}
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 */
-	public function loadModel()
-	{
-		if($this->_model===null)
-		{
-			if(isset($_GET['id']))
+			if($j)
+				$html .='<li class="local_trip_pro_li wq_clearfix hide" data-content="lj'.$j.'" style="display:none;">';
+			else
+				$html .='<li class="local_trip_pro_li wq_clearfix" data-content="lj'.$j.'">';	
+			
+			$criteria1 = new CDbCriteria; 
+                	$criteria1->condition = "(style & 4) !=0"; 
+			$criteria1->addCondition('area ="'.$area[$j]->name.'"', 'AND');
+			$criteria1->limit = 3;
+			$route = Route::model()->findAll($criteria1);
+			for($i = 0; $i < count($route); $i ++)
 			{
-				if(Yii::app()->user->isGuest)
-					$condition='status='.Post::STATUS_PUBLISHED.' OR status='.Post::STATUS_ARCHIVED;
+				if($i)
+					$html .= '<a class="local_trip_right img_slide_animte_wrapper" href="';
 				else
-					$condition='';
-				$this->_model=Post::model()->findByPk($_GET['id'], $condition);
+					$html .= '<a class="local_trip_left_l img_slide_animte_wrapper" href="';
+			
+				if($i)	
+					$html.='#" target="_blank"> <img class="local_trip_img_s img_slide_animte first_page"  src="'.$route[$i]->source.'" data-original="'.$route[$i]->source.'" style="display: block;"> <span class="local_trip_mask_s"></span> <span class="local_trip_txt_s" title="'.$route[$i]->name.'">'.$route[$i]->name.'</span>'.'<span class="local_trip_price_s font_size12"><span class="font_size16">'.$route[$i]->price.'</span>元/人起</span></a>';
+				else
+					$html.='#" target="_blank"> <img class="local_trip_img_l img_slide_animte first_page" alt=" '.$route[$i]->name.'" src="'.$route[$i]->source.'" data-original="'.$route[$i]->source.'" style="display: block;"> <span class="local_trip_mask_l"></span> <span class="local_trip_bl"></span><span class="local_trip_txt_l" title="'.$route[$i]->name.'">'.$route[$i]->name.'</span>'.'<span class="local_trip_price_l font_size14 font_color_orange"><span class="font_size28">'.$route[$i]->price.'</span>元/人起</span></a>';
+				
 			}
-			if($this->_model===null)
-				throw new CHttpException(404,'The requested page does not exist.');
-		}
-		return $this->_model;
-	}
+			$html.='</li>';
 
-	/**
-	 * Creates a new comment.
-	 * This method attempts to create a new comment based on the user input.
-	 * If the comment is successfully created, the browser will be redirected
-	 * to show the created comment.
-	 * @param Post the post that the new comment belongs to
-	 * @return Comment the comment instance
-	 */
-	protected function newComment($post)
-	{
-		$comment=new Comment;
-		if(isset($_POST['ajax']) && $_POST['ajax']==='comment-form')
-		{
-			echo CActiveForm::validate($comment);
-			Yii::app()->end();
-		}
-		if(isset($_POST['Comment']))
-		{
-			$comment->attributes=$_POST['Comment'];
-			if($post->addComment($comment))
-			{
-				if($comment->status==Comment::STATUS_PENDING)
-					Yii::app()->user->setFlash('commentSubmitted','Thank you for your comment. Your comment will be posted once it is approved.');
-				$this->refresh();
-			}
-		}
-		return $comment;
+		}	
+		$html.='</ul>';	
+		echo $html;	
+		
 	}
 }

@@ -121,9 +121,16 @@ $(document).ready(function() {
 var save = function(id) {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
 
-        var source = $('.mini-image-view').attr("source");
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
+
+
+
         var title = document.getElementById("title").value;
 
             $.ajax({

@@ -1,7 +1,7 @@
 
 <ol class="breadcrumb">
   <li><a href="/post/index">首页</a></li>
-  <li class="active">第二级地区管理</li>
+  <li class="active">地区管理</li>
 </ol>
 
 
@@ -24,8 +24,8 @@
                 <thead>
                  <tr>
                         <th data-column-id="id" data-type="numeric" data-identifier="true">ID</th>
-			<th data-column-id="continent">第一级地区</th>
-                        <th data-column-id="area">第二级地区</th>
+                        <th data-column-id="area">地区</th>
+			<th data-column-id="continent">所属洲</th>
                         <th data-column-id="commands"data-formatter="commands" data-sortable="false">操作</th>
                 </tr>
                 </thead>
@@ -94,7 +94,7 @@ var grid = $("#grid-selection").bootgrid({
         rows[0] = $(this).data("row-id");
         $.ajax({
                 type: "get",
-                url: "/area/remove_selected/area_id/" + rows[0],
+                url: "/area/remove/area_id/" + rows[0],
                 success: function() {
                       //alert('success');
                   //  editor.insertImage(welEditable, url);

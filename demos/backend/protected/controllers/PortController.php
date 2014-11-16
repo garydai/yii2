@@ -57,11 +57,16 @@ class PortController extends AdminController
                 $portId =  intval($_GET['port_id']) ? intval($_GET['port_id']) : '';
                 if(!$portId) exit();
 
+
+
+		//$connection = Yii::app()->db;  
+		//$sql = "SELECT a.id, a.name, a.description, b.source, c.thumb FROM g_port a, g_source b, g_thumb c where a.source =b.id and a.thumb=c.id";  
+		//$command = $connection->createCommand($sql);  
+		//$result = $command->queryAll();  
+		//var_dump($result[0]);
                 $port = Port::model()->find('id=:id', array(':id'=>$portId));
                 if(!$port) exit();
-
-                $this->render('modify',array('port'=>$port));
-
+		 $this->render('modify',array('port'=>$port));	
         }
 
 
@@ -110,7 +115,7 @@ class PortController extends AdminController
                 {
                         $port_id = explode(',', $_GET['port_id']);
                         //$room = Room::model()->findByPk($room_id); // assuming there is a post whose ID is 10
-                        Interest::model()->deleteByPk($port_id);
+                        Port::model()->deleteByPk($port_id);
 
                         //$this->redirect(Yii::app()->request->urlReferrer);
                 }
@@ -124,7 +129,7 @@ class PortController extends AdminController
                 if(!$port_id) exit();
                 //$this->actionIndex();
 		Port::model()->deleteByPk($port_id);
-                //$this->redirect(Yii::app()->request->urlReferrer);
+               $this->redirect(Yii::app()->request->url);
 
         }
 
@@ -195,10 +200,45 @@ class PortController extends AdminController
                         $port->name = $_POST['title'];
                         $port->description = $_POST['content'];
                         if(isset($_POST['source']))
-                                $port->source = $_POST['source'];
-                        if(isset($_POST['thumb']))
-                                $port->thumb = $_POST['thumb'];
+			{
 
+				/*
+                                $t = explode(',', $_POST['source']);
+				$id = '';
+                                foreach($t as $a)
+                                {
+                                        if($a != '')
+                                        {
+                                                $source = new Source;
+                                                $source->source = $a;
+                                                $source->save();
+                                                $id .= $source->id.','; 
+                                        }
+				
+                                }
+
+				*/
+				$port->source = $_POST['source'];
+	
+			}
+                        if(isset($_POST['thumb']))
+			{
+				/*
+				$t = explode(',', $_POST['thumb']);
+				$id = '';
+				foreach($t as $a)
+				{
+					if($a != '')
+					{
+						$thumb = new Thumb;
+						$thumb->thumb = $a;
+						$thumb->save();
+						$id .= $thumb->id.',';	
+					}
+				}
+				*/
+				$port->thumb = $_POST['thumb'];
+			}
                         $port->save();
 
                         echo 1;
