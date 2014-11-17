@@ -31,6 +31,26 @@
                 </tr>
 
 
+
+                <tr>
+                <td>所属地区</td>
+
+
+            	<td><select class="selectpicker area" name="area" id="area">
+                      <?php if($area){ ?>
+                      <?php for($i =0 ;$i< count($area) ; $i++){?>
+                        <option <?php if($area[$i]->name == $port->area ) echo 'selected="selected"' ?>><?php echo $area[$i]->name ?> </option>
+
+                      <?php }?>
+                      <?php }?>
+
+                	 </select>
+             	</td>
+
+        	</tr>   
+
+
+
         <tr>
 	        <td>港口图片</td>
 
@@ -144,15 +164,17 @@ var save = function(id) {
 
         var title = document.getElementById("title").value;
 
+	var area = $('.area').val();
             $.ajax({
                 dataType: "json",
 
                  data:{
                         "id":id,
                         "title":title,
+			"area":area,
                         "content":aHTML,
-                        "thumb":thumb,
-                        "source":source
+                        "thumb":thumb.substring(0,thumb.length-1),
+                        "source":source.substring(0,source.length-1)
                 },
                 type: "POST",
                 url: "/port/save_port",

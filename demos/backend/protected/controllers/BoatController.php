@@ -184,7 +184,7 @@ class BoatController extends AdminController
                         $thumb = $_POST['thumb'];
                 }
 
-		Boat::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'zaikeshu'=>$_POST['zaikeshu'] , 'paishuiliang'=>$_POST['paishuiliang'], 'zuigaosudu'=>$_POST['zuigaosudu'], 'jiabanlouceng'=>$_POST['jiabanlouceng'], 'gongzuorenyuan'=>$_POST['gongzuorenyuan'], 'changdu'=>$_POST['changdu'], 'kuandu'=>$_POST['kuandu'], 'gaodu'=>$_POST['gaodu'], 'description'=>$_POST['content'], 'source'=>$source, 'thumb'=>$thumb));
+		Boat::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'zaikeshu'=>$_POST['zaikeshu'] , 'paishuiliang'=>$_POST['paishuiliang'], 'zuigaosudu'=>$_POST['zuigaosudu'], 'jiabanlouceng'=>$_POST['jiabanlouceng'], 'gongzuorenyuan'=>$_POST['gongzuorenyuan'], 'changdu'=>$_POST['changdu'], 'kuandu'=>$_POST['kuandu'], 'gaodu'=>$_POST['gaodu'], 'description'=>$_POST['content'], 'source'=>$source, 'thumb'=>$thumb, 'type'=>$_POST['type']));
 
                 echo 1;
 
@@ -212,6 +212,7 @@ class BoatController extends AdminController
                         $boat->kuandu = $_POST['kuandu'];
                         $boat->gaodu = $_POST['gaodu'];
                         $boat->description = $_POST['content'];
+			$boat->type = $_POST['type'];
                         $boat->save();
 
 

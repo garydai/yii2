@@ -11,7 +11,7 @@ window.onload = function ()
                 file_size_limit : "2MB", //上传文件大小限制 2MB
                 file_types : "*.jpeg;*.jpg;*.png;*.gif",        //上传文件类型限制，以分号隔开
                 file_types_description : "Image",                //弹出的window窗口下方文件类型描述
-                file_upload_limit : "1",                         //一次上传文件个数限制，0表示不限制
+                file_upload_limit : "10",                         //一次上传文件个数限制，0表示不限制
 
                 /*上传事件处理设置，这些方法都在Handlers.js中定义*/
                 /*下面是处理事件函数定义*/

@@ -47,6 +47,7 @@
                  </select>
              </td>
 
+	</tr>	
 
         <tr>
 	        <td>地区图片</td>

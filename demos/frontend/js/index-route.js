@@ -23,15 +23,32 @@
 						I.func.imgLazy();
 					}
 				});
+
+
+                                $.ajax({
+                                        url: "/home/get_boat",
+                                        dataType: "text",
+                                        type: "POST",
+                                        data: {
+                                        },
+                                        success: function(_html) {
+                                                $("#boat_wrapper").append(_html);
+                                                $('#boat_wrapper .local_trip_txt_s').each(function() {
+                                                        I.func.subProductName($(this), 33);
+                                                });
+
+                                                //lazy load
+                                                I.func.imgLazy();
+                                         }
+				});
+                                                //                                                                                                                        });
+                                                //
 				//load block: promotion_mustactive
-				var usa_mustactive_codes = ["US-FP-MA-NY", "US-FP-MA-LA", "US-FP-MA-LV", "US-FP-MA-Hawaii", "US-FP-MA-SF", "US-FP-MA-Orlando", "US-FP-MA-Miami", "US-FP-MA-Washington"];
 				$.ajax({
-					url: "http://www.woqu.com/show-home-promotion",
+					url: "/home/get_area",
 					dataType: "text",
 					type: "POST",
 					data: {
-						groupCodes: usa_mustactive_codes.join(","),
-						template: "promotion_mustactive"
 					},
 					success: function(_html) {
 						$("#trip_play_main").append(_html);

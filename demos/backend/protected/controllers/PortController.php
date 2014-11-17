@@ -58,7 +58,7 @@ class PortController extends AdminController
                 if(!$portId) exit();
 
 
-
+		$area = Area::model()->findAll();
 		//$connection = Yii::app()->db;  
 		//$sql = "SELECT a.id, a.name, a.description, b.source, c.thumb FROM g_port a, g_source b, g_thumb c where a.source =b.id and a.thumb=c.id";  
 		//$command = $connection->createCommand($sql);  
@@ -66,15 +66,15 @@ class PortController extends AdminController
 		//var_dump($result[0]);
                 $port = Port::model()->find('id=:id', array(':id'=>$portId));
                 if(!$port) exit();
-		 $this->render('modify',array('port'=>$port));	
+		 $this->render('modify',array('port'=>$port, 'area'=>$area));	
         }
 
 
         public function actionAdd()
         {
 
-
-                $this->render('add',array());
+		$area = Area::model()->findAll();
+                $this->render('add',array('area'=>$area));
 
         }
 
@@ -184,7 +184,7 @@ class PortController extends AdminController
                         $thumb = $_POST['thumb'];
                 }
 
-                Port::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'description'=>$_POST['content'], 'source'=>$source, 'thumb'=>$thumb));
+                Port::model()->updateByPk($_POST['id'], array('name'=>$_POST['title'], 'area'=>$_POST['area'], 'description'=>$_POST['content'], 'source'=>$source, 'thumb'=>$thumb));
                 echo 1;
 
         }
@@ -198,6 +198,7 @@ class PortController extends AdminController
 
                         $port = new Port;
                         $port->name = $_POST['title'];
+			$port->area = $_POST['area'];
                         $port->description = $_POST['content'];
                         if(isset($_POST['source']))
 			{

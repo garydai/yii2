@@ -71,6 +71,34 @@
                 </tr>
 
 
+                <tr>
+                        <td>
+                              显示类型
+                        </td>
+                        <td>
+                           <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="show" checked="true" > 显示
+                              </label>
+                           </div>
+
+                           <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="cheap" > 特价
+                              </label>
+                           </div>
+                          <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="recommend"  > 推荐
+                              </label>
+                           </div>
+
+
+
+                        </td>
+                </tr>
+
+
 
 
 	        <tr>
@@ -166,9 +194,16 @@ $(document).ready(function() {
 var save = function() {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
 
-        var source = $('.mini-image-view').attr("source");
+        var source = '';
+        var thumb = '';
+
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
+
+
         var title = document.getElementById("title").value;
 
 	var zaikeshu = document.getElementById("zaikeshu").value;
@@ -180,14 +215,29 @@ var save = function() {
         var gongzuorenyuan = document.getElementById("gongzuorenyuan").value;
         var gaodu = document.getElementById("gaodu").value;
 
+
+
+        var show = document.getElementById("show").checked;
+        var cheap = document.getElementById("cheap").checked;
+        var recommend = document.getElementById("recommend").checked;
+        var style = 0;
+        if(show == true)
+                style = 1;
+        if(cheap == true)
+                style += 2;
+        if(recommend == true)
+                style += 4;
+
+
+
             $.ajax({
                 dataType: "json",
 
                  data:{
                         "title":title,
                         "content":aHTML,
-                        "thumb":thumb,
-                        "source":source,
+                        "thumb":thumb.substring(0,thumb.length-1),
+                        "source":source.substring(0,source.length-1),
 			"zaikeshu":zaikeshu,
 			"zuigaosudu":zuigaosudu,
 			"paishuiliang":paishuiliang,
@@ -195,7 +245,8 @@ var save = function() {
 			"gongzuorenyuan":gongzuorenyuan,
 			"gaodu":gaodu,
 			"jiabanlouceng":jiabanlouceng,
-			"kuandu":kuandu
+			"kuandu":kuandu,
+			"type":style
                 },
                 type: "POST",
                 url: "/boat/add_boat",

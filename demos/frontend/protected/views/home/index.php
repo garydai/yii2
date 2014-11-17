@@ -143,10 +143,62 @@
 		
 
 
+				<!-- 广告-->
+				<a target="_blank" href="#" data-blockId="localjoin_banner_ad">
+					<img class="wq_index_part lazy" width="993" height="90" src="" data-original="/"/>
+				</a>
 
 			<div class="wq_index_part wq_clearfix">
-				<h2 class="wq_index_part_title">目的地之旅</h2>
+				<h2 class="wq_index_part_title">热门目的地之旅</h2>
+				<ul class="local_trip_map trip_play_map" id="trip_play_map">
+					 <?php for($i = 0; $i < count($continent) && $i < 8; $i ++) {?>
+					<li data-content="<?php echo "ma".$i ?>" class= "<?php if($i)echo "trip_play_li hide"; else echo "trip_play_li" ?>" >
+				    <a target="_blank" href="#" class="trip_play_title trip_play_title_ls"><span class="trip_play_title_ch"><?php echo $continent[$i]->name ?></span><i></i></a>
+					<div class="local_trip_container local_trip_container_l">
+							<p class="local_trip_container_para">可以玩什么？</p>
+					</div>
+					<?php } ?>
+				</ul>
+				<div class="local_trip_main trip_play_main" id="trip_play_main">
+					<ul class="local_trip_area wq_clearfix" id="trip_city_list">
+						<?php for($i = 0; $i < count($continent) && $i < 8; $i ++) {?>
+						<li data-target="ma" class="<?php if($i)echo "local_trip_area_li"; else echo "local_trip_area_li active" ?>"><a target="_blank" href="#"><?php echo $continent[$i]->name ?></a><i class="la_radius_right"></i><i class="la_sharp"></i></li>
+        	                                <?php } ?>
+                                	</ul>
+
+				 	<a target="_blank" href="#" class="local_trip_more">更多&gt;</a>
+				</div>
 			</div>	
+
+
+
+
+                <div class="wq_index_part wq_clearfix" id="">
+                        <h2 class="wq_index_part_title">热门邮轮</h2>
+                        <ul class="local_trip_map" id="local_trip_map_list">
+                                <?php for($i = 0; $i < count($boat) && $i < 8; $i ++) {?>
+                                <li data-content="<?php echo "lj".$i ?>" class= "<?php if($i)echo "local_trip_list hide"; else echo "local_trip_list" ?>">
+                                        <h3 class="local_trip_title"><?php echo $boat[$i]->name ?></h3>
+                                        <div class="local_trip_container">
+                                                <img class="local_trip_img lazy" src="" data-original='<?php $arr=explode(',', $boat[$i]->source); if($arr)echo $arr[0]; ?>'  width="260" height="220">
+                                        </div>
+                                </li>
+                                <?php } ?>
+                        </ul>
+                        <div class="local_trip_main">
+                                <ul class="local_trip_area wq_clearfix" id="local_trip_area_list">
+                                        <?php for($i = 0; $i < count($boat) && $i < 8; $i ++) {?>
+                                        <li data-target="lj" class="<?php if($i)echo "local_trip_area_li"; else echo "local_trip_area_li active" ?>"><a target="_blank" href="#"><?php echo $boat[$i]->name ?></a><i class="la_radius_right"></i><i class="la_sharp"></i></li>
+                                        <?php } ?>
+                                </ul>
+                                <a target="_blank" href="#" class="local_trip_more">更多&gt;</a>
+                                <div id="boat_wrapper"></div>
+                        </div>
+                </div>
+
+
+
+
 
 			<div class="wq_index_part wq_fqa_part wq_clearfix">
 				<section class="info_section">

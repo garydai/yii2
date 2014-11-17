@@ -274,7 +274,7 @@ dl.wq_ft_fee {width: 109px;}
 .wq_ft_kefu dt {background-position: -82px -108px;}
 .wq_ft_safety dt {background-position: -123px -108px;}
 .wq_ft_fee dt {background-position: -164px -108px;}
-.wq_partner_wrapper {width: 1000px;margin: 0 auto;padding: 30px 0;border-top: 1px solid #4f5f7c;border-bottom: 1px solid #2f3849;}
+.wq_partner_wrapper {width: 1000px;margin: 0 auto;padding: 30px 0;border-bottom: 3px solid #3cafd5;}
 .wq_p_link {float: left;margin-right: 7px;height: 38px;line-height: 52px;background-image: url(//dn-woqu.qbox.me/a1184/img/common/bottom-partner-list.png);background-repeat: no-repeat;width: 76px;}
 .lv_link {width: 80px;}
 .wq_p_link a {display: block;height: 100%;width: 100%;}
@@ -294,13 +294,13 @@ dl.wq_ft_fee {width: 109px;}
 .wq_friendly_link {width: 1000px;margin: 0 auto;padding: 13px 0;border-top: 1px solid #4f5f7c;border-bottom: 1px solid #2f3849;}
 .wq_friendly_link a {margin-right: 9px;font-size: 12px;color: #8d96b5;line-height: 24px;white-space: nowrap;}
 .wq_friendly_link a:hover {text-decoration: underline;}
-.wq_footer_bottom {text-align: center;border-top: 1px solid #4f5f7c;width: 1000px;margin: 0 auto;padding-top: 20px;}
+.wq_footer_bottom {text-align: center;width: 1000px;margin: 0 auto;padding-top: 20px;}
 .wq_cert_list {width: 170px;margin: 0 auto;padding: 15px 0 25px;float: left;}
 .wq_cert_list li {float: left;}
 .wq_cert_list .wq_geocert {display: block;width: 72px;height: 27px;background-image: url(//dn-woqu.qbox.me/a1184/img/common/woqu-common.png);background-repeat: no-repeat;}
 .wq_geocert {background-position: -80px -298px;margin-right: 10px;}
 .wq_footer_top_container{width: 100%;background-color: #fff;padding-top: 37px;}
-.wq_footer_wrapper_container{width: 100%;background-color: #3d495f;}
+.wq_footer_wrapper_container{width: 100%;background-color: #009acd;}
 .wq_footer_center{width: 1000px;margin: 0 auto;padding-top: 28px;padding-bottom: 27px;border-bottom: 1px solid #2f3849;color: #fff;}
 .wq_footer_about{float: left;width: 100px;}
 .wq_footer_about_title{font-weight: bold;font-size: 12px;line-height: 14px;margin-bottom: 12px;}
@@ -324,6 +324,21 @@ p.wq_footer_adviser_phone{color: #b0b3ba;margin-bottom: 6px;}
 .wq_footer_follow ul {padding-top: 14px;color: #d2d4d7;font-weight: normal;}
 .wq_footer_follow li {float: left;margin-right: 20px;text-align: center;}
 .wq_footer_follow li p {padding-top: 4px;}
+
+
+.shiplogo{height:120px;padding-bottom:15px;}
+.shiplogo_show{overflow:hidden;width:960px;height:72px;padding: 0 20px;position: relative;}
+.shiplist{position: relative;}
+.shiplogo_list{position: absolute;}
+.shiplogo_list li{float: left;background-color:#FFF;height:70px;width:140px;text-align: center;border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;border-top: 1px solid #ddd;}
+.shiplogo_list li img{display:inline-block;}
+
+.shiplist .btn_prev{background: url("/images/scrollbtn.png") no-repeat scroll; height: 72px;width: 21px;left: 0;top: 0;position: absolute;background-position:-55px 0;z-index: 1;}
+.shiplist .btn_next{background: url("/images/scrollbtn.png") no-repeat scroll; height: 72px;width: 21px;right: 0;top: 0;position: absolute;background-position:-1px 0;z-index: 1;}
+.shiplist .btn_prev:hover{background-position:-86px 0;}
+.shiplist .btn_next:hover{background-position:-27px 0;}
+
+
 
 
 /* +++++++++++++++++++

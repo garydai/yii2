@@ -73,18 +73,46 @@
 
 
 
+
+                <tr>
+                        <td>
+                                显示类型
+                        </td>
+                        <td>
+                           <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="show" <?php if($boat->type & 1) echo 'checked="true"'?> > 显示
+                              </label>
+                           </div>
+
+                           <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="cheap" <?php if($boat->type & 2) echo 'checked="true"'?> > 特价
+                              </label>
+                           </div>
+                          <div class="checkbox" >
+                              <label>
+                              <input type="checkbox" id="recommend" <?php if($boat->type & 4) echo 'checked="true"'?> > 推荐
+                              </label>
+                           </div>
+
+
+
+                        </td>
+                </tr>
+
+
+
 	        <tr>
                 <td>邮轮图片</td>
 
                 <td>
                         <div class="fluid" id="divFileProgressContainer1">
 
-
-
-                        <?php if($boat->thumb){ ?>
+			<?php if($boat->thumb) { $arr_t = explode(',', $boat->thumb); $arr_s = explode(',', $boat->source); for($i=0;$i<count($arr_t); $i++)  { ?>
                         <div class="row-fluid upload-thumb-box" id="old_thumb_34">
                                 <div class="span3">
-                                                <img src=<?php if($boat->thumb) echo $boat->thumb; ?> source=<?php if($boat->source) echo $boat->source;  ?> style="height: 80px;" class="mini-image-view">
+                                                <img src=<?php if($arr_t[$i]) echo $arr_t[$i]; ?> source=<?php if($arr_s[$i]) echo $arr_s[$i];  ?> style="height: 80px;" class="mini-image-view">
                                 </div>
                                 <div class="span8">
                                     <p>
@@ -93,11 +121,15 @@
                                 </div>
                             </div>
 
-                        <?php } ?>
+                        <?php }} ?>
+
+
+
+
                         </div><!--  进度条容器  -->
 
 
-                        <br /><p style=<?php if($boat->thumb) echo "display:none;"; else echo ""; ?> id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
+                        <br /><p  id="thumb_upload_wp"><span id="spanButtonPlaceholder1"></span></p>
                         <p id="spanUpladErrorInfo1"></p>
                 </td>
 
@@ -182,9 +214,6 @@ $(document).ready(function() {
 var save = function(id) {
         var aHTML = $('.summernote').code(); //save HTML If you need(aHTML: array).
 
-        var thumb = $('.mini-image-view').attr("src");
-
-        var source = $('.mini-image-view').attr("source");
         var title = document.getElementById("title").value;
 
 	var zaikeshu = document.getElementById("zaikeshu").value;
@@ -196,6 +225,33 @@ var save = function(id) {
         var gongzuorenyuan = document.getElementById("gongzuorenyuan").value;
         var gaodu = document.getElementById("gaodu").value;
 
+
+
+        var thumb = '';
+        var source = '';
+        $(".mini-image-view").each(function(){
+                thumb += $(this).attr("src") + ',';
+                source += $(this).attr("source") + ',';
+        });
+
+
+
+
+
+        var show = document.getElementById("show").checked;
+        var cheap = document.getElementById("cheap").checked;
+        var recommend = document.getElementById("recommend").checked;
+
+        var style = 0;
+        if(show == true)
+                style = 1;
+        if(cheap == true)
+                style += 2;
+        if(recommend == true)
+                style += 4;
+
+
+
             $.ajax({
                 dataType: "json",
 
@@ -203,8 +259,8 @@ var save = function(id) {
                         "id":id,
                         "title":title,
                         "content":aHTML,
-                        "thumb":thumb,
-                        "source":source,
+                        "thumb":thumb.substring(0,thumb.length-1),
+                        "source":source.substring(0,source.length-1),
 			"zaikeshu":zaikeshu,
 			"zuigaosudu":zuigaosudu,
 			"paishuiliang":paishuiliang,
@@ -212,7 +268,8 @@ var save = function(id) {
 			"gongzuorenyuan":gongzuorenyuan,
 			"gaodu":gaodu,
 			"jiabanlouceng":jiabanlouceng,
-			"kuandu":kuandu
+			"kuandu":kuandu,
+			"type":style
                 },
                 type: "POST",
                 url: "/boat/save_boat",

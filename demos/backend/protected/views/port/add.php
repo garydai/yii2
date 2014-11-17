@@ -36,6 +36,27 @@
 
 
         <tr>
+
+
+
+
+          <tr>
+             <td >所属地区</td>
+            <td><select class="selectpicker area" name="area" id="area">
+
+                      <?php if($area){ ?>
+                      <?php for($i =0 ;$i< count($area) ; $i++){?>
+                        <option><?php echo $area[$i]->name ?> </option>
+
+                      <?php }?>
+                      <?php }?>
+
+                 </select>
+             </td>
+        </tr>
+
+
+
                 <td>港口图片</td>
 
                 <td>
@@ -128,6 +149,9 @@ var save = function() {
 		source += $(this).attr("source") + ',';
   	});
 
+	var area = $('.area').val();
+
+	
         var title = document.getElementById("title").value;
 
             $.ajax({
@@ -135,6 +159,7 @@ var save = function() {
 
                  data:{
                         "title":title,
+			"area":area,
                         "content":aHTML,
                         "thumb":thumb.substring(0,thumb.length-1),
                         "source":source.substring(0,source.length-1)
