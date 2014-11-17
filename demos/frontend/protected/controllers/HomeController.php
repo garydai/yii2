@@ -2,9 +2,9 @@
 
 class HomeController extends Controller
 {
-	public $layout='column2';
+	public $layout='homepage';
 
-	public $a = null;
+	public $g_area = null;
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
@@ -14,12 +14,13 @@ class HomeController extends Controller
 	{
 
 
-		$this->a = '1';
 		$criteria = new CDbCriteria; // 创建CDbCriteria对象
                 $criteria->condition = "(style & 2) !=0"; // 设置查询条件
                 $cheap = Route::model()->findAll($criteria);
 		$criteria->condition = '(style&4) !=0';
 		$hot = Route::model()->findAll($criteria);
+
+
 		$area = Area::model()->findAll();
 		$criteria1 = new CDbCriteria; // 创建CDbCriteria对象
                 $criteria1->select = "title"; // 设置查询条件
@@ -27,7 +28,8 @@ class HomeController extends Controller
 		$diary = Diary::model()->findAll($criteria1);
 		$continent = Continent::model()->findAll();
 		$boat = Boat::model()->findAll();	
-		//var_dump($continent);	
+		//var_dump($continent);
+		$this->g_area = $area;	
 		$this->render('index', array('hot'=>$hot, 'cheap'=>$cheap, 'area'=>$area, 'diary'=>$diary, 'continent'=>$continent, 'boat'=>$boat));
 	}
 

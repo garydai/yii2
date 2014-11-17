@@ -291,8 +291,8 @@ dl.wq_ft_fee {width: 109px;}
 .hnair_link {background-position: -774px 0;}
 .qunar_link {background-position: -860px 0;}
 .daodao_link {background-position: -946px 0;margin-right: 0;}
-.wq_friendly_link {width: 1000px;margin: 0 auto;padding: 13px 0;border-top: 1px solid #4f5f7c;border-bottom: 1px solid #2f3849;}
-.wq_friendly_link a {margin-right: 9px;font-size: 12px;color: #8d96b5;line-height: 24px;white-space: nowrap;}
+.wq_friendly_link {width: 1000px;margin: 0 auto;padding: 13px 0;border-bottom: 3px solid #3cafd5;}
+.wq_friendly_link a {margin-right: 9px;font-size: 12px;color: #fff;line-height: 24px;white-space: nowrap;}
 .wq_friendly_link a:hover {text-decoration: underline;}
 .wq_footer_bottom {text-align: center;width: 1000px;margin: 0 auto;padding-top: 20px;}
 .wq_cert_list {width: 170px;margin: 0 auto;padding: 15px 0 25px;float: left;}
