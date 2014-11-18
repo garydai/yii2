@@ -158,7 +158,7 @@ li.wq_header_mycount, li.wq_header_currency {padding-right: 23px;text-align: cen
 
 .nav_sub_list {position: absolute;top: 38px;left: 0;width: 113px;background-color: #fff;padding: 10px 0;display: none;z-index: 8;border-bottom: 3px solid #dce0df;}
 .nsl_lj {width: 153px;}
-.nsl_ms {width: 127px;}
+.nsl_ms {width: 150px;}
 .nav_sub_list a {color: #000;font-size: 14px;text-align: left;text-indent: 20px;line-height: 30px}
 .nsl_lj a, .nsl_ms a {text-indent: 31px;}
 .nav_sub_list a:hover {color: #f08300;}

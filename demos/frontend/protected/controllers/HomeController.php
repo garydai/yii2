@@ -5,6 +5,8 @@ class HomeController extends Controller
 	public $layout='homepage';
 
 	public $g_area = null;
+	public $g_continent = null;
+	public $g_company = null;
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
@@ -29,7 +31,9 @@ class HomeController extends Controller
 		$continent = Continent::model()->findAll();
 		$boat = Boat::model()->findAll();	
 		//var_dump($continent);
-		$this->g_area = $area;	
+		$this->g_area = $area;
+		$this->g_continent = $continent;
+		$this->g_company = Company::model()->findAll();	
 		$this->render('index', array('hot'=>$hot, 'cheap'=>$cheap, 'area'=>$area, 'diary'=>$diary, 'continent'=>$continent, 'boat'=>$boat));
 	}
 

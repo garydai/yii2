@@ -31,7 +31,7 @@
 
 
 .select_box{position:relative;}
-.select_box input{cursor:pointer;width:100px;}
+.select_box input{background:url(/images/select_input.png) no-repeat 100px center;background-color:#fff;cursor:pointer;width:100px;}
 .select_box ul{background-color:#fdfdfd;display:none;border:1px solid #ccc;position:absolute;left:0; top:28px;width:155px;z-index:10;}
 .select_box ul li{font: 12px/28px "宋体";text-align:left;color:#000;border-bottom: 1px solid #f4f4f4;cursor:pointer;padding-left:5px;}
 .select_box ul li:hover{background-color:#1d7ad9;color:#fff;}
@@ -314,8 +314,12 @@ $(function() {
 								<span class="select_box">
 									<input id="shipidshow" type="text" value="请选择目的地" readonly="readonly" />
            							            <ul class="select_ul">
-										    <?php for($i = 0; $i < count($this->g_area); $i ++){ ?>
-								                    <li value="0" class="bigClass"><?php echo $this->g_area[$i]->name?></li>
+										    <li value="0" class="bigClass">全部</li>
+										    <?php for($i = 0; $i < count($this->g_continent); $i ++){ ?>
+								                    <li value="0" class="bigClass"><?php echo $this->g_continent[$i]->name?></li>
+											<?php for($j = 0; $j < count($this->g_area); $j ++)  if($this->g_area[$j]->continent == $this->g_continent[$i]->name){?>
+												<li value = '1' class="smallClass"><?php echo $this->g_area[$j]->name?></li>		
+											<?php } ?>
 											<?php } ?>
 								            </ul>
 
@@ -333,8 +337,13 @@ $(function() {
 								<span class="select_box">
 									<input id="shipidshow" type="text" value="请选择邮轮公司" readonly="readonly" />
            							            <ul class="select_ul">
-								                    <li value="0" class="bigClass">全部</li>
-								            </ul>
+								               <li value="0" >全部</li>
+                                                                                    <?php for($i = 0; $i < count($this->g_company); $i ++){ ?>
+                                                                                    <li value="0" ><?php echo $this->g_company[$i]->name?></li>
+                                                                                    <?php } ?>
+
+
+									    </ul>
 
 								</span>
 
@@ -357,22 +366,11 @@ $(function() {
 							</h2>
 							
 						</li>
-						<li class="pt15 wq_clearfix">
-							<i></i>
-								<h2 class="nm_area">
-								<label >出发城市</label>
 
-								<span class="select_box">
-									<input id="shipidshow" type="text" value="请选择出发城市" readonly="readonly" />
-           							            <ul class="select_ul">
-								                    <li value="0" class="bigClass">全部</li>
-								            </ul>
+					        <div class="search">
+            						<a href="/search/index">搜索</a>
+						</div>
 
-								</span>
-
-							</h2>
-							
-						</li>
 								
 					</form>
 
@@ -398,22 +396,21 @@ $(function() {
 		<li class="nav_channel" data-nav="homepage"><a target="_self" href="#">首页</a></li>
 		<li class="nav_channel" data-nav="localjoin"><a target="_blank" href="#">邮轮航线<em></em></span></a><i class="nav_triangle"></i>
 			<ul class="nav_sub_list nsl_lj">
-				<li><a target="_blank" href="#">美国西海岸</a></li>
-				<li><a target="_blank" href="#">夏威夷</a></li>
-				<li><a target="_blank" href="#">佛罗里达</a></li>
-				<li><a target="_blank" href="#">阿拉斯加</a></li>
+				<?php foreach($this->g_area as $a) {?>
+				
+				<li><a target="_blank" href="#"><?php echo $a->name?></a></li>
+				<?php } ?>
 			</ul>
 		</li>
 		<li class="nav_channel" data-nav="mustactive"><a target="_blank" href="#">邮轮公司<em></em></a><i class="nav_triangle"></i>
 			<ul class="nav_sub_list nsl_ms">
-				<li><a target="_blank" href="#">纽约</a></li>
-				<li><a target="_blank" href="#">华盛顿</a></li>
-				<li><a target="_blank" href="#">洛杉矶</a></li>
-				<li><a target="_blank" href="#">旧金山</a></li>
-				<li><a target="_blank" href="#">拉斯维加斯</a></li>
-				<li><a target="_blank" href="#">夏威夷</a></li>
-				<li><a target="_blank" href="#">奥兰多</a></li>
-				<li><a target="_blank" href="#">迈阿密</a></li>
+				
+                              <?php foreach($this->g_company as $a) {?>
+
+                                <li><a target="_blank" href="#"><?php echo $a->name?></a></li>
+                               <?php } ?>
+
+
 			</ul>
 		</li>
 		<li class="nav_channel" data-nav="car"><a target="_blank" href="#">攻略游记</a></li>
@@ -432,9 +429,5 @@ $(function() {
 	
 	
 </header>
-
-
-
-
 
 
