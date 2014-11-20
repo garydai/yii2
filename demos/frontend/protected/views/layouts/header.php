@@ -304,7 +304,7 @@ $(function() {
 				<span>这里起航<i></i></span>
 				<div class="nm_side_bar">
 					<div class="nmsb_mask"></div>	
-					<form action="/search_0_0_0_0_0_0.html" method="get" id="searchForm">			
+					<form action="" method="get" id="searchForm">			
 
 
 						<li class="pt15 wq_clearfix">
@@ -312,9 +312,9 @@ $(function() {
 							<h2 class="nm_area">
 								<label >邮轮航线</label>
 								<span class="select_box">
-									<input id="shipidshow" type="text" value="请选择目的地" readonly="readonly" />
+									<input id="area" type="text" value="请选择目的地" readonly="readonly" />
            							            <ul class="select_ul">
-										    <li value="0" class="bigClass">全部</li>
+										    <li  class="bigClass">全部</li>
 										    <?php for($i = 0; $i < count($this->g_continent); $i ++){ ?>
 								                    <li value="0" class="bigClass"><?php echo $this->g_continent[$i]->name?></li>
 											<?php for($j = 0; $j < count($this->g_area); $j ++)  if($this->g_area[$j]->continent == $this->g_continent[$i]->name){?>
@@ -335,7 +335,7 @@ $(function() {
 								<label >邮轮公司</label>
 
 								<span class="select_box">
-									<input id="shipidshow" type="text" value="请选择邮轮公司" readonly="readonly" />
+									<input id="company" type="text" value="请选择邮轮公司" readonly="readonly" />
            							            <ul class="select_ul">
 								               <li value="0" >全部</li>
                                                                                     <?php for($i = 0; $i < count($this->g_company); $i ++){ ?>
@@ -356,9 +356,13 @@ $(function() {
 								<label >开航日期</label>
 
 								<span class="select_box">
-									<input id="shipidshow" type="text" value="请选择开航日期" readonly="readonly" />
+									<input id="data" type="text" value="请选择开航日期" readonly="readonly" />
            							            <ul class="select_ul">
 								                    <li value="0" class="bigClass">全部</li>
+                                                                                    <?php for($i = 0; $i < count($this->g_data); $i ++){ ?>
+                                                                                       <li value="0" ><?php echo $this->g_data[$i]?></li>
+                                                                                    <?php } ?>
+
 								            </ul>
 
 								</span>
@@ -368,7 +372,9 @@ $(function() {
 						</li>
 
 					        <div class="search">
-            						<a href="/search/index">搜索</a>
+
+							<button type="button" onclick="search()">搜索</button>
+            						<!--a href="search()">搜索</a!-->
 						</div>
 
 								
@@ -393,7 +399,7 @@ $(function() {
 		</li>
 		
 		
-		<li class="nav_channel" data-nav="homepage"><a target="_self" href="#">首页</a></li>
+		<li class="nav_channel" data-nav="homepage"><a target="_self" href="/">首页</a></li>
 		<li class="nav_channel" data-nav="localjoin"><a target="_blank" href="#">邮轮航线<em></em></span></a><i class="nav_triangle"></i>
 			<ul class="nav_sub_list nsl_lj">
 				<?php foreach($this->g_area as $a) {?>
@@ -421,7 +427,27 @@ $(function() {
 	</ul>
 </nav>
 	
+<script>
 
+function search()
+{
+	//alert(1);
+
+	var area = $("#area").val();
+	var data = $("#data").val();
+	var company = $("#company").val();
+/*
+	$.ajax({
+		
+		data:{'area':area, 'data':data, 'company':company},
+		url:'/search/route',
+		type:'post',		
+		
+	});
+*/
+	window.open('/search/route/a/'+ area + '/d/' + data + '/c/' + company + '/days/全部');
+}
+</script>
 
 
 

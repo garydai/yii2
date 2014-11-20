@@ -1,0 +1,68 @@
+.product_list > li {width: 1000px;padding-left: 0px;border:none;}
+.p_img{float:left;}
+.localjoin_trip_days,.localjoim_num,.localjoin_begin_city,.localjoin_end_city,.localjoin_schedule{font-size: 13px;color: #848484;padding-top:7px;}
+.list_attribute{float:left;width:418px;padding:8px 0 0 30px;position: relative;}
+.localjoin_btn{background: url('//dn-woqu.qbox.me/a1184/img/page/list/list-common.png') no-repeat 0 -70px;width: 138px;height: 40px;}
+.localjoin_price,.localjoin_btn{position: absolute;}
+.localjoin_price{top:6px;right:20px;}
+.localjoin_btn{top: 80px;right: 20px;}
+.p_tag{position: relative;padding-top:20px; }
+.p_tag_list li{padding: 0 5px;margin-right: 6px;border-radius: 2px;}
+.p_title{padding:0;font-size:18px;width:700px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
+.top_info{padding-top: 15px}
+.localjoin_recommend{color: #0aaa96;font-size: 14px;font-weight: bold;padding-bottom: 15px;}
+.localjoin_img_tag{background: url('//dn-woqu.qbox.me/a1184/img/page/list/list-common.png') no-repeat 0 -113px;width: 78px;height: 28px;display: inline-block;position: absolute;top: 5px;left: -5px;color: #fff;font-size: 14px;padding-left: 7px;line-height: 23px;}
+/*行程图*/
+.travel_profile_wrapper{position: relative;margin-top: 10px;z-index:999;margin-bottom: 20px;}
+.travel_profile_icon{background: url('//dn-woqu.qbox.me/a809/img/page/localjoin/wq_all_localjoin_detail.png') no-repeat 0 -70px;width: 30px;height: 30px;display: inline-block;position:absolute;top:10px;left:0;z-index: 3}
+.travel_profile_line_wrapper{width:890px;position: relative}
+.travel_profile_origin{background: url('//dn-woqu.qbox.me/a809/img/page/localjoin/wq_all_localjoin_detail.png') no-repeat -2px -117px;width: 7px;height: 7px;display: inline-block;position: relative;left: -4px;}
+.travel_profile_line_left{display: inline-block;border-bottom: 1px solid #cbcbcb;width:36px;top: -3px;position: relative;}
+.travel_profile_line_right{display: inline-block;border-bottom: 1px solid #cbcbcb;width:28px;top: -4px;position: relative;}
+.travel_profile_desc p{color:#848484;font-size: 13px;font-weight: bold}
+.travel_profile_all li{width: 111px;padding-top: 12px;float:left;margin-left: -1px;}
+.travel_profile_desc .travel_profile_num{font-weight: normal;}
+.travel_profile_desc .travel_profile_location,.travel_profile_detail .travel_profile_location{font-size: 14px;color:#333333;padding:0px 0 5px;clear: both;}
+.ie7 .travel_profile_detail .travel_profile_location{line-height: 0}
+.travel_profile_desc .travel_profile_location{padding-left: 19px;}
+.travel_profile_detail .travel_profile_location{padding-left: 0px;}
+.travel_profile_detail .travel_profile_location{max-width: 221px}
+.travel_profile_location_detail{padding-left: 24px;}
+.travel_profile_desc .travel_profile_location_detail{width: 77px;overflow: hidden;white-space: nowrap;}
+.travel_profile_detail .travel_profile_location_detail{padding-left: 4px;max-width: 108px;min-width: 80px;}
+.travel_profile_desc .travel_profile_location_detail,.travel_profile_detail .travel_profile_location_detail{font-size: 12px;font-weight: normal;line-height: 1.4;color: #848484;padding-bottom: 5px;}
+.ie7 .travel_profile_desc .travel_profile_location_detail{padding-bottom: 3px;}
+.travel_profile_desc_wrapper ,.localjoin_line_origin{float:left;}
+.travel_profile_desc_wrapper{width:96px;margin-left: -33px;margin-top: 4px;}
+.localjoin_line_origin{width: 48px;}
+.travel_profile_day{float: right;cursor: pointer;margin-bottom: 8px;}
+.travel_profile_desc_wrapper{max-height: 156px;overflow: hidden;}
+.travel_profile_ellipses{float: right;margin-right: 59px;color: #848484;}
+.travel_profile_next{color:#848484;font-size:13px;position: absolute;top: 17px;right:22px;cursor:pointer;}
+.travel_profile_more_line{border-top: 1px solid #848484;width: 3px;margin-left: 3px;display: inline-block;top: -5px;position: relative;}
+.ie7 .travel_profile_more_line{top:12px;}
+.travel_profile_next_icon{background: url('//dn-woqu.qbox.me/a809/img/page/localjoin/wq_all_localjoin_detail.png') no-repeat -2px -155px;width: 18px;height: 14px;display: inline-block;} 
+.travel_profile_next:hover .travel_profile_next_icon{background-position:  -2px -179px}
+.travel_profile_next:hover{color:#f08300;}
+.travel_profile_pre{background: url('//dn-woqu.qbox.me/a809/img/page/localjoin/wq_all_localjoin_detail.png') no-repeat -2px -223px;width: 18px;height: 13px;position: absolute;top:20px;left:0;cursor:pointer;}
+.ie7 .travel_profile_pre{top:23px;}
+.travel_profile_pre:hover{background-position: -2px -202px}
+.travel_profile_all{width:660px;max-height:192px;overflow: hidden;}
+.ie7 .travel_profile_all{position: relative;}
+.travel_profile_all ul{position: relative;left: 0px;}
+.travel_profile_detail{border:1px solid #cbcbcb;padding:10px 10px 10px 10px;position: absolute;z-index: 10;top: 42px;left: 35px;background: #fff;}
+.detail_arrow{background: url('//dn-woqu.qbox.me/a809/img/page/localjoin/wq_all_localjoin_detail.png') no-repeat -1px -248px;width: 21px;height: 12px;position: absolute;top: -12px;left: 42px;}
+.ie7 .travel_profile_origin{top:-3px;}
+.ie7 .travel_profile_line_left{top:-6px;}
+.ie7 .travel_profile_desc_wrapper{line-height: 1}
+.ie7 .travel_profile_desc P{margin-top: 1px}
+.ie7 .travel_profile_next{top:16px;}
+/*tips*/
+.wqdialog{border:1px solid #ccc;}
+.triangle-white {background: url('//dn-woqu.qbox.me/a1184/img/page/list/list-common.png') no-repeat 0 -273px;}
+.wqdialog-content{color: #848484;font-size: 13px;padding: 10px;}
+.ie7 .product_list > LI{position: static}
+
+.original_price, .current_price{float:none;}
+.current_price{top: 25px;position: absolute;width: 145px;right: 0px;}
+.original_price{position: absolute;width: 145px;right: 0px;margin-right: 0px}

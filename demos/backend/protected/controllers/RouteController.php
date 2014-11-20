@@ -150,8 +150,10 @@ class RouteController extends AdminController
 		$company = Company::model()->findAll();
 	
 		$port = Port::model()->findAll();
-	
-                $this->render('modify',array('route'=>$route, 'days'=>$route->days, 'boat'=>$boat, 'area'=>$area, 'port'=>$port, 'company'=>$company));
+
+		$continent = Continent::model()->findAll();	
+
+                $this->render('modify',array('route'=>$route, 'days'=>$route->days, 'boat'=>$boat, 'area'=>$area, 'port'=>$port, 'company'=>$company, 'continent'=>$continent));
 
 		
 	}
@@ -170,8 +172,9 @@ class RouteController extends AdminController
 
                 $port = Port::model()->findAll();
 
-		
-                $this->render('add',array( 'boat'=>$boat, 'area'=>$area, 'port'=>$port, 'company'=>$company));
+		$continent = Continent::model()->findAll();
+	
+                $this->render('add',array( 'boat'=>$boat, 'area'=>$area, 'port'=>$port, 'company'=>$company, 'continent'=>$continent));
 
 
         }
@@ -252,9 +255,9 @@ class RouteController extends AdminController
 			$route->company = $_POST['company'];
 			$route->source = $source;
 			$route->thumb = $thumb;
-			$route->days = $_POST['days'];
 			$route->description = $_POST['description'];
 			$route->start_time = $_POST['date'];
+			$route->continent = $_POST['continent'];
 			$route->save();
 			echo 1;
                 }
@@ -371,6 +374,30 @@ class RouteController extends AdminController
                 }
         //      var_dump( $arr);        
                 echo json_encode(array('rowCount'=>$_POST['rowCount'], 'current'=>$_POST['current'], 'rows'=>$arr, 'total'=>$count));
+
+
+        }
+
+
+        public function actionSelect_area()
+        {
+
+                $continent =  $_POST['continent'];
+
+                if(!$continent) exit();
+
+                $criteria = new CDbCriteria; // 创建CDbCriteria对象
+
+                $criteria->select='name';
+                $criteria->condition = 'continent = "'.$continent.'"'; // 设置查询条件
+                $model = Area::model()->findAll($criteria);
+                $ret = '';
+                foreach($model as $value)
+                {
+                        $ret .= '<option>'.$value->name.'</option>';
+                }
+
+                echo CJSON::encode(array('option'=>$ret));
 
         }
 

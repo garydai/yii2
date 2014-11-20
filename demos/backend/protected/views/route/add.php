@@ -31,9 +31,28 @@
                 </tr>
 
 
+
+	          <tr>
+	             <td >一级地区</td>
+
+        	    <td><select class="selectpicker continent" name="continent" id="continent">
+                	        <option>请选择所属邮轮公司</option>
+	                      <?php if($continent){ ?>
+        	              <?php for($i =0 ;$i< count($continent) ; $i++){?>
+                	        <option><?php echo $continent[$i]->name ?> </option>
+
+	                      <?php }?>
+        	              <?php }?>
+
+	                 </select>
+        	     </td>
+	        </tr>
+
+
+
                  <tr>
 
-                       <td>地区</td>
+                       <td>二级地区</td>
 			
                         <td><select class="selectpicker area" name="area" id="area">
 				<option>请选择地区</option>
@@ -267,6 +286,8 @@ $(document).ready(function() {
         }
 
 
+});
+
 
 function onsave(route_id)
 {
@@ -304,6 +325,7 @@ function onsave(route_id)
             data:{
 			"id":route_id,
 			"title":$("#title").val(),
+			"continent":$("#continent").val(),
 			"area":$("#area").val(),
 			"port":t,
 			"style":style,

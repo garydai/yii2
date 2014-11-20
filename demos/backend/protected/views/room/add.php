@@ -147,32 +147,6 @@ $(document).ready(function() {
 
 
 
-$("#company").on('change', function () 
-{
-
-
-	var company =  $('.company').val()
-	    $.ajax({
-                dataType: "json",
-
-                 data:{
-                        "company":company
-                },
-                type: "post",
-                url: "/room/select_boat",
-                success: function(option) {
-
-			 $("#boat").html(option['option']);
-		         $('.boat').selectpicker('refresh');
-
-                  //  editor.insertImage(welEditable, url);
-                }
-            });
-
-
-
-});
-
 
 
 

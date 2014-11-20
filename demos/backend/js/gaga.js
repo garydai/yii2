@@ -68,5 +68,61 @@ $(document).ready(function(e) {
 
               $('#thumb_upload_wp').show();
           });
+
+
+
+
+	$("#company").on('change', function ()
+	{
+
+
+        	var company =  $('.company').val();
+	            $.ajax({
+        	        dataType: "json",
+
+                	 data:{
+                        	"company":company
+	                },
+        	        type: "post",
+                	url: "/room/select_boat",
+	                success: function(option) {
+	
+        	                 $("#boat").html(option['option']);
+                	         $('.boat').selectpicker('refresh');
+			}
+
+		});
+	});
+
+
+
+	$("#continent").on('change', function ()
+	{
+
+
+        var continent =  $('.continent').val()
+            $.ajax({
+                dataType: "json",
+
+                 data:{
+                        "continent":continent
+                },
+                type: "post",
+                url: "/route/select_area",
+                success: function(option) {
+
+                         $("#area").html(option['option']);
+                         $('.area').selectpicker('refresh');
+
+                	}
+             });
+             
+                  //
+                  //
+	});
+                  //
+                  //
+                  //
+
 });
 

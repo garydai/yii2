@@ -7,6 +7,7 @@ class HomeController extends Controller
 	public $g_area = null;
 	public $g_continent = null;
 	public $g_company = null;
+	public $g_data = null;
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
@@ -33,8 +34,25 @@ class HomeController extends Controller
 		//var_dump($continent);
 		$this->g_area = $area;
 		$this->g_continent = $continent;
-		$this->g_company = Company::model()->findAll();	
+		$this->g_company = Company::model()->findAll();
+		$year = date("Y");
+		$month = date('n');
+		$arr = array();
+	
+		for($i = $month ; $i <= 12; $i ++)
+		{
+			array_push($arr, $year.'年'.$i.'月');
+		}	
+		$year += 1;
+                for($i = 1 ; $i <= 12; $i ++)
+                {
+                        array_push($arr, $year.'年'.$i.'月');
+                }
+		$this->g_data = $arr;
 		$this->render('index', array('hot'=>$hot, 'cheap'=>$cheap, 'area'=>$area, 'diary'=>$diary, 'continent'=>$continent, 'boat'=>$boat));
+
+
+
 	}
 
 

@@ -33,7 +33,34 @@
 
                  <tr>
 
-                       <td>地区</td>
+                       <td>一级地区</td>
+
+                        <td><select class="selectpicker continent" name="continent" id="continent">
+
+                        	<option>请选择一级地区</option>
+	                      <?php if($continent){ ?>
+        	              <?php for($i =0 ;$i< count($continent) ; $i++){?>
+	                        <option <?php if($continent[$i]->name == $route->company) echo 'selected="selected"' ?>><?php echo $continent[$i]->name ?> </option>
+
+        	       	      <?php }?>
+                	      <?php }?>
+
+
+                          </select>
+                        </td>
+
+                </tr>
+
+
+          <tr>
+
+
+
+
+
+                 <tr>
+
+                       <td>二级地区</td>
 			
                         <td><select class="selectpicker area" name="area" id="area">
 
@@ -275,6 +302,9 @@ $(document).ready(function() {
                 }
             });
         }
+
+
+
 
 
 

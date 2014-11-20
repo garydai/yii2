@@ -1,0 +1,412 @@
+ 
+/* +++++++++++++++++++ 
+ * list common start +
+ * +++++++++++++++++++
+ */
+.current_search_msg {position: relative;display: inline-block;background-color: #efefef;padding: 5px 40px 5px 10px;margin-top: 15px;}
+.current_search_msg i {position: absolute;top: 9px;right: 6px;width: 12px;height: 12px;cursor: pointer;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat 0 0;}
+
+.list_outter {padding-top: 20px;}
+.list_left{float: left;width: 792px;}
+.new_list_left {float: left;width: 742px;}
+.list_right{float: right;width: 200px;}
+.list_right > div {background-color: #fff;}
+.new_list_right {float: left;width: 230px;margin-left: 18px; padding-left: 10px;}
+.lr_promise{width: 230px;}
+.lr_promise_title {font-size: 18px;color: #333333;height: 40px;line-height: 50px; border-bottom: 2px solid #00a5a5;display: inline-block;margin-left: 16px;}
+.lr_faqlist_title {font-size: 18px;color: #333333;height: 40px;line-height: 50px; border-bottom: 2px solid #00a5a5;display: inline-block;}
+.ie7 .lr_promise_title{display: inline;zoom: 1;}
+.lr_promise_list {padding-top: 30px;}
+.lr_promise_list li {position: relative;padding-bottom: 30px;text-indent: 33px;font-size: 14px;font-weight: bold;color: #848484; padding-left: 10px;}
+.lr_promise_list li i {position: absolute;width: 18px;height: 18px;top: 0;left: 16px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) -282px 0 no-repeat;}
+div.lr_hot {background-color: transparent;}
+.lr_hot_li {padding: 4px;margin-top: 20px;background-color: #fff;}
+.lr_hot_li img {float: left;}
+.lr_hot_li a {display: block;position: relative;overflow: hidden;}
+.lr_hot_content {position: absolute;width: 100%;height: 50px;bottom: 0;left: 0;background-color: #3c3c3c;text-align: center;}
+.lr_hot_divide {height: 0;border-top: 1px solid #dde7e8;}
+.lr_hot_price {text-align: right;}
+
+.faq_wrapper {padding: 0 12px 15px 20px;margin-top: 20px;background-color: #fff;}
+.faq_wrapper a{color:#848484;float:right;font-size:13px;margin-top:19px;}
+.faq_wrapper a:hover{color: #f08300;cursor: pointer;}
+.faq_wrapper h2 {float:left;font-size:18px;height: 40px;line-height:50px;color:#333;border-bottom: 2px solid #00a5a5;display: inline-block;}
+.ie7 .faq_wrapper h2 {display: inline;zoom: 1;}
+.faq_wrapper ul{clear:both;padding-top:14px;word-break: break-all;}
+.faq_list li {text-indent: -7px;padding-left: 7px;padding-bottom: 7px;}
+.faq_list a{color:#848484;float:none;margin-top:0;display: inline;}
+.faq_list a:hover{color: #f08300;cursor: pointer;border-bottom: 1px solid #f08300;}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++
+ * localjoin && mustactive && pickup common start +
+ * ++++++++++++++++++++++++++++++++++++++++++++++++
+ */
+.filter_wrapper {position: relative;z-index: 10;}
+.product_wrapper {position: relative;padding-top: 30px;z-index: 8;}
+
+.area_tag {height: 38px;border-bottom: 2px solid #0aaa96;height: 38px;}
+.area_tag li {position: relative;float: left;height: 38px;line-height: 38px;text-align: center;width: 80px;border-bottom: 2px solid #0aaa96;}
+.area_tag li:hover a {color: #0aaa96;}
+.area_tag li a {display: block;color: #333;}
+li.active_tag {border-color: #f08300;border: 1px solid #0aaa96;border-bottom: 2px solid #fff;height: 37px;}
+li.active_tag a {color: #0aaa96;}
+.area_tag li i {position: absolute;width: 0;height: 12px;border-right: 1px solid #aeaeae;top: 12px;right: -1px;}
+li.active_tag i {display: none;}
+
+.search_wrapper {height: 26px;width: 198px;border-color: #f08300;margin-bottom: 12px;}
+.search_input {float: left;border: none;height: 20px;width: 140px;}
+.ie7 .search_input {height: 16px;border: 1px solid transparent;}
+.search_btn {float: left;width: 46px;height: 26px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -160px 5px #f08300;}
+.ie7 .search_btn {width: 44px;}
+
+.filter_opts {padding: 10px 18px 5px 18px;}
+.filter_item_wrapper {position: relative;overflow: hidden;padding: 10px 0;}
+.fiw_divide {height: 0;border-bottom: 1px dotted #d9d9d9;}
+.filter_label {position: relative;float: left;width: 65px;text-align: right;color: #333;padding-right: 5px;}
+.filter_list {position: relative;float: left;width: 660px;padding-right: 25px;}
+.filter_opt {float: left;margin-bottom: 5px;margin-right: 20px;}
+.filter_opt i {display: inline-block;width: 12px;height: 12px;margin-left: 8px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -22px 0;}
+.ie7 .filter_opt i {margin-bottom: 3px;}
+.se_filter_item_wrapper {overflow: visible;}
+.se_wrapper {position: relative;float: left;margin-right: 25px;z-index: 102;}
+.se_wrapper .filter_label {height: 28px;line-height: 28px;]}
+.se_opt {float: left;width: 266px;height: 16px;line-height: 16px;font-size: 12px;border: 1px solid #d9d9d9;padding: 5px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat 250px -396px;cursor: default;}
+.se_selecter {display: none;position: absolute;top: 26px;left: 70px;z-index: 10;background-color: #fff;border: 1px solid #d9d9d9;width: 252px;padding: 12px;}
+.se_section h4 {font-size: 14px;color: #333;padding-bottom: 5px;}
+.se_section a {color: #848484;font-size: 12px;line-height: 20px;}
+.se_section a:hover {color: #f08300;}
+.se_section li {float: left;margin-right: 18px;}
+.se_all_list li {width: 50%;margin-right: 0;}
+.ses_divide {height: 0;border-top: 1px dotted #d9d9d9;margin: 6px 0;}
+.opt_selected {overflow: hidden;}
+.os_label {line-height: 34px;}
+.opt_selected li {position: relative;float: left;margin: 5px 10px 0 0;border: 1px solid #0aaa96;border-radius: 2px;padding: 4px 20px 4px 4px;font-size: 14px;height: 14px;line-height: 14px;white-space: nowrap;}
+.opt_selected li:hover {border-color: #f08300;}
+.opt_city {color: #0aaa96;}
+.opt_remove {position: absolute;top: 7px;right: 4px;width: 10px;height: 10px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -49px -44px;margin-left: 6px;}
+.ie7 .opt_remove {display: inline;zoom: 1;}
+.opt_remove:hover {background-position: -49px -27px;}
+.filter_table_wrapper {position: relative;float: left;width: 680px;padding-bottom: 2px;}
+.filter_table_wrapper li {float: left;width: 170px;margin-right: 0;}
+.filter_table_wrapper li a {display: block;width: 170px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+
+.product_list_opts {position: relative;z-index: 100;min-height:38px;border: 1px solid #d9d9d9;background-color: #fff;}
+.order_opts > li {float: left;height: 38px;position: relative;}
+.order_opts > li > a {position: relative;display: block;color: #848484;line-height: 38px;padding: 0 12px;}
+.order_opts i {position: absolute;width: 12px;height: 12px;top: 14px;right: 12px;}
+.ie7 .order_opts i {top: 6px;}
+li.order_divide {width: 0;border-right: 1px solid #848484;height: 14px;margin-top: 12px;}
+.order_opts > li:hover {color: #f08300;}
+.order_opts > li:hover > a {color: #f08300;}
+li.order_price_opt > a {padding-right: 27px;}
+.order_price_opt i, .order_dropdown_opt i {background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png);background-repeat: no-repeat;}
+.order_price_normal_opt i {background-position: -90px 0;}
+.order_price_asc_opt i {background-position: -48px 0;}
+.order_price_desc_opt i {background-position: -69px 0;}
+li.order_price_range {padding: 0 10px;z-index: 13;}
+.order_price_range div {padding-top: 7px;}
+.order_price_range input {width: 33px;height: 16px;border: 1px solid #d9d9d9;}
+.order_price_range input:focus {border-color: #ffc278;}
+.opts_submit_button {border: none;background-color: #f08300;width: 38px;height: 22px;color: #fff;cursor: pointer;margin-left: 10px;font-family: "Microsoft Yahei";}
+li.order_dropdown_opt > a {padding-right: 27px;}
+.order_dropdown_opt i {background-position: -145px 0;height: 6px;top: 17px;}
+.order_dropdown_opt:hover i {background-position: -145px -7px;}
+.sub_order_opt {display: none;position: absolute;padding: 5px 10px 5px 5px;line-height: 24px;top: 30px;left: -30px;border: 1px solid #d9d9d9;background-color: #fff;z-index: 10;}
+.sub_order_opt li {position: relative;width: 75px;}
+.sub_favorable_opt li, .sub_pickup_opt li {width: 90px;}
+li.sub_sharp {position: absolute;top: -4px;left: 50%;margin-left: -4px;width: 9px;height: 5px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -103px -28px;}
+.ie7 .sub_favorable_opt li {width: 95px;}
+.sub_order_opt li a {display: block;color: #848484;padding-left: 20px;}
+.sub_order_opt .active_opt {color: #f08300;}
+.sub_order_opt li a:hover {color: #f08300;}
+.order_dropdown_opt:hover .sub_order_opt {display: block;}
+.sub_order_opt input {vertical-align: middle;margin-right: 4px;}
+.sub_order_opt li .active_opt span {position: absolute;width: 11px;height: 8px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -23px -44px;top: 9px;left: 3px;}
+
+.favor_opts {border-top: 1px dotted #d9d9d9;width: 760px;margin: 0 auto;font-size: 14px;color: #848484;padding-top: 9px;height: 29px;}
+.favor_opts li {margin-right: 14px;}
+.favor_opts input {position: relative;top: 2px;margin-right: 3px;}
+.favor_opts .active_opt span {color: #f08300;}
+
+li.active_order_opt {color: #f08300;}
+li.active_order_opt > a {color: #f08300;}
+li.active_order_opt.order_price_asc_opt > a i {background-position: -48px 0;}
+li.active_order_opt.order_price_desc_opt > a i {background-position: -69px 0;}
+
+.active_tag a {color:#fff;}
+.filter_opt a {display: inline-block;color: #848484;width: 100%;height: 100%;white-space: nowrap;}
+.filter_opt  a:hover {color: #f08300;}
+a.filter_opt_hot {color: #0aaa96;}
+.filter_opt:hover {color: #f08300;cursor: pointer;}
+.filter_opt_last {position: absolute;right: -12px;bottom: 0;padding-right: 0;}
+.ie7 .filter_opt_last {bottom: -6px;}
+.opt_expand, .empty_filter {position: absolute;right: -5px;bottom: 5px;color: #f08300;border: none;outline: none;padding-right: 17px;line-height: 14px;font-family: "微软雅黑";background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png);background-repeat: no-repeat;background-color: transparent;background-position: 29px -19px;}
+.opt_collapse {background-position: 53px -40px;}
+.filter_opt_last:hover {background: none;}
+.empty_filter {background-position: 54px -57px;right: 0;}
+
+#page_simple_div {border: 1px solid #d9d9d9;margin: 0 15px 0 13px;height: 22px;line-height: 22px;padding: 0 7px;}
+.page_change {position: absolute;top: 7px;right: 0;}
+.page_change > div {float: left;line-height: 24px;}
+.page_change a {display: inline-block;width: 6px;height: 12px;background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png);background-repeat: no-repeat;}
+a.prev_page {background-position: -67px -27px;}
+a.next_page {background-position: -86px -27px;}
+.ie7 a.prev_page, .ie7 a.next_page {margin-top: -15px;}
+a.prev_page:hover {background-position: -67px -41px;}
+a.next_page:hover {background-position: -86px -41px;}
+
+.product_list_wrapper {padding-top: 20px;width: 1000px;}
+.product_list {padding-bottom: 20px;}
+.product_list > li {position: relative;float: left;width: 366px;min-height: 265px;border: 1px solid #d9d9d9;background-color: #fff;margin: 0 27px 20px 0;}
+.product_list > li:hover {border-color: #f08300;}
+.product_list > li:hover .p_img_content{opacity: 1.0;display: block;}
+.product_list > li > a {display: block;}
+.p_img_content{display: none;position: absolute;bottom: 0;left: 0;padding: 6px 2% 20px 2%;width: 96%;z-index: 0;opacity: 0;-webkit-transition: all .5s ease-in-out;o-transition: all .5s ease-in-out;-moz-transition: all .5s ease-in-out;transition: all .5s ease-in-out;}
+.p_img_item{margin-bottom: 5px;}
+.p_img_text{font-size: 13px;margin-left: 5px;}
+.p_img_content .p_tag_bg{z-index: -1;top: -20px;}
+.p_img_content ul{margin-top: -20px;}
+.top_info {height: 40px;line-height: 40px;}
+.p_img_wrapper {position: relative;}
+.p_img {float: left;}
+.p_tag {position: absolute;width: 366px;height: 20px;left: 0;bottom: 0;}
+.p_tag_bg {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;opacity: 0.5;filter: alpha(opacity=50);z-index: 0;}
+.p_tag_list {position: relative;z-index: 1;}
+.p_tag_list li {float: left;width: 64px;height: 20px;line-height: 20px;font-size: 12px;text-align: center;color: #fff;margin-right: 1px;}
+li.two_send_one {background-color: #06adac;}
+li.free_pick {background-color: #3897d9;}
+li.level_up {background-color: #8a85db;}
+.p_info_wrapper {position: relative;height: 105px;}
+.p_title {padding: 10px 0;font-weight: bold;}
+.price_wrapper {position: absolute;bottom: 0;left: 10px;}
+.original_price, .current_price {float: left;height: 35px;line-height: 35px;}
+.original_price {margin-right: 15px;padding-top: 4px;}
+.link_icon {position: absolute;right: 15px;bottom: 12px;width: 25px;height: 25px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -277px -29px;}
+
+/* mustactive special */
+.special_item_wrapper {padding: 10px 0 20px 0;}
+.special_item_wrapper > ul {padding: 20px 10px;}
+.special_item_wrapper > ul li {float: left;margin-right: 20px;}
+/* mustactive special */
+
+/* empty */
+.empty_tips {position: relative;width: 544px;height: 203px;margin: 0 auto;padding-top: 60px;}
+.empty_text {font-weight: bold;font-size: 22px;width: 540px;height: 120px;line-height: 120px;text-align: center;border: 1px solid #f08300;border-radius: 10px;}
+.avatar_icon {position: absolute;width: 41px;height: 58px;left: -40px;top: 75px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -217px 0;}
+.reset_btn_wrapper {position: relative;padding-top: 40px;}
+.reset_btn {display: block;width: 150px;height: 37px;line-height: 37px;text-align: center;font-size: 18px;margin: 0 auto;background-color: #f08300;}
+.arrow_to_btn {position: absolute;width: 58px;height: 98px;right: 130px;top: -40px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) no-repeat -200px -79px;}
+/* empty */
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++
+ * localjoin new created by Kylin wong 2014.08.27 +
+ * ++++++++++++++++++++++++++++++++++++++++++++++++
+ */
+.list-item{width: 780px;border: 1px solid #f1f1f1;font-family: "Microsoft Yahei"; box-shadow: 1px 1px 2px #c7c7c7;margin: 10px 0 10px 0; background: #ffffff;}
+.list-item:hover{box-shadow: 1px 1px 3px #afdede; border-color:#eef5f5; }
+.list-item-title{font-size: 18px; display: block; color: #000; text-decoration: none; font-weight: bold; padding-left: 8px;margin-top: 16px;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; width:770px; }
+.list-item-title:hover{text-decoration: underline;}
+.list-main-area{overflow: hidden; margin-top:15px;}
+.list-photo-outer{margin-left: 8px;position: relative; float: left; display: inline;}
+.list-photo-pic{width: 300px; height: 180px;}
+.list-photo-tag{text-align: center; width: 78px; height: 28px;line-height:22px;padding-left: 8px; font-size: 14px; color: #fff; background:url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) 0 -113px no-repeat; position: absolute; top: 6px; left: -5px; z-index: 10;}
+.list-photo-tag-inner{width:60px; margin-left:-22px;}
+.list-main-right{float: left; display: inline; margin-left: 11px; position: relative;width: 460px;}
+.old-price{font-size: 13px;color: #848484;position: absolute;top: 5px; right: 20px; text-decoration: line-through;}
+.old-price span{font-size: 16px;}
+.list-right-intro{color: #f08300; font-size: 14px; font-weight: bold; margin-top: 5px;}
+.list-right-taglist{ overflow: hidden; margin:10px 0 0 9px;}
+.list-right-taglist span{height: 19px; line-height: 19px; padding: 0 3px; margin-right:3px; display:inline-block; font-size: 12px; border: 1px solid; border-radius: 3px; }
+.list-right-taglist span:hover{cursor: pointer;}
+.list-right-tag1{color:#00d0d0;border-color: #00d0d0;}
+.list-right-tag2{color:#65adff;border-color: #65adff;}
+.list-right-tag3{color:#9e94ff;border-color: #9e94ff;}
+.list-right-tag4{color:#ef82e6;border-color: #ef82e6;}
+.list-price{color: #f08300; font-size: 14px; position: absolute; right: 10px; top: 28px;}
+.list-price span{font-size: 28px;}
+.list-product-detail{color: #848484; font-size: 13px; line-height: 25px; margin:21px 0 0 9px;}
+.list-end-city{margin-left: 24px;}
+.list-detail-btn{display: block; width: 78px; height: 26px; background:url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) 0 -75px no-repeat; position: absolute; left: 337px; top: 83px; }
+.day-list{overflow: hidden;  margin:5px 0 10px 9px;border-left: 1px solid #cfdfdf; }
+.ie7 .day-list{margin-left: 10px; border-left: 1px solid #cfdfdf; }
+.day-list li{list-style: none; float:left; display: inline; height: 103px; width: 90px; border: 1px solid #cfdfdf; margin-left: -1px; padding: 9px;}
+.day-list p{color: #848484;font-size: 13px; width:90px; margin: 0 0 -1px 0;overflow: hidden;word-break:keep-all;white-space:nowrap;}
+.day-list .day-list-day{font-weight: bold;margin:0;padding-bottom: 1px; color: #0aaa96;}
+.day-list-empty{background:url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) 15px -145px no-repeat; }
+.day-list-more{background: #f0f0f0;text-align: center; }
+.day-list-more a{ line-height: 100px; color: #848484; font-size: 13px; text-decoration: none; display: block;}
+.list-tips-area{width: 285px; border: 1px solid #cfdfdf;position: absolute;top:0;left: 0;z-index: 5; background: #fff;}
+.list-tips-arrow{display: block; width: 19px; height: 12px; background:url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) 0px -273px no-repeat; margin: -11px 0 0 134px;}
+.list-tips-word{font-size: 13px; color: #848484; margin: 9px;}
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++
+ * localjoin new end  +
+ * ++++++++++++++++++++++++++++++++++++++++++++++++
+ */
+
+
+/* +++++++++++++++++++++++++++++++++++++++
+ * sim && insurance && visa common start +
+ * +++++++++++++++++++++++++++++++++++++++
+ */
+.banner_text {float: left;width: 50px;height: 113px;padding-top: 30px;background-color: #f08300;color: #fff;font-size: 16px;text-align: center;}
+.qa_wrapper {float: left;width: 629px;border-left: none;padding: 25px 30px;height: 92px;}
+.visa_qa_wrapper {padding: 15px 30px;height: 112px;}
+.qa_wrapper h2 {display: inline-block;font-size: 18px;color: #333;font-weight: bold;padding-bottom: 5px;border-bottom: 2px solid #f08300;}
+.qa_wrapper p {line-height: 26px;padding-top: 10px;}
+.product_ul li {padding-top: 35px;}
+.insur_title {font-size: 18px;margin-bottom: 20px; color:#06a6a6;}
+.product_ul li:hover .bd_color_gray{box-shadow:1px 2px 1px #c3eaea;}
+.product_ul li:hover .insur_title {color: #f08300;}
+.product_info_wrapper {padding: 28px 21px 28px 21px;}
+.pi_title{font-size: 14px;font-weight: bold;color: #333;}
+.pi_detail {padding-top: 8px;}
+.insur_img_wrapper{float: left;width: 257px;}
+.insur_img_wrapper img{display: inline;width: 133px;height: 100px; margin-left:52px;margin-bottom: 20px;}
+.insur_img_wrapper p{color: #333; font-size: 14px; width: 238px;}
+.insur_right_a{float: left; padding-left: 20px; border-left: 1px solid #cfdfdf;}
+.sim_pi_img_wrapper {float: left;width: 260px;}
+.pi_img_wrapper img{display: inline;width: 230px;height: 100px; margin-left:52px;margin-bottom: 20px;}
+.sim_pi_img_wrapper img{display: inline;width: 230px;}
+.insur_img_wrapper h3{padding-bottom: 5px; width:240px; font-size: 14px; color: #000; font-weight: bold;}
+.insur_img_wrapper p{color: #333; font-size: 14px; width: 238px; text-align: justify;}
+.sim_pi_info_wrapper{border: none; float: left;}
+.insurance_info_table{width: 410px;}
+.ie7 .insurance_info_table{width: 412px;}
+.sim_info_table{width: 243px;}
+.sim_info_table td {padding-bottom: 8px;}
+td.package_future {padding-bottom: 0;}
+.package_future p {position: relative;padding-left: 17px;line-height: 24px;}
+.package_future p i {position: absolute;top: 4px;left: 0px;width: 15px;height: 15px;background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png); background-position: -21px -20px;}
+.pi_price_wrapper {float: left;width: 125px;text-align: center;margin-left: 35px;}
+.sim_pi_price_wrapper{float: right; width: 180px;}
+.sim_pi_price_wrapper p{float: right; margin-right: 15px; margin-top: 20px;}
+.sim_pi_price_wrapper a{float: right; margin-right: 14px; text-align: center;}
+.pi_price {text-align: right;float: left; padding-left: 130px;}
+.svi_book_btn {background-color: #f08300;display: block;font-size: 18px;height: 37px;line-height: 37px;width: 125px;}
+.sim_svi_book_btn{background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png); background-repeat: no-repeat; background-position: 0 -305px; display: block;font-size: 18px;height: 33px;line-height: 33px;width: 109px; margin-top: 30px;}
+.sim_svi_book_btn:hover{background-position: 0 -355px;}
+.sim_latest_buy_notes{font-size: 13px; color: #848484;}
+.sim_pi_price_wrapper .sim_latest_buy_notes{margin-top: 20px;}
+.sim_pi_price_wrapper .sim_latest_buy_notes
+.current_sale {padding: 10px 0;}
+
+/* visa special start */
+/* list right visa buy step */
+.buy_step {margin-top: 20px;padding: 0 10px;}
+.buy_step_visa {padding: 0; width: 230px;}
+.buy_step_insurance, .buy_step_sim {padding: 0;}
+.step_list {position: relative; padding-bottom: 15px;}
+/* .step_list ul {padding-left: 10px;} */
+.step_line {position: absolute;left: 34px;top: 32px;width: 2px;height: 157px;background-color: #aaebeb;}
+.sim_step_line {position: absolute;left: 34px;top: 32px;width: 2px;height: 156px;background-color: #aaebeb;}
+.ie7 .step_line {left: 36px; top: 37px;}
+.step_list li {position: relative;font-weight: bold;padding-left: 30px;line-height: 46px;}
+.step_list li i {position: absolute;left: 25px;top: -10px;width: 24px;height: 24px;background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png);background-repeat: no-repeat;}
+li.step1 i {background-position: -277px -78px;}
+li.step2 i {background-position:  -277px -126px;}
+li.step3 i {background-position:  -277px -175px;}
+li.step4 i {background-position:  -277px -223px;}
+li.step5 i {background-position:  -277px -271px;}
+
+/* list right visa */
+.visa_step {margin-top: 35px;border-left: 1px solid #bfbfbf;margin-left: 48px;;}
+.visa_step li {padding-bottom: 30px;}
+.visa_step li.step5 {padding-bottom: 0;}
+.visa_step li i {width: 45px;height: 45px;background: url(//dn-woqu.qbox.me/a1503/img/page/list/visa/woqu-list-visa.png) no-repeat;top: 0;left: -23px;}
+.visa_step li.step1 i {background-position: 0 -103px;}
+.visa_step li.step2 i {background-position: -55px -103px;}
+.visa_step li.step3 i {background-position: -110px -103px;}
+.visa_step li.step4 i {background-position: -165px -103px;}
+.visa_step li.step5 i {background-position: -220px -103px;top: 1px;}
+.ie7 .visa_step li i {top: -14px;}
+.ie7 .visa_step li.step5 i {top: -13px;}
+.lr_visa_promise_list {padding: 40px 0 0 15px;color: #848484}
+.lr_visa_promise_list li {position: relative;padding: 0 0 40px 65px;}
+.lr_visa_promise_list div {float: left;}
+.lr_visa_promise_list h3 {font-size: 16px; color: #333;font-weight: bold; margin-left: 12px;}
+.lr_visa_promise_list p {font-size: 12px; color: #848484; margin-left: 12px;}
+.lr_visa_promise_list i {position: absolute;top: 8px;left: 7px;width: 44px;height: 44px;background-image: url(//dn-woqu.qbox.me/a1503/img/page/list/visa/woqu-list-visa.png);background-repeat: no-repeat; margin-left: 4px;}
+.visa_pro1 {background-position: 0 -39px;}
+.visa_pro2 {background-position: -58px -39px;}
+.visa_pro4 {background-position: -122px -39px;}
+
+/* list left visa filter */
+.visa_top_content {padding-bottom: 40px;}
+.visa_green_tips {color: #06a6a6;font-weight: bold;border-bottom: 1px dashed #06a6a6;}
+.visa_green_tips:hover {color: #f07c00;;border-color: #f07c00;}
+.visa_top_tag li {float: left;width: 163px;height: 50px;line-height: 50px;font-size: 20px;font-weight: bold;text-align: center;background-image: url(//dn-woqu.qbox.me/a1503/img/page/list/visa/woqu-list-visa.png);background-repeat: no-repeat;background-position: -164px 0;margin-right: 4px;}
+.visa_top_tag li a {color: #333;display: block;}
+li.active_top_tag {background-position: 0 0;}
+li.active_top_tag a {color: #fff;}
+.visa_top_tag li:hover {background-position: 0 0;}
+.visa_top_tag li:hover a {color: #fff;}
+.top_tag_line {height: 2px;background-color: #0aaa96;margin-top: 1px;}
+.visa_info_box, .insurance_info_box {padding-top: 40px;}
+.visa_img, .usa_text {float: left;}
+.usa_text {line-height: 33px;margin-left: 15px;width: 558px;margin-top: -11px;}
+.discount_text {color: #fff;font-size: 12px;background-color: #ffad81;padding: 2px 5px;}
+.free_dialog {position: absolute;z-index: 10;top: 100px;left: 100px;width: 537px;height: 262px;border: 1px solid #35b9b9;padding: 45px 40px;background-color: #fff;display: none;}
+.free_dialog i {position: absolute;left: 300px;top: -16px;width: 18px;height: 18px;background: url(//dn-woqu.qbox.me/a1503/img/page/list/visa/woqu-list-visa.png) no-repeat 0 -1px;}
+.free_dialog h2 {font-size: 18px;font-weight: bold;}
+.free_dialog p {padding-top: 30px;}
+
+/* list left visa list */
+.visa_li_item {display: block;height: auto;margin-bottom: 20px;padding: 20px;background-color: #fff;border: 1px solid #fff;}
+.visa_li_item:hover {border: 1px solid #f08300;cursor: pointer;}
+.visa_tag {float: left;width: 110px;height: 100px;background: url(//dn-woqu.qbox.me/a1503/img/page/list/visa/woqu-list-visa.png) no-repeat 0 -170px;margin-top: 45px;}
+.person_tag {background-position: 0 -170px;}
+.visit_tag {background-position: -120px -170px;}
+.business_tag {background-position: -240px -170px;}
+.free_tag {background-position: -360px -170px;}
+.visa_info {float: left;width: 555px;margin-left: 30px;}
+.visa_title {padding-bottom: 20px;}
+.visa_sublit {font-size: 14px;color: #848484;line-height: 30px;}
+.visa_sublit label {color: #333;}
+.visa_price_wrapper {overflow: hidden;padding: 20px 0 10px 0;}
+.market_price {float: right;width: 140px;text-align: right;margin-right: 20px;height: 28px;line-height: 40px;}
+.woqu_price {float: right;margin-right: 35px;line-height: 28px;}
+.book_btn {float: right;width: 92px;height: 34px;background: url(//dn-woqu.qbox.me/a1018/img/common/woqu-btn-list.png) no-repeat 0 -54px;margin-top: -8px; margin-right: 16px;}
+.book_btn:hover {background-position: 0 -206px;}
+
+/* list left visa qa */
+.bottom_qa_wrapper {margin-top: 40px;background-color: #fff;padding: 5px 25px 20px 30px;}
+.bqa_title {position: relative;font-size: 16px;color: #333;font-weight: bold;display: inline-block;height: 40px;line-height: 50px;border-bottom: 2px solid #00a5a5;margin-left: 10px;}
+.ie7 .bqa_title {display: inline;zoom: 1;}
+.bqa_title a {position: absolute;left: 630px;top: 16px;width: 51px;height: 21px;text-align: center;line-height: 21px;color: #848484;font-size: 12px;}
+.bqa_title a:hover {color: #f08300;}
+.bottom_qa_list li {float: left;width: 310px;padding: 15px 0 5px 0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin-left: 10px;}
+.bottom_qa_list a {color: #333;font-size: 13px;}
+.bottom_qa_list a:hover {color: #f08300;}
+/* visa special end */
+
+/* insurance starts*/
+.why_insurance_img{float: left;}
+.why_insurance_div{float: left; margin-left: 20px; width: 546px;}
+.why_insurance_div h2{ padding-bottom: 9px;}
+.why_insurance_div p{line-height: 26px;}
+.insu_intro{line-height: 20px; padding-bottom: 20px; color: #333;}
+td.insurance_future {padding-bottom: 0; width: 144px;}
+.ie8 td.insurance_future{width: 340px;}
+.ie7 td.insurance_future{width: 140px;}
+.sur_book_btn {display: block;width: 109px;height: 33px;color: #fff; line-height: 33px;font-size: 18px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png); text-align: center; background-position: 0px -305px; float: right}
+a.sur_book_btn:hover{ background-position: 0px -355px;}
+.sur_book_btn p{width: 109px; height: 33px;}
+.insurance_future p {position: relative;padding-left: 17px;line-height: 27px;}
+.insurance_future p i {position: absolute;top: 4px;left: 0px;width: 15px;height: 15px;background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png); background-position: -21px -19px;}
+.ie7 .insurance_future p i {position: absolute;top: 1px;left: 0px;width: 15px;height: 15px;background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png); background-position: -212px -187px;}
+.suitable_for_people{padding-bottom: 20px; line-height: 20px;}
+td.insurance_price{text-align: right; padding-top: 20px;}
+td.insurance_buy{text-align: right;}
+.in_promise_list {padding-top: 30px;}
+.in_promise_list li {position: relative;padding-bottom: 30px;text-indent: 33px;font-size: 14px;font-weight: bold;color: #848484; padding-left: 10px;}
+.in_promise_list li i {position: absolute;width: 18px;height: 18px;top: 0;left: 22px;background: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png) -281px -0px no-repeat;}
+.ie7 .in_promise_list li i {top: 3px;}
+.insurance_step, .sim_step{padding-top: 20px;padding-left: 35px;}
+.insurance_step li i, .sim_step li i {background-image: url(//dn-woqu.qbox.me/a1184/img/page/list/list-common.png);background-repeat: no-repeat;width: 23px;height: 23px;position: absolute;top: 10px;left: -11px;}
+.ie7 .insurance_step li i, .ie7 .sim_step li i {top: -7px;}
+.insurance_step li.step1 i, .sim_step li.step1 i{background-position: -277px -79px;}
+.insurance_step li.step2 i, .sim_step li.step2 i{background-position: -277px -127px;}
+.insurance_step li.step3 i, .sim_step li.step3 i{background-position: -277px -175px;}
+.insurance_step li.step4 i, .sim_step li.step4 i{background-position: -277px -223px;}
+/* insurance ends*/
