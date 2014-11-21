@@ -167,7 +167,7 @@ a.next_page:hover {background-position: -86px -41px;}
 .p_img_text{font-size: 13px;margin-left: 5px;}
 .p_img_content .p_tag_bg{z-index: -1;top: -20px;}
 .p_img_content ul{margin-top: -20px;}
-.top_info {height: 40px;line-height: 40px;}
+.top_info {height: 0px;line-height: 40px;}
 .p_img_wrapper {position: relative;}
 .p_img {float: left;}
 .p_tag {position: absolute;width: 366px;height: 20px;left: 0;bottom: 0;}
@@ -178,7 +178,7 @@ li.two_send_one {background-color: #06adac;}
 li.free_pick {background-color: #3897d9;}
 li.level_up {background-color: #8a85db;}
 .p_info_wrapper {position: relative;height: 105px;}
-.p_title {padding: 10px 0;font-weight: bold;}
+.p_title {font-weight: bold;}
 .price_wrapper {position: absolute;bottom: 0;left: 10px;}
 .original_price, .current_price {float: left;height: 35px;line-height: 35px;}
 .original_price {margin-right: 15px;padding-top: 4px;}

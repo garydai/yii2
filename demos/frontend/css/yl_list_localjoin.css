@@ -1,14 +1,14 @@
 .product_list > li {width: 970px;padding-left: 30px;border:none;}
 .p_img{float:left;}
 .localjoin_trip_days,.localjoim_num,.localjoin_begin_city,.localjoin_end_city,.localjoin_schedule{font-size: 13px;color: #848484;padding-top:7px;}
-.list_attribute{float:left;width:418px;padding:8px 0 0 30px;position: relative;}
+.list_attribute{float:left;width:418px;padding:45px 0 0 30px;position: relative;}
 .localjoin_btn{background: url('//dn-woqu.qbox.me/a1184/img/page/list/list-common.png') no-repeat 0 -70px;width: 138px;height: 40px;}
 .localjoin_price,.localjoin_btn{position: absolute;}
 .localjoin_price{top:6px;right:20px;}
 .localjoin_btn{top: 80px;right: 20px;}
 .p_tag{position: relative;padding-top:20px; }
 .p_tag_list li{padding: 0 5px;margin-right: 6px;border-radius: 2px;}
-.p_title{padding:0;font-size:18px;width:700px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
+.p_title{padding-left:330px;font-size:18px;width:700px;white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
 .top_info{padding-top: 15px}
 .localjoin_recommend{color: #0aaa96;font-size: 14px;font-weight: bold;padding-bottom: 15px;}
 .localjoin_img_tag{background: url('//dn-woqu.qbox.me/a1184/img/page/list/list-common.png') no-repeat 0 -113px;width: 78px;height: 28px;display: inline-block;position: absolute;top: 5px;left: -5px;color: #fff;font-size: 14px;padding-left: 7px;line-height: 23px;}

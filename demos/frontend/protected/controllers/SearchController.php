@@ -121,11 +121,27 @@ class SearchController extends Controller
 		
 		
 		$result = Route::model()->findAll($criteria);
+		$schedule = array();	
+		#foreach($result as $item)
+		{
+		#	if($item != '')
+			{	
+		#		$item = str_replace(',', ' and id = ', $item);
+		#		$item = ' id = '.$item;
+		#		$c = new CDbCriteria;
+		#		$c->condition = $item;
+		#		$c->order = 'day asc';
+		#		$c->select = 'title';
+		#		$r = Schedule::model()->findAll($c);
+		#		array_push($schedule, $r);
+
+			}	
+		}	
 		//echo '<meta charset="UTF-8">';
 
 		//echo $criteria->condition;
 		//var_dump($result);
-		$this->render('index', array('s_data'=>$s_data, 's_company'=>$s_company, 's_area'=>$s_area, 'area'=>$area, 'continent'=>$continent, 'company'=>$company, 'data'=>$arr, 'result'=>$result, 'count'=>$count, 'page'=>$page, 'limit'=>$criteria->limit, 's_days'=>$s_days));
+		$this->render('index', array('s_data'=>$s_data, 's_company'=>$s_company, 's_area'=>$s_area, 'area'=>$area, 'continent'=>$continent, 'company'=>$company, 'data'=>$arr, 'result'=>$result, 'count'=>$count, 'page'=>$page, 'limit'=>$criteria->limit, 's_days'=>$s_days, 'schedule'=>$schedule));
 		
         }
 
