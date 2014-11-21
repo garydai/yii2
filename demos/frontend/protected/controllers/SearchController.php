@@ -95,7 +95,20 @@ class SearchController extends Controller
                         $criteria->addCondition("area = '$s_area' or continent = '$s_area' ", 'AND');
                 }
 
+		if($s_days != '全部')
+		{
+			if($s_days == 3)
+			{
+				$criteria->addCondition("days <= $s_days", 'AND');
+			}
+			else if($s_days == 11)
+			{
+				$criteria->addCondition("days >= $s_days", 'AND');
 
+			}	
+			else $criteria->addCondition("days = $s_days", 'AND');
+
+		}
 		$page = 0;
 		if(isset($_GET['page']))
 		{
@@ -103,7 +116,7 @@ class SearchController extends Controller
 		}
 		$count = Route::model()->count($criteria);
 		
-		$criteria->limit = 1;
+		$criteria->limit = 10;
 		$criteria->offset = $page * $criteria->limit;
 		
 		

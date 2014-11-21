@@ -172,10 +172,9 @@ class HomeController extends Controller
                                 $html.='#" target="_blank"> <img class="trip_play_img img_slide_animte first_page"  src="'.$result[$i]['source'].'" data-original="'.$result[$i]['source'].'" alt="" style="display: block;"> <span class="trip_play_txt" title="'.$result[$i]['name'].'">'.$result[$i]['name'].'</span></a>';
 
                         }
-                        $html.='</li>';
+                        $html.='</li></ul>';
 
                 }
-                $html.='</ul>';
                 echo $html;
 		
 		

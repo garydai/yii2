@@ -156,10 +156,10 @@ li.wq_header_mycount, li.wq_header_currency {padding-right: 23px;text-align: cen
 .nav_tips {position: absolute;color: #ff0000;font-size: 10px;top: -10px;right: -10px;}
 .current_nav {background-color: #0dbfb0;}
 
-.nav_sub_list {position: absolute;top: 38px;left: 0;width: 113px;background-color: #fff;padding: 10px 0;display: none;z-index: 8;border-bottom: 3px solid #dce0df;}
+.nav_sub_list {position: absolute;top: 38px;left: 0;width: 113px;background-color: #000;opacity: 0.6;padding: 10px 0;display: none;z-index: 8;}
 .nsl_lj {width: 153px;}
 .nsl_ms {width: 150px;}
-.nav_sub_list a {color: #000;font-size: 14px;text-align: left;text-indent: 20px;line-height: 30px}
+.nav_sub_list a {color: #fff;font-size: 14px;text-align: left;text-indent: 20px;line-height: 30px}
 .nsl_lj a, .nsl_ms a {text-indent: 31px;}
 .nav_sub_list a:hover {color: #f08300;}
 .nav_channel:hover .nav_sub_list {display: block;}
@@ -167,7 +167,7 @@ li.wq_header_mycount, li.wq_header_currency {padding-right: 23px;text-align: cen
 .nm_side_bar {position: absolute;top: 38px;left: 0;width: 210px;height: 402px;display: none;}
 .ie7 .nm_side_bar {top: 29px;}
 .all_product_tag:hover .nm_side_bar {display: block;}
-.nmsb_mask {position: absolute;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;background-color: #3d495f;opacity: 0.9;filter: alpha(opacity=90);}
+.nmsb_mask {position: absolute;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;background-color: #000;opacity: 0.6;filter: alpha(opacity=90);}
 .nm_list {position: relative;z-index: 10;text-align: left;}
 .nm_list > li {position: relative;border-bottom: 1px solid #415667;padding: 8px 20px 12px 15px;cursor: pointer;}
 li.pt15 {padding-top: 15px!important;}

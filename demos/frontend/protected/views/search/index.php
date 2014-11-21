@@ -122,19 +122,20 @@
 
 	<ul class="product_list wq_clearfix">
 
-				<li>
 			
 				
-					<?php for($i=0; $i < count($result); $i ++) { ?>	
+					<?php for($i=0; $i < count($result); $i ++) { ?>
+	
+				<li>
 					<a href="#" target="_blank">
 					<div class="top_info font_size13 font_color_gray">
-						<p class="p_title font_size14 font_color_black" title="<?php echo $result[$i]->name?>"><?php echo $result[$i]->name?></p>
+						<p class="p_title font_size14 font_color_orange" title="<?php echo $result[$i]->name?>"><?php echo $result[$i]->name?></p>
 		
 		
 					</div>
 	
 					<div class="p_img_wrapper wq_clearfix">
-						<img class="p_img lazy" width="300" height="180" src="//dn-woqu.qbox.me/a168/img/common/blank-img5x3.jpg" data-original="<?php echo $result[0]->source?>"><?php echo $result[$i]->source?>" >
+						<img class="p_img lazy" width="300" height="180" src="" data-original="<?php echo $result[0]->source?>"><?php echo $result[$i]->source?>" >
 		
 						<div class="list_attribute">
 							<p class="localjoin_trip_days">途径港口：<span><?php echo $result[$i]->port?></span></p>
@@ -165,7 +166,9 @@
 	
 					</a>	
 
+			    </li>
 					<?php } ?>
+
 	</ul>
 
 

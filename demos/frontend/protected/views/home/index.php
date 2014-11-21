@@ -123,9 +123,14 @@
 			<ul class="local_trip_map" id="local_trip_map_list">
 				<?php for($i = 0; $i < count($area) && $i < 8; $i ++) {?>
 				<li data-content="<?php echo "lj".$i ?>" class= "<?php if($i)echo "local_trip_list hide"; else echo "local_trip_list" ?>">
-					<h3 class="local_trip_title"><?php echo $area[$i]->name ?></h3>
+					<h3 class="local_trip_title">&gt </h3>
 					<div class="local_trip_container">
 						<img class="local_trip_img lazy" src="" data-original='<?php echo $area[$i]->source ?>'  width="260" height="220">
+					</div>
+					<div class='route_description'>
+						
+						<p> 航线介绍:</p>
+						<p>简介</p>
 					</div>
 				</li>
 				<?php } ?>
@@ -178,7 +183,7 @@
                         <ul class="local_trip_map" id="local_trip_map_list">
                                 <?php for($i = 0; $i < count($boat) && $i < 8; $i ++) {?>
                                 <li data-content="<?php echo "lj".$i ?>" class= "<?php if($i)echo "local_trip_list hide"; else echo "local_trip_list" ?>">
-                                        <h3 class="local_trip_title"><?php echo $boat[$i]->name ?></h3>
+                                        <h3 class="local_trip_title">&gt;</h3>
                                         <div class="local_trip_container">
                                                 <img class="local_trip_img lazy" src="" data-original='<?php $arr=explode(',', $boat[$i]->source); if($arr)echo $arr[0]; ?>'  width="260" height="220">
                                         </div>

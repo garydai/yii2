@@ -1,4 +1,4 @@
-.product_list > li {width: 1000px;padding-left: 0px;border:none;}
+.product_list > li {width: 970px;padding-left: 30px;border:none;}
 .p_img{float:left;}
 .localjoin_trip_days,.localjoim_num,.localjoin_begin_city,.localjoin_end_city,.localjoin_schedule{font-size: 13px;color: #848484;padding-top:7px;}
 .list_attribute{float:left;width:418px;padding:8px 0 0 30px;position: relative;}
